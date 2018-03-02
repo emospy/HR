@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="XSLColourView.xsl"?>
+<!DOCTYPE Labels_Description SYSTEM "DTDDoc.dtd">
+<Labels_Description>
+  <product prod_id = "p1">
+    <product_name>HR</product_name>
+    <version>1.13</version>
+    <client_name>СКС</client_name>
+    <forms>
+      <form form_id = "f1">
+        <formname>formCharacteristic</formname>
+        <description>Тук се съхраняват всички данни за длъжностната характеристика</description>
+        <header type = "Static" >Длъжностна характеристика</header>
+        <labels>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text>НКП</original_text>
+            <client_text>НКП</client_text>
+            <label_description>
+              Код по НКП
+            </label_description>
+            <client_label_description>Код по НКП</client_label_description>
+            <program_type>string</program_type>
+            <tooltip> Код по НКП</tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name>nkpcode</SQL_column_name>
+            <SQL_table>firmpersonal</SQL_table>
+            <associated_control>textboxNkpCode</associated_control>
+            <max_size>12</max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l2" important="true" visible="true">
+            <program_name>labelNames</program_name>
+            <original_text>Трите имена на лицето :</original_text>
+            <client_text>Трите имена на лицето :</client_text>
+            <label_description>Трите имена на лицето</label_description>
+            <client_label_description>Трите имена на лицето</client_label_description>
+            <SQL_variable_type>string</SQL_variable_type>
+            <SQL_column_name>name</SQL_column_name>
+            <associated_control>textBoxNames</associated_control>
+            <max_size>255</max_size>
+          </label>
+          <label label_id = "l3" important="true" visible="true">
+            <program_name>labelCountry</program_name>
+            <original_text>Гражданство :</original_text>
+            <client_text>Гражданство :</client_text>
+            <label_description>Гражданство. По лична карта.</label_description>
+            <client_label_description>Гражданство</client_label_description>
+            <SQL_variable_type>string</SQL_variable_type>
+            <SQL_column_name>Country</SQL_column_name>
+            <associated_control>textBoxCountry</associated_control>
+            <max_size></max_size>
+          </label>
+          <label label_id = "l4" important ="false" visible="true">
+            <program_name>labelBornTown</program_name>
+            <original_text>Месторождение град :</original_text>
+            <client_text>Месторождение град :</client_text>
+            <label_description>Месторождение град : Това се преписва от личната карта.</label_description>
+            <client_label_description>Месторождение град :</client_label_description>
+            <SQL_variable_type>string</SQL_variable_type>
+            <SQL_column_name>borntown</SQL_column_name>
+            <associated_control>textBoxBornTown</associated_control>
+            <max_size></max_size>
+          </label>
+        </labels>
+      </form>
+    </forms>
+  </product>
+</Labels_Description>

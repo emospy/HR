@@ -1,0 +1,15 @@
+<!ELEMENT Excel_Template_Description (template)>
+<!ELEMENT template (template_name, client_name, data_views)>
+<!ELEMENT template_name (#PCDATA)>
+<!ELEMENT client_name (#PCDATA)>
+<!ELEMENT data_views (vuePositions*, vuePerson*)>
+<!ELEMENT vuePositions (#PCDATA)>
+<!ELEMENT vuePerson (#PCDATA)>
+
+<!ATTLIST vuePositions id ID #REQUIRED>
+<!ATTLIST vuePositions column_text CDATA #REQUIRED>
+<!ATTLIST vuePositions column_number CDATA #REQUIRED>
+
+<!ATTLIST vuePerson id ID #REQUIRED>
+<!ATTLIST vuePerson column_text CDATA #REQUIRED>
+<!ATTLIST vuePerson column_number CDATA #REQUIRED>

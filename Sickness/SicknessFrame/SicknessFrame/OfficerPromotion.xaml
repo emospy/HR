@@ -1,0 +1,44 @@
+﻿<Window x:Class="SicknessFrame.OfficerPromotion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SicknessFrame"
+        mc:Ignorable="d"
+        Title="Повишение в офицер" Height="300" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="От дата:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <DatePicker Name="dpFromDate" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></DatePicker>
+        <Label Content="До дата:" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <DatePicker Name="dpToDate" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center"></DatePicker>
+
+        <Label Content="Администрация:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <ComboBox Name="cmbAdministration" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" SelectionChanged="cmbAdministration_SelectionChanged" DisplayMemberPath="level"></ComboBox>
+        
+        <Label Content="Дирекция:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <ComboBox Name="cmbDirection" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" SelectionChanged="cmbDirection_SelectionChanged" DisplayMemberPath="level"></ComboBox>
+
+        <Label Content="Отдел:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <ComboBox Name="cmbDepartment" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" SelectionChanged="cmbDepartment_SelectionChanged" DisplayMemberPath="level"></ComboBox>
+
+        <Label Content="Сектор:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <ComboBox Name="cmbSector" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" DisplayMemberPath="level"></ComboBox>
+        
+        <Button Content="Генерирай справка" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Name="btnGenerate" Click="BtnGenerate_OnClick"></Button>
+        
+    </Grid>
+</Window>

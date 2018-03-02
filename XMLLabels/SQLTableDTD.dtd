@@ -1,0 +1,27 @@
+<!ELEMENT SQL_Database (database)>
+<!ELEMENT database (database_name, version, server, client_name, tables)>
+<!ELEMENT database_name (#PCDATA)>
+<!ELEMENT version (#PCDATA)>
+<!ELEMENT server (#PCDATA)>
+<!ELEMENT client_name (#PCDATA)>
+<!ELEMENT tables (table+)>
+<!ELEMENT table (tablename, tabledescription, tabletype, columns)>
+<!ELEMENT tablename (#PCDATA)>
+<!ELEMENT tabledescription (#PCDATA)>
+<!ELEMENT tabletype (#PCDATA)>
+<!ELEMENT columns (column+)>
+<!ELEMENT column (columnname, columntype, columndescription, columnlabel*, client_columnlabel*, max_size*, max_value*, min_value*)>
+<!ELEMENT columnname (#PCDATA)>
+<!ELEMENT columntype (#PCDATA)>
+<!ELEMENT columndescription (#PCDATA)>
+<!ELEMENT columnlabel (#PCDATA)>
+<!ELEMENT client_columnlabel (#PCDATA)>
+<!ELEMENT max_size (#PCDATA)>
+<!ELEMENT max_value (#PCDATA)>
+<!ELEMENT min_value (#PCDATA)>
+
+<!ATTLIST database database_id ID #REQUIRED>
+<!ATTLIST table table_id ID #REQUIRED>
+<!ATTLIST column columnid_id ID #REQUIRED>
+<!ATTLIST column important (true|false) #REQUIRED>
+<!ATTLIST column visible (true|false) #REQUIRED>

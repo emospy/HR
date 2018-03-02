@@ -1,0 +1,230 @@
+﻿<Window x:Class="HolidayPlan.HolidayPlanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        Title="HolidayPlan" Height="700" Width="1000" Loaded="Window_Loaded" Icon="/HolidayPlan;component/Images/User.ico" WindowState="Maximized" FontSize="14pt">
+    <Window.Resources>
+        <System:Int32 x:Key="MonthMaxWidth">20</System:Int32>
+        <System:Int32 x:Key="MonthDaysMaxWidth">2</System:Int32>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="93*" />
+            <RowDefinition Height="7*" />
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" Name="DataGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridComboBoxColumn Header="Имена" SelectedValueBinding="{Binding par, Mode=OneTime}" SelectedValuePath="ID" DisplayMemberPath="Name" IsReadOnly="True"/>
+                <DataGridComboBoxColumn Header="ЕГН" SelectedValueBinding="{Binding par, Mode=OneTime}" SelectedValuePath="ID" DisplayMemberPath="EGN" IsReadOnly="True"/>
+<<<<<<< HEAD
+                <DataGridComboBoxColumn Header="Полагаем текуща година" SelectedValueBinding="{Binding par, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="PersonID" DisplayMemberPath="Leftover" IsReadOnly="True"/>
+                <DataGridComboBoxColumn Header="Остатък от минали години"        SelectedValueBinding="{Binding par, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="PersonID" DisplayMemberPath="Leftover" IsReadOnly="True"/>
+                <DataGridComboBoxColumn Header="Общ остатък" SelectedValueBinding="{Binding par, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="PersonID" DisplayMemberPath="Leftover" IsReadOnly="True"/>
+
+=======
+                <DataGridComboBoxColumn Header="Полагаем" SelectedValueBinding="{Binding par, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="PersonID" DisplayMemberPath="Leftover" IsReadOnly="True"/>
+                <DataGridComboBoxColumn Header="Предходен" SelectedValueBinding="{Binding par, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="PersonID" DisplayMemberPath="Leftover" IsReadOnly="True"/>
+                <!--<DataGridComboBoxColumn Header="Общо" SelectedValueBinding="{Binding par, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="PersonID" DisplayMemberPath="Leftover" IsReadOnly="True"/>-->
+>>>>>>> origin/master
+
+                <DataGridTextColumn Header="Януари"        Binding="{Binding Jan,Mode=TwoWay}" >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+                
+                <DataGridTextColumn Header="Дни"   Binding="{Binding JanDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+                <DataGridTextColumn.EditingElementStyle>
+                    <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                    </Style>
+                </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Февруари"       Binding="{Binding Feb,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"  Binding="{Binding FebDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Март"          Binding="{Binding Mar,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"     Binding="{Binding MarDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Април"          Binding="{Binding Apr,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"     Binding="{Binding AprDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Май"            Binding="{Binding May,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"       Binding="{Binding MayDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Юни"           Binding="{Binding Jun,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"      Binding="{Binding JunDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Юли"           Binding="{Binding Jul,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"      Binding="{Binding JulDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Август"         Binding="{Binding Aug,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"    Binding="{Binding AugDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Септември"      Binding="{Binding Sep,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни" Binding="{Binding SepDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Октомври"        Binding="{Binding Oct,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"   Binding="{Binding OctDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Ноември"       Binding="{Binding Nov,Mode=TwoWay}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"  Binding="{Binding NovDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Декември"       Binding="{Binding Dec,Mode=TwoWay}" >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Дни"  Binding="{Binding DecDays,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="MaxLength" Value="{StaticResource MonthDaysMaxWidth}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>           
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Grid.Row="1" Name="btnUpdateData" Content="Save" Click="btnUpdateData_Click" Margin="0,5,10,5" Width="150"/>
+            <Button Grid.Row="1" Name="btnCancelChanges" Content="Cancel" Click="btnCancelChanges_Click" Margin="0,5,10,5" Width="150"/>
+        </StackPanel>
+      
+     </Grid>
+</Window>

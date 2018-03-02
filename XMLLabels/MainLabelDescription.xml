@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="XSLTableView.xsl"?>
+<!DOCTYPE Labels_Description SYSTEM "DTDDoc.dtd">
+<Labels_Description>
+	<product prod_id = "p1">
+		<product_name>HR</product_name>
+		<version>1.13</version>
+		<client_name>СКС</client_name>
+		<forms>
+			<form form_id = "f1">
+				<formname>TabPersonalInfo</formname>
+				<description>Тук се съхраняват всички данни от досието за всяко от лицата</description>
+				<header type = "Static" >Лични данни</header>
+				<labels>
+          <label label_id = "l100" important="false" visible="true">
+            <program_name></program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+					<label label_id = "l1" important="false" visible="true">
+						<program_name>label1</program_name>
+						<original_text>ЕГН:</original_text>
+						<client_text>ЕГН:</client_text>
+						<label_description>ЕГН на служител. Полето е ограничено да приема само цифри
+							 и се прави контрол по първите 6 цифри (проверява се за коректна дата).
+							 Също така трябва да се въведата точно 10 цифри.</label_description>
+						<client_label_description>ЕГН на служител</client_label_description>
+						<program_type>string</program_type>
+						<tooltip> Тука се казва к'во трябва да се въвежда</tooltip>
+						<SQL_variable_type>VARCHAR()</SQL_variable_type>
+						<SQL_column_name>egn</SQL_column_name>
+						<SQL_table>person</SQL_table>
+						<associated_control>numBoxEgn</associated_control>
+						<max_size>10</max_size>
+						<max_value></max_value>
+						<min_value></min_value>
+					</label>
+					<label label_id = "l2" important="false" visible="true">
+						<program_name>labelNames</program_name>
+						<original_text>Трите имена на лицето :</original_text>
+						<client_text>Трите имена на лицето :</client_text>
+						<label_description>Трите имена на лицето</label_description>
+						<client_label_description>Трите имена на лицето</client_label_description>
+						<SQL_variable_type>string</SQL_variable_type>
+						<SQL_column_name>name</SQL_column_name>
+						<associated_control>textBoxNames</associated_control>
+						<max_size>255</max_size>
+					</label>
+					<label label_id = "l3" important="false" visible="true">
+						<program_name>labelCountry</program_name>
+						<original_text>Гражданство :</original_text>
+						<client_text>Гражданство :</client_text>
+						<label_description>Гражданство. По лична карта.</label_description>
+						<client_label_description>Гражданство</client_label_description>
+						<SQL_variable_type>string</SQL_variable_type>
+						<SQL_column_name>Country</SQL_column_name>
+						<associated_control>textBoxCountry</associated_control>
+						<max_size>30</max_size>
+					</label>
+					<label label_id = "l4" important ="false" visible="true">
+						<program_name>labelBornTown</program_name>
+						<original_text>Месторождение град :</original_text> 
+						<client_text>Месторождение град :</client_text>
+						<label_description>Месторождение град : Това се преписва от личната карта.</label_description>
+						<client_label_description>Месторождение град :</client_label_description>
+						<SQL_variable_type>string</SQL_variable_type>
+						<SQL_column_name>borntown</SQL_column_name>
+						<associated_control>textBoxBornTown</associated_control>
+						<max_size>50</max_size>						
+					</label>
+				</labels>
+			</form>
+		</forms>
+	</product>
+</Labels_Description>

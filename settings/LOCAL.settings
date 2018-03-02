@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project name="Settings">
+  <!-- environment settings -->
+  <property name="environment" value="LOCAL" />
+
+  <property name="log.level" value="DEBUG" />
+  
+  <property name="target.folder" value="z:\dis-devel" />
+  <property name="published.folder" value="_PublishedWebSites\$(project.name)" />
+  
+  <!-- base settings -->
+  <property name="project.name" value="__REPLACE__" overwrite="false" />
+  <property name="repository.path" value="__REPLACE__" />
+  <property name="folder.app.drop" value="${project.name}" overwrite="false" />
+  <property name="folder.database" value="__REPLACE__" overwrite="false" />
+
+  <property name="file.version" value="_BuildInfo.xml" overwrite="false" />
+
+  
+</project>

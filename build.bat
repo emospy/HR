@@ -1,0 +1,35 @@
+@echo off
+
+::Project UppercuT - http://uppercut.googlecode.com
+::No edits to this file are required - http://uppercut.pbwiki.com
+
+if '%1' == '/?' goto usage
+if '%1' == '-?' goto usage
+if '%1' == '?' goto usage
+if '%1' == '/help' goto usage
+
+SET DIR=%cd%
+SET BUILD_DIR=%~d0%~p0%
+SET NANT="%BUILD_DIR%\..\lib\Nant\nant.exe"
+SET build.config.settings="%DIR%\settings\UppercuT.config"
+
+%NANT% -logger:NAnt.Core.DefaultLogger -quiet /f:%BUILD_DIR%build\default.build -D:build.config.settings=%build.config.settings% %*
+
+set errCode=%ERRORLEVEL%
+REM cd HR
+REM git checkout -f
+
+if %errCode% NEQ 0 goto errors
+
+goto finish
+
+:usage
+echo.
+echo Usage: build.bat
+echo.
+goto finish
+
+:errors
+EXIT /B %errCode%
+
+:finish

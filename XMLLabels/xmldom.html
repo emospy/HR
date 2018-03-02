@@ -1,0 +1,99 @@
+<html>
+<body>
+<script language="VBScript">
+Dim xmldoc
+  Set xmldoc = CreateObject("Microsoft.XMLDOM")
+
+  ' Check to see if a document has data. If it does, don't build it
+  If (xmldoc.childNodes.length = 0) Then
+    ' Build the XML document
+    Set root = xmldoc.createNode("element", "Labels_Description", "")
+    xmldoc.appendChild (root)
+
+    Set product = xmldoc.createNode("element", "product", "")
+    Set newattrib = xmldoc.createAttribute("prod_id")
+    newattrib.Text = "p1"
+	product.Attributes.setNamedItem newattrib
+    xmldoc.documentElement.appendChild (product)
+       
+    Set child = xmldoc.createNode("element", "product_name", "")
+    child.Text = "HR"
+    product.appendChild (child)
+
+     Set     child = xmldoc.createNode("element", "version", "")
+    child.Text = "1.13"
+    product.appendChild (child)
+
+    Set child = xmldoc.createNode("element", "client_name", "")
+    child.Text = "BIM"
+    product.appendChild (child)
+    
+    Set forms = xmldoc.createNode("element", "forms", "")
+    product.appendChild (forms)
+    
+    Set form = xmldoc.createNode("element", "form", "")
+    Set newattrib = xmldoc.createAttribute("form_id")
+    newattrib.Text = "f1"
+	form.Attributes.setNamedItem newattrib
+    forms.appendChild (form)
+    
+    Set child = xmldoc.createNode("element", "formname", "")
+    child.Text = "formNomenklatures"
+    form.appendChild (child)
+    
+    Set child = xmldoc.createNode("element", "description", "")
+    child.Text = "Форма за въвеждане на номенклатури."
+    form.appendChild (child)
+    
+    Set child = xmldoc.createNode("element", "header", "")
+    child.Text = "Номенклатура"
+    Set newattrib = xmldoc.createAttribute("type")
+    newattrib.Text = "Dynamic"
+	child.Attributes.setNamedItem newattrib
+    form.appendChild (child)
+    
+    Set labels = xmldoc.createNode("element", "labels", "")
+    form.appendChild (labels)
+    
+    Set label = xmldoc.createNode("element", "label", "")
+    Set newattrib = xmldoc.createAttribute("label_id")
+    newattrib.Text = "l1"
+	label.Attributes.setNamedItem newattrib
+	Set newattrib = xmldoc.createAttribute("important")
+    newattrib.Text = "false"
+	label.Attributes.setNamedItem newattrib
+	Set newattrib = xmldoc.createAttribute("visible")
+    newattrib.Text = "true"
+	label.Attributes.setNamedItem newattrib
+    labels.appendChild (label)
+    
+    Set child = xmldoc.createNode("element", "program_name", "")
+    child.Text = "buttonAdd"
+    label.appendChild (child)
+    
+    Set child = xmldoc.createNode("element", "original_text", "")
+    child.Text = "Добави"
+    label.appendChild (child)
+    
+    Set child = xmldoc.createNode("element", "client_text", "")
+    child.Text = "Добави"
+    label.appendChild (child)
+    
+    Set child = xmldoc.createNode("element", "label_description", "")
+    child.Text = "Бутон з добне на нов запис в номенклатурата"
+    label.appendChild (child)
+    
+    Set child = xmldoc.createNode("element", "client_label_description", "")
+    child.Text = "Бутон з добне на нов запис в номенклатурата"
+    label.appendChild (child)
+    
+  End If
+
+  Document.write("<xmp>")
+  Document.write(xmldoc.xml)
+  Document.write("</xmp>")
+  'alert(xmldoc.xml)
+  'xmldoc.save("example1.xml")
+</script>
+</body>
+</html>

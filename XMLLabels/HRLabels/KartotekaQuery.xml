@@ -1,0 +1,30 @@
+<KartotekaQuery>  
+  <BasicQuery value ="HR_person.id" column ="id" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_person.egn" column ="egn" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_person.name" column ="name" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_personassignment.level1" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_personassignment.level2" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_personassignment.level3" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_personassignment.level4" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_personassignment.position" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_person.hiredat" column ="hiredat" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_person.education" column ="education" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="case when DATEPART(DAY, CURRENT_TIMESTAMP) - DATEPART(day, HR_person.hiredat) &lt; 1 AND DATEPART(MONTH, CURRENT_TIMESTAMP) - DATEPART(MONTH, HR_person.hiredat) - 1 &lt; 1 then datepart(year,CURRENT_TIMESTAMP) - DATEpart(year, HR_person.hiredat) -1 when DATEPART(MONTH, CURRENT_TIMESTAMP) - DATEPART(MONTH, HR_person.hiredat) &lt; 1 then datepart(year,CURRENT_TIMESTAMP) - DATEpart(year, HR_person.hiredat) - 1 when 1 = 1 then datepart(YEAR,CURRENT_TIMESTAMP) - DATEpart(YEAR, HR_person.hiredat) 	END AS Years" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="case 
+	when DATEPART(DAY, CURRENT_TIMESTAMP) - DATEPART(day, HR_person.hiredat) &lt;= 0 AND DATEPART(MONTH, CURRENT_TIMESTAMP) - DATEPART(MONTH, HR_person.hiredat) - 1 &lt;= 0 then datepart(MONTH,CURRENT_TIMESTAMP) - DATEpart(MONTH, HR_person.hiredat) - 1 + 12
+	when DATEPART(DAY, CURRENT_TIMESTAMP) - DATEPART(DAY, HR_person.hiredat) &lt;= 0 then datepart(MONTH,CURRENT_TIMESTAMP) - DATEpart(MONTH, HR_person.hiredat) - 1 
+	when DATEPART(MONTH, CURRENT_TIMESTAMP) - DATEPART(MONTH, HR_person.hiredat) &lt;= 0 then datepart(MONTH,CURRENT_TIMESTAMP) - DATEpart(MONTH, HR_person.hiredat) + 12
+	when 1 = 1 then datepart(MONTH,CURRENT_TIMESTAMP) - DATEpart(MONTH, HR_person.hiredat) 
+	END  AS months" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="case 
+	when DATEPART(DAY, CURRENT_TIMESTAMP) - DATEPART(day, HR_person.hiredat) &lt;= 0 then datepart(MONTH,CURRENT_TIMESTAMP) - DATEpart(MONTH, HR_person.hiredat) + 30	
+	when 1 = 1 then datepart(DAY,CURRENT_TIMESTAMP) - DATEpart(DAY, HR_person.hiredat) 
+	END  AS days" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_personassignment.assignedat" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="HR_personassignment.isactive" column ="" SelectAs = ""></BasicQuery>
+
+  <FiredQuery value ="HR_person.id" column ="id" SelectAs = ""></FiredQuery>
+  <FiredQuery value ="HR_person.egn" column ="egn" SelectAs = ""></FiredQuery>
+  <FiredQuery value ="HR_person.name" column ="name" SelectAs = ""></FiredQuery>
+  <FiredQuery value ="HR_person.education" column ="education" SelectAs = ""></FiredQuery>
+</KartotekaQuery>

@@ -1,0 +1,27 @@
+<KartotekaQuery>
+  <BasicQuery value ="person.id" column ="id" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="person.egn" column ="egn" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="person.name" column ="name" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.level1" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.level2" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.level3" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.level4" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.position" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="person.hiredat" column ="hiredat" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="person.education" column ="education" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="DATEDIFF(CURRENT_TIMESTAMP, person.hiredat) DIV 365 AS years" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="(DATEDIFF(CURRENT_TIMESTAMP, person.hiredat) % 365) DIV 30 AS months" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="(DATEDIFF(CURRENT_TIMESTAMP, person.hiredat) % 365) %30 AS days" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.assignedat" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.isactive" column ="" SelectAs = ""></BasicQuery>
+
+  <FiredQuery value ="person.id" column ="id" SelectAs = ""></FiredQuery>
+  <FiredQuery value ="person.egn" column ="egn" SelectAs = ""></FiredQuery>
+  <FiredQuery value ="person.name" column ="name" SelectAs = ""></FiredQuery>
+  <BasicQuery value ="personassignment.level1" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.level2" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.level3" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.level4" column ="" SelectAs = ""></BasicQuery>
+  <BasicQuery value ="personassignment.position" column ="" SelectAs = ""></BasicQuery>
+  <FiredQuery value ="person.education" column ="education" SelectAs = ""></FiredQuery>
+</KartotekaQuery>

@@ -1,0 +1,17 @@
+<KartotekaQuery>  
+  <BasicQuery value ="TabPersonalInfo" visible ="true" ></BasicQuery>
+  <BasicQuery value ="TabPageAssignment" visible ="true"></BasicQuery>
+  <BasicQuery value ="TabPageAbsence" visible ="true" ></BasicQuery>
+  <BasicQuery value ="TabpagePenalty" visible ="true" ></BasicQuery>
+  <BasicQuery value ="TabpageFired" visible ="true" ></BasicQuery>
+  <BasicQuery value ="TabpageNotes" visible ="true" ></BasicQuery>
+  <BasicQuery value ="TabpageCharacteristics" visible ="true" ></BasicQuery>
+  <BasicQuery value ="TabpageAtestacii" visible ="true" ></BasicQuery>
+  <BasicQuery value ="tabpageEducation" visible ="true"></BasicQuery>
+  <BasicQuery value ="tabpageMilitaryRang" visible ="false"></BasicQuery>
+  
+
+  <FiredQuery>
+    
+  </FiredQuery>
+</KartotekaQuery>

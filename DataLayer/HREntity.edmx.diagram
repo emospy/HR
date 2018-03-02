@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8401340f01db49edb598a2b65285ed24" Name="Diagram1" ZoomLevel="43">
+        <EntityTypeShape EntityType="hrModel.HR_AdminInfo" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="hrModel.HR_AttachedDocs" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Attestations" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Education" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="hrModel.HR_EducationNomenklature" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Educations" Width="1.5" PointX="3" PointY="9.375" />
+        <EntityTypeShape EntityType="hrModel.HR_EKDA" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Fired" Width="1.5" PointX="3" PointY="38.875" />
+        <EntityTypeShape EntityType="hrModel.HR_FirmPersonal3" Width="1.75" PointX="5.75" PointY="10.75" />
+        <EntityTypeShape EntityType="hrModel.HR_FirmStructure" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="hrModel.HR_GlobalPositions" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="hrModel.HR_JoinNomenklature" Width="1.5" PointX="7.75" PointY="11.75" />
+        <EntityTypeShape EntityType="hrModel.HR_MessageInstances" Width="1.5" PointX="3.75" PointY="1.375" />
+        <EntityTypeShape EntityType="hrModel.HR_Messages" Width="1.5" PointX="6" PointY="31.25" />
+        <EntityTypeShape EntityType="hrModel.HR_MessageTypes" Width="1.5" PointX="1.5" PointY="2" />
+        <EntityTypeShape EntityType="hrModel.HR_MilitaryRangs" Width="1.5" PointX="9.75" PointY="11.75" />
+        <EntityTypeShape EntityType="hrModel.HR_NKID" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="hrModel.HR_NKP" Width="1.5" PointX="13.75" PointY="3.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Notes" Width="1.5" PointX="3" PointY="13.875" />
+        <EntityTypeShape EntityType="hrModel.HR_NotesTable" Width="1.5" PointX="3" PointY="35.625" />
+        <EntityTypeShape EntityType="hrModel.HR_Options" Width="1.5" PointX="13.75" PointY="6.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Penalty" Width="1.5" PointX="3" PointY="25.5" />
+        <EntityTypeShape EntityType="hrModel.HR_Pictures" Width="1.5" PointX="3" PointY="33.25" />
+        <EntityTypeShape EntityType="hrModel.HR_ReasonAssignment" Width="1.5" PointX="13.75" PointY="10.75" />
+        <EntityTypeShape EntityType="hrModel.HR_StructureHistory" Width="1.5" PointX="11.75" PointY="13.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Users" Width="1.5" PointX="13.75" PointY="13.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Worktime" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Year" Width="1.5" PointX="15.75" PointY="3.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Year_Holiday" Width="1.5" PointX="3" PointY="5.625" />
+        <EntityTypeShape EntityType="hrModel.HR_YearWorkdays" Width="1.5" PointX="15.75" PointY="6.75" />
+        <EntityTypeShape EntityType="hrModel.HR_EKDAPayLevels" Width="1.5" PointX="15.75" PointY="9.75" />
+        <AssociationConnector Association="hrModel.FK_HR_MessageInstances_HR_MessageTypes" />
+        <AssociationConnector Association="hrModel.FK_HR_Messages_HR_MessageInstances" />
+        <EntityTypeShape EntityType="hrModel.HR_Absence" Width="1.5" PointX="3" PointY="65.125" />
+        <EntityTypeShape EntityType="hrModel.HR_PersonAssignment" Width="1.5" PointX="3" PointY="71.75" />
+        <EntityTypeShape EntityType="hrModel.HR_PlannedHolidays" Width="1.5" PointX="3" PointY="44.5" />
+        <EntityTypeShape EntityType="hrModel.HR_LanguageLevel" Width="1.5" PointX="3" PointY="52.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Person" Width="1.5" PointX="0.75" PointY="38.125" />
+        <AssociationConnector Association="hrModel.FK_HR_absence_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_educations_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_fired_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_languagelevel_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_Messages_HR_Person" />
+        <AssociationConnector Association="hrModel.FK_HR_Notes_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_NotesTable_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_Penalty_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_personassignment_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_pictures_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_PlannedHolidays_HR_person" />
+        <AssociationConnector Association="hrModel.FK_HR_Year_Holiday_HR_person" />
+        <EntityTypeShape EntityType="hrModel.HR_Newtree2" Width="1.5" PointX="0.75" PointY="16.75" />
+        <EntityTypeShape EntityType="hrModel.HR_Cards" Width="1.5" PointX="8.375" PointY="16.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

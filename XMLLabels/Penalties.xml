@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="XSLTableShortView.xsl"?>
+<!DOCTYPE Labels_Description SYSTEM "DTDDoc.dtd">
+
+<Labels_Description>
+  <product prod_id="p1">
+    <product_name>HR</product_name>
+    <version>1.13</version>
+    <client_name>BIM</client_name>
+    <forms>
+      <form form_id="f3">
+        <formname>tabPagePenalty</formname>
+        <description>Тук се въвеждат наказанията за служителя</description>
+        <header type="Static">Наказания</header>
+        <labels>
+          <label label_id="l1" important="false" visible="true">
+            <program_name>groupBoxPenalty</program_name>
+            <original_text>Данни за наказание</original_text>
+            <client_text>Данни за наказание</client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+          </label>
+          <label label_id="l2" important="false" visible="true">
+            <program_name>labelPenaltyReason</program_name>
+            <original_text>Основание :</original_text>
+            <client_text>Основание :</client_text>
+            <label_description>Основание за назначаване</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Основание за назначаване</tooltip>
+            <associated_control>comboBoxPenaltyReason</associated_control>
+          </label>
+          <label label_id="l3" important="false" visible="true">
+            <program_name>buttonPenaltyReason</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description>Бутон за извикване на номеклатура</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Номенклатура научно звание</tooltip>
+          </label>
+          <label label_id="l4" important="false" visible="true">
+            <program_name>labelPenalty</program_name>
+            <original_text>В сила от:</original_text>
+            <client_text></client_text>
+            <label_description>Дата от която е валидно наказанието</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>В сила от</tooltip>
+            <associated_control>dateTimePickerPenaltyDate</associated_control>
+          </label>
+          <label label_id="l5" important="false" visible="true">
+            <program_name>label30</program_name>
+            <original_text>Валидно до</original_text>
+            <client_text></client_text>
+            <label_description>Дата до която е валидно наказанието</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Валидно до</tooltip>
+            <associated_control>dateTimePickerPenaltyTo</associated_control>
+          </label>
+          <label label_id="l6" important="false" visible="true">
+            <program_name>label31</program_name>
+            <original_text>Вид наказание:</original_text>
+            <client_text></client_text>
+            <label_description>Вид наказание:</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Вид наказание:</tooltip>
+            <associated_control>comboBoxTypePenalty</associated_control>
+          </label>
+          <label label_id="l7" important="false" visible="true">
+            <program_name>buttonTypePenalty</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description>Номенклатура вид наказание</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Номенклатура вид наказание</tooltip>
+          </label>
+          <label label_id="l8" important="false" visible="true">
+            <program_name>label20</program_name>
+            <original_text>Номер заповед :</original_text>
+            <client_text>Номер заповед :</client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Номер заповед :</tooltip>
+            <associated_control>numBoxPenaltyOrder</associated_control>
+          </label>
+          <label label_id="l9" important="false" visible="true">
+            <program_name>label21</program_name>
+            <original_text>От дата :</original_text>
+            <client_text></client_text>
+            <label_description>Дата на която влиза в сила заповедта</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Дата на която влиза в сила заповедта</tooltip>
+            <associated_control>dateTimePenaltyFormDate</associated_control>
+          </label>
+          <label label_id="l10" important="false" visible="true">
+            <program_name>groupBoxPenaltyGrid</program_name>
+            <original_text>Данни за  наложени наказания за служителя</original_text>
+            <client_text></client_text>
+            <label_description>Данни за  наложени наказания за служителя</label_description>
+            <client_label_description></client_label_description>
+          </label>
+        </labels>
+      </form>
+    </forms>
+  </product>
+</Labels_Description>

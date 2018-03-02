@@ -1,0 +1,22 @@
+<Tables>
+  <Table1>
+    <workingDir>C:\Git\HR\bin\x86\Debug\</workingDir>
+    <Host>81.161.245.39\SQLEXPRESS2005</Host>
+    <User>root</User>
+    <Password>tessla</Password>
+    <Database>HRDB</Database>
+    <ActivationKey>ActivationKey</ActivationKey>
+    <DBTypes>mssql</DBTypes>
+    <TablePrefix />
+  </Table1>
+  <Table2>
+    <workingDir>C:\Git\HR\bin\x86\Debug\</workingDir>
+    <Host>81.161.245.39\SQLEXPRESS2005</Host>
+    <User>root</User>
+    <Password>tessla</Password>
+    <Database>SyscoDB</Database>
+    <ActivationKey>ActivationKey</ActivationKey>
+    <DBTypes>mssql</DBTypes>
+    <TablePrefix />
+  </Table2>
+</Tables>

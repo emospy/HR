@@ -1,0 +1,53 @@
+﻿<Window x:Class="HolidayPlan.OrganisationStructure"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" Loaded="Window_Loaded"
+        Title="OrganisationStructure" Height="740" Width="1024" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="88*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="Структура източник" FontSize="24"/>
+        <Label Content="Структура приемник" FontSize="24" Grid.Column="1"/>
+        <Label Content="Служители в звено източник" FontSize="24" Grid.Column="2"/>
+        
+        <telerik:RadTreeView x:Name="RadViewSource" Background="Azure" Margin="8" Grid.Row="1" ItemClick="RadViewSource_ItemClick">
+            <telerik:RadTreeView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Премести нагоре" Click="MenuItemUp_Click" />
+                    <MenuItem Header="Премести надолу" Click="MenuItemDown_Click" />
+                </ContextMenu>
+            </telerik:RadTreeView.ContextMenu>
+        </telerik:RadTreeView>
+        <telerik:RadTreeView x:Name="RadViewDestination" Background="Azure" Margin="8" Grid.Row="1" Grid.Column="1">
+            <telerik:RadTreeView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Премести нагоре" Click="MenuItemUp_Click" />
+                    <MenuItem Header="Премести надолу" Click="MenuItemDown_Click" />
+                </ContextMenu>
+            </telerik:RadTreeView.ContextMenu>
+        </telerik:RadTreeView>
+        <telerik:RadGridView Name="dgEmployeesView" Grid.Row="1" Grid.Column="2" CanUserDeleteRows="False" CanUserInsertRows="False" AutoGenerateColumns="False" ShowGroupPanel="False" SelectionMode="Multiple">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn Header="Име" IsReadOnly="True" DataMemberBinding="{Binding Name, Mode=OneWay}" />
+                <telerik:GridViewDataColumn Header="Длъжност" IsReadOnly="True" DataMemberBinding="{Binding position, Mode=OneWay}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3">
+            <Label Content="Дата на преназначаване" VerticalAlignment="Center" Width="180" Margin="5"/>
+            <DatePicker Name="dpDate" VerticalAlignment="Center" Width="180" Margin="5"/>
+            <Button Grid.Row="2" Name="btnMoveNode" Content="Премести звено" Click="btnMoveNode_Click" Width="180" Margin="5" />
+            <Button Grid.Row="2" Grid.Column="1" Name="btnJoinNodes" Content="Сливане на звена" Click="btnJoinNodes_Click" Width="180" Margin="5" />
+            <Button Grid.Row="2" Grid.Column="2" Name="btnMoveEmployees" Content="Преместване на служители" Click="btnMoveEmployees_Click"  Width="180" Margin="5"/>
+            <Button Grid.Row="2" Grid.Column="2" Name="btnPrint" Content="Разпечатване на документи" Click="buttonPrintD_Click"  Width="180" Margin="5"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

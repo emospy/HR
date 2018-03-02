@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="ConvDBToLabel.xsl"?>
+<!DOCTYPE SQL_Database SYSTEM "SQLTableDTD.dtd">
+
+<SQL_Database>
+  <database database_id="d1">
+    <database_name>HRDB</database_name>
+    <version>1.14</version>
+    <server>MySQL</server>
+    <client_name>ALL</client_name>
+    <tables>
+      <table table_id="t1">
+        <tablename>Attestations</tablename>
+        <tabledescription>Таблица в която ще се съхраняват всички данни за атестациите</tabledescription>
+        <tabletype>MyISAM</tabletype>
+        <columns>
+          <column columnid_id="c1" important="true" visible="false">
+            <columnname>id</columnname>
+            <columntype>Autonumber</columntype>
+            <columndescription>ID</columndescription>
+          </column>
+          <column columnid_id="c2" important="true" visible="true">
+            <columnname>Year</columnname>
+            <columntype>VARCHAR</columntype>
+            <columndescription>Година за която е правена атестацията</columndescription>
+          </column>
+          <column columnid_id="c3" important="true" visible="true">
+            <columnname>TotalMark</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Обща оценка за атестацията</columndescription>
+            <columnlabel>Обща оценка</columnlabel>
+          </column>
+          <column columnid_id="c4" important="true" visible="true">
+            <columnname>hasWorkPlan</columnname>
+            <columntype>VARCHAR(45)</columntype>
+            <columndescription>Тук се описва с "да/не" дали му е съставян работен план</columndescription>
+            <columnlabel>Раб. план</columnlabel>
+          </column>
+          <column columnid_id="c5" important="true" visible="true">
+            <columnname>hasMiddleMeeting</columnname>
+            <columntype>VARCHAR(45)</columntype>
+            <columndescription>Тук се описва с "да/не" дали е правена междиунна среща</columndescription>
+            <columnlabel>Межд. среща</columnlabel>
+          </column>
+          <column columnid_id="c6" important="true" visible="true">
+            <columnname>hasTraining</columnname>
+            <columntype>VARCHAR(45)</columntype>
+            <columndescription>Тук се описва с "да/не" дали е правено обучение</columndescription>
+            <columnlabel>Обучение</columnlabel>
+          </column>
+          <column columnid_id="c7" important="true" visible="false">
+            <columnname>NextRangUpdate</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Вероятно дата или година през която да е следващото повишение</columndescription>
+          </column>
+          <column columnid_id="c8" important="false" visible="false">
+            <columnname>Declaration</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Някаква декларация с "да/не" по чл 29.</columndescription>
+          </column>
+          <column columnid_id="c9" important="true" visible="true">
+            <columnname>hasRangUpdate</columnname>
+            <columntype>VARCHAR(45)</columntype>
+            <columndescription>Тук се описва с "да/не" дали е правено повишение в ранг</columndescription>
+            <columnlabel>Повишение в ранг</columnlabel>
+          </column>
+          <column columnid_id="c10" important="true" visible="false">
+            <columnname>RangUpdateData</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Свободен текст във връзка с повишението</columndescription>
+          </column>
+          <column columnid_id="c11" important="false" visible="false">
+            <columnname>InterestConflict</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Конфликт на интереси (БИМ)</columndescription>
+          </column>
+          <column columnid_id="c12" important="true" visible="false">
+            <columnname>WorkPlanPeriodStart</columnname>
+            <columntype>DATETIME</columntype>
+            <columndescription>Начало на периода на оценяване</columndescription>
+          </column>
+          <column columnid_id="c13" important="true" visible="false">
+            <columnname>WorkPlanPeriodEnd</columnname>
+            <columntype>DATETIME</columntype>
+            <columndescription>Край на периода на оценяване</columndescription>
+          </column>
+          <column columnid_id="c14" important="true" visible="false">
+            <columnname>WorkPlanMark</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Общи оценки на индивидуалното трудово изпълнение след последното повишаване в ранг (попълва се само за държавните служители</columndescription>
+          </column>
+          <column columnid_id="c15" important="true" visible="false">
+            <columnname>WorkPlan</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription>Свободен текст на работния план</columndescription>
+          </column>
+          <column columnid_id="c16" important="false" visible="false">
+            <columnname>WorkPlanBoss</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Име на ръководителя подписал работния план</columndescription>
+          </column>
+          <column columnid_id="c17" important="true" visible="false">
+            <columnname>WorkPlanDate</columnname>
+            <columntype>DATETIME</columntype>
+            <columndescription>Дата на подписване на работния план</columndescription>
+          </column>
+          <column columnid_id="c18" important="true" visible="false">
+            <columnname>MiddleMeetingDate</columnname>
+            <columntype>DATETIME</columntype>
+            <columndescription>Дата на междинната среща</columndescription>
+          </column>
+          <column columnid_id="c19" important="true" visible="false">
+            <columnname>MiddleMeetingText</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription>Тук се запива коментара на ръководителя</columndescription>
+          </column>
+          <column columnid_id="c20" important="false" visible="false">
+            <columnname>MiddleMeetingBoss</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Име на ръководителя провел срещата</columndescription>
+          </column>
+          <column columnid_id="c21" important="true" visible="false">
+            <columnname>MarkA</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка А</columndescription>
+          </column>
+          <column columnid_id="c22" important="true" visible="false">
+            <columnname>MarkB</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка Б</columndescription>
+          </column>
+          <column columnid_id="c23" important="true" visible="false">
+            <columnname>MarkC1</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка В 1</columndescription>
+          </column>
+          <column columnid_id="c24" important="true" visible="false">
+            <columnname>MarkC2</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка В 2</columndescription>
+          </column>
+          <column columnid_id="c25" important="true" visible="false">
+            <columnname>MarkC3</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка В 3</columndescription>
+          </column>
+          <column columnid_id="c26" important="true" visible="false">
+            <columnname>MarkC4</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка В 4</columndescription>
+          </column>
+          <column columnid_id="c27" important="true" visible="false">
+            <columnname>MarkC5</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка В 5</columndescription>
+          </column>
+          <column columnid_id="c28" important="true" visible="false">
+            <columnname>MarkC6</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка В 6</columndescription>
+          </column>
+          <column columnid_id="c29" important="true" visible="false">
+            <columnname>MarkC7</columnname>
+            <columntype>INTEGER</columntype>
+            <columndescription>Оценка В 7</columndescription>
+          </column>
+          <column columnid_id="c30" important="true" visible="false">
+            <columnname>BossComment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription>Коментар на оценяващия ръководител по общите постижения</columndescription>
+          </column>
+          <column columnid_id="c31" important="true" visible="false">
+            <columnname>TotalPlan</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription>План за обучение и развитие на оценявания</columndescription>
+          </column>
+          <column columnid_id="c32" important="true" visible="false">
+            <columnname>FuturePotential</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription>Бъдещ потенциал</columndescription>
+          </column>
+          <column columnid_id="c33" important="false" visible="false">
+            <columnname>BossName</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Име на оценяващия ръководител</columndescription>
+          </column>
+          <column columnid_id="c34" important="true" visible="false">
+            <columnname>BossSignedDate</columnname>
+            <columntype>DATETIME</columntype>
+            <columndescription>Дата на която е подписана аестацията</columndescription>
+          </column>
+          <column columnid_id="c35" important="true" visible="false">
+            <columnname>PersonComment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription>Дата на подписване от служителя (при коментар)</columndescription>
+          </column>
+          <column columnid_id="c36" important="true" visible="false">
+            <columnname>ControllingBossComment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription>Коментар на оценяващия ръководител</columndescription>
+          </column>
+          <column columnid_id="c37" important="false" visible="false">
+            <columnname>ControllingBossName</columnname>
+            <columntype>VARCHAR(255)</columntype>
+            <columndescription>Име на контролиращия ръководител</columndescription>
+          </column>
+          <column columnid_id="c38" important="true" visible="false">
+            <columnname>MarkAComment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription>Коментар на оценяващия за оценка А</columndescription>
+          </column>
+          <column columnid_id="c39" important="true" visible="false">
+            <columnname>MarkBComment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription></columndescription>
+          </column>
+          <column columnid_id="c40" important="true" visible="false">
+            <columnname>MarkC1Commnet</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription></columndescription>
+          </column>
+          <column columnid_id="c41" important="true" visible="false">
+            <columnname>MarkC2Comment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription></columndescription>
+          </column>
+          <column columnid_id="c42" important="true" visible="false">
+            <columnname>MarkC3Comment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription></columndescription>
+          </column>
+          <column columnid_id="c43" important="true" visible="false">
+            <columnname>MarkC4Comment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription></columndescription>
+          </column>
+          <column columnid_id="c44" important="true" visible="false">
+            <columnname>MarkC5Comment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription></columndescription>
+          </column>
+          <column columnid_id="c45" important="true" visible="false">
+            <columnname>MarkC6Comment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription></columndescription>
+          </column>
+          <column columnid_id="c46" important="true" visible="false">
+            <columnname>MarkC7Comment</columnname>
+            <columntype>TEXT</columntype>
+            <columndescription></columndescription>
+          </column>
+        </columns>
+      </table>
+    </tables>
+  </database>
+</SQL_Database>

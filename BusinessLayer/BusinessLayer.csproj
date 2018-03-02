@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{920347F8-2A9A-4920-8B80-AAF57CD7481F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessLayer</RootNamespace>
+    <AssemblyName>BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HREntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HREntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HREntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HREntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HREntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Absence.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_AdminInfo.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_AttachedDocs.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Attestations.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Education.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_EducationNomenklature.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Educations.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_EKDA.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Fired.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_FirmPersonal3.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_FirmStructure.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_GlobalPositions.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_JoinNomenklature.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_LanguageLevel.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_MessageInstances.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Messages.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_MessageTypes.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Newtree2.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_NKID.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_nkp.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Notes.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_NotesTable.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Options.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Penalty.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_person.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_PersonAssignment.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Pictures.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_PlannedHolidays.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_ReasonAssignment.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_StructureHistory.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Users.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_worktime.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Year.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_YearWorkdays.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Year_Holiday.cs">
+      <DependentUpon>HREntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="HREntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HREntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="HREntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HREntity.edmx</DependentUpon>
+      <LastGenOutput>HREntity.Context.cs</LastGenOutput>
+    </None>
+    <None Include="HREntity.edmx.diagram">
+      <DependentUpon>HREntity.edmx</DependentUpon>
+    </None>
+    <None Include="HREntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HREntity.edmx</DependentUpon>
+      <LastGenOutput>HREntity.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

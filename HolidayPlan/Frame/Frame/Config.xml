@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:Locale="en-US">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="workingDir" type="xs:string" minOccurs="0" />
+                <xs:element name="Host" type="xs:string" minOccurs="0" />
+                <xs:element name="User" type="xs:string" minOccurs="0" />
+                <xs:element name="Password" type="xs:string" minOccurs="0" />
+                <xs:element name="Database" type="xs:string" minOccurs="0" />
+                <xs:element name="ActivationKey" type="xs:string" minOccurs="0" />
+                <xs:element name="DBTypes" type="xs:string" minOccurs="0" />
+		<xs:element name="TablePrefix" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <workingDir>C:\Git\HR\bin\x86\Debug\</workingDir>
+    <Host>svnserver</Host>
+    <User>root</User>
+    <Password>tessla</Password>
+    <Database>HRDB</Database>
+    <ActivationKey>ActivationKey</ActivationKey>
+    <DBTypes>mysql</DBTypes>
+    <TablePrefix></TablePrefix>
+  </Table1>
+</NewDataSet>

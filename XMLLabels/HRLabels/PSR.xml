@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE Excel_Template_Description SYSTEM "ExcelDTD.dtd">
+<Excel_Template_Description>
+  <template>
+    <template_name>OSR</template_name>
+    <client_name>Shumen University</client_name>
+    <data_views>
+
+      <vuePositions id="v1" column_number="4" column_text="Education"></vuePositions>
+      <vuePositions id="v2" column_number="5" column_text="EKDACode"></vuePositions>
+      <vuePositions id="v3" column_number="6" column_text="EKDALevel"></vuePositions>
+      <vuePositions id="v4" column_number="7" column_text="law"></vuePositions>
+      <vuePerson id="v5" column_number="8" column_text="worktime"></vuePerson >	
+      <vuePositions id="v6" column_number="9" column_text="Rang"></vuePositions>
+      <vuePositions id="v7" column_number="10" column_text="NKPCode"></vuePositions>
+	  <vuePerson id="v8" column_number="11" column_text="ekdaPayLevel"></vuePerson>
+	  <vuePerson id="v9" column_number="12" column_text="ekdapaydegree"></vuePerson>
+      <vuePositions id="v10" column_number="13" column_text="SMin"></vuePositions>
+      <vuePositions id="v11" column_number="14" column_text="SMax"></vuePositions>
+
+
+      <vuePerson id="v12" column_number="3" column_text="name"></vuePerson>
+      <vuePerson id="v13" column_number="15" column_text="basesalary"></vuePerson>
+    </data_views>
+  </template>
+</Excel_Template_Description>

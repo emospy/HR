@@ -1,0 +1,36 @@
+﻿<!ELEMENT Labels_Description (product)>
+<!ELEMENT product (product_name, version, client_name, forms)>
+<!ELEMENT product_name (#PCDATA)>
+<!ELEMENT version (#PCDATA)>
+<!ELEMENT client_name (#PCDATA)>
+<!ELEMENT forms (form+)>
+<!ELEMENT form (formname, description, header, labels)>
+<!ELEMENT formname (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT labels (label+)>
+<!ELEMENT label (program_name, original_text, client_text, label_description, client_label_description, program_type*, tooltip* ,SQL_variable_type*, SQL_column_name*, SQL_table*, associated_control*, max_size*, max_value*, min_value*, alternate_text*, alternate_tooltip* )>
+<!ELEMENT program_name (#PCDATA)>
+<!ELEMENT original_text (#PCDATA)>
+<!ELEMENT client_text (#PCDATA)>
+<!ELEMENT label_description (#PCDATA)>
+<!ELEMENT client_label_description (#PCDATA)>
+<!ELEMENT program_type (#PCDATA)>
+<!ELEMENT tooltip (#PCDATA)>
+<!ELEMENT SQL_variable_type (#PCDATA)>
+<!ELEMENT SQL_column_name (#PCDATA)>
+<!ELEMENT SQL_table (#PCDATA)>
+<!ELEMENT associated_control (#PCDATA)>
+<!ELEMENT max_size (#PCDATA)>
+<!ELEMENT max_value (#PCDATA)>
+<!ELEMENT min_value (#PCDATA)>
+<!ELEMENT alternate_text (#PCDATA)>
+<!ELEMENT alternate_tooltip (#PCDATA)>
+
+<!ATTLIST header type (Static|Dynamic) #REQUIRED>
+<!ATTLIST product prod_id ID #REQUIRED>
+<!ATTLIST form form_id ID #REQUIRED>
+<!ATTLIST label label_id ID #REQUIRED>
+<!ATTLIST label important (true|false) #REQUIRED>
+<!ATTLIST label visible (true|false) #REQUIRED>
+

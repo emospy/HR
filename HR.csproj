@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BB253F5-380E-4237-840D-D5D247F8C405}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HR</RootNamespace>
+    <AssemblyName>HR</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AddressInputControl">
+      <HintPath>HRDLL\AddressInputControl.dll</HintPath>
+    </Reference>
+    <Reference Include="BugBox">
+      <HintPath>HRDLL\BugBox.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckedCombo">
+      <HintPath>HRDLL\CheckedCombo.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckedComboBox">
+      <HintPath>HRDLL\CheckedComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckedNumBox">
+      <HintPath>HRDLL\CheckedNumBox.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckedTextBox">
+      <HintPath>HRDLL\CheckedTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="ComboBoxIntelisense">
+      <HintPath>HRDLL\ComboBoxIntelisense.dll</HintPath>
+    </Reference>
+    <Reference Include="DocX">
+      <HintPath>HRDLL\DocX.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel">
+      <HintPath>HRDLL\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Office">
+      <HintPath>HRDLL\Interop.Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Word">
+      <HintPath>HRDLL\Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>HRDLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>HRDLL\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="NewTabControl">
+      <HintPath>HRDLL\NewTabControl.dll</HintPath>
+    </Reference>
+    <Reference Include="NumberBox1">
+      <HintPath>HRDLL\NumberBox1.dll</HintPath>
+    </Reference>
+    <Reference Include="PassportDataControll">
+      <HintPath>HRDLL\PassportDataControll.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>HRDLL\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Windows.Controls, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HRDLL\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Additional\Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additional\formAcaunts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additional\FormChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additional\formFinishYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additional\formWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additional\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additional\MilitaryRangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additional\MilitaryRangForm.Designer.cs" />
+    <Compile Include="Additional\NumericConversions.cs" />
+    <Compile Include="AssignmentPackage.cs" />
+    <Compile Include="Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Characteristic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Experience.cs" />
+    <Compile Include="FormAddMinSalary.cs" />
+    <Compile Include="formFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGlobalPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGlobalPositionsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMinSalary.cs" />
+    <Compile Include="formPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStructureNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetDate.designer.cs">
+      <DependentUpon>GetDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KartotekaLichenSystaw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\formOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Key.cs" />
+    <Compile Include="Main\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Time.cs" />
+    <Compile Include="Nomenclatures\CommonNomenclature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\CommonNomenclatureAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\FormAttached.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\FormAttached.designer.cs">
+      <DependentUpon>FormAttached.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nomenclatures\FormEducationAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\FormEducationNomenklature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\FormEKDAAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\FormEKDAView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\FormLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\FormLanguage.designer.cs">
+      <DependentUpon>FormLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nomenclatures\JoinNomenclature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\JoinNomenclature_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomenclatures\NomeclatureData.cs" />
+    <Compile Include="PersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ExcelExpo.cs" />
+    <Compile Include="Printing\OmegaExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\OmegaExport.designer.cs">
+      <DependentUpon>OmegaExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShtatnoRazpisanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic\StatisticTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic\StatisticTotal2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Additional\Author.resx">
+      <DependentUpon>Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional\formAcaunts.resx">
+      <DependentUpon>formAcaunts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional\FormChoose.resx">
+      <DependentUpon>FormChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional\formFinishYear.resx">
+      <DependentUpon>formFinishYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional\formWait.resx">
+      <DependentUpon>formWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional\MilitaryRangForm.resx">
+      <DependentUpon>MilitaryRangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Characteristic.resx">
+      <DependentUpon>Characteristic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpCalculator.resx">
+      <DependentUpon>ExpCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddMinSalary.resx">
+      <DependentUpon>FormAddMinSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formFind.resx">
+      <DependentUpon>formFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGlobalPositions.resx">
+      <DependentUpon>FormGlobalPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGlobalPositionsView.resx">
+      <DependentUpon>formGlobalPositionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMinSalary.resx">
+      <DependentUpon>FormMinSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPosition.resx">
+      <DependentUpon>formPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRegister.resx">
+      <DependentUpon>formRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStructureNew.resx">
+      <DependentUpon>FormStructureNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetDate.resx">
+      <DependentUpon>GetDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KartotekaLichenSystaw.resx">
+      <DependentUpon>KartotekaLichenSystaw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\CommonNomenclature.resx">
+      <DependentUpon>CommonNomenclature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\CommonNomenclatureAdd.resx">
+      <DependentUpon>CommonNomenclatureAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\FormAttached.resx">
+      <DependentUpon>FormAttached.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\FormEducationAdd.resx">
+      <DependentUpon>FormEducationAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\FormEducationNomenklature.resx">
+      <DependentUpon>FormEducationNomenklature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\FormEKDAAdd.resx">
+      <DependentUpon>FormEKDAAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\FormEKDAView.resx">
+      <DependentUpon>FormEKDAView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\FormLanguage.resx">
+      <DependentUpon>FormLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\JoinNomenclature.resx">
+      <DependentUpon>JoinNomenclature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomenclatures\JoinNomenclature_2.resx">
+      <DependentUpon>JoinNomenclature_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonInfo.resx">
+      <DependentUpon>PersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\OmegaExport.resx">
+      <DependentUpon>OmegaExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShtatnoRazpisanie.resx">
+      <DependentUpon>ShtatnoRazpisanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticTotal.resx">
+      <DependentUpon>StatisticTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticTotal2.resx">
+      <DependentUpon>StatisticTotal2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="DataLayer\DataLayer.csproj">
+      <Project>{5b5b2c49-e322-4595-86d4-009f1da9b7de}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="ExcelExport\ExcelExport\ExcelExport.csproj">
+      <Project>{81f2e6eb-9f74-4065-b7d2-11aa6e64bad0}</Project>
+      <Name>ExcelExport</Name>
+    </ProjectReference>
+    <ProjectReference Include="HolidayPlan\Frame\HolidayPlan\HolidayPlan.csproj">
+      <Project>{acc06cda-b800-471b-ad02-c14619da23ee}</Project>
+      <Name>HolidayPlan</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sickness\SicknessFrame\SicknessFrame\SicknessFrame.csproj">
+      <Project>{00c7210b-2454-4492-8a08-d1ecb904b9c9}</Project>
+      <Name>SicknessFrame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

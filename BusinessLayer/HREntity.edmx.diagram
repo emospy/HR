@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e0b57cc0d3c3459bba0c5a96ae78a047" Name="Diagram1">
+        <EntityTypeShape EntityType="hrModel.HR_Absence" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_AdminInfo" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_AttachedDocs" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Attestations" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Education" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_EducationNomenklature" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Educations" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_EKDA" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Fired" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_FirmPersonal3" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_FirmStructure" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_GlobalPositions" Width="1.5" PointX="5.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_JoinNomenklature" Width="1.5" PointX="7.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_LanguageLevel" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_MessageInstances" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Messages" Width="1.5" PointX="10.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_MessageTypes" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Newtree2" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_NKID" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_nkp" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Notes" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_NotesTable" Width="1.5" PointX="3" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Options" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Penalty" Width="1.5" PointX="3" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_person" Width="1.5" PointX="0.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_PersonAssignment" Width="1.5" PointX="3" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Pictures" Width="1.5" PointX="3" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_PlannedHolidays" Width="1.5" PointX="3" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_ReasonAssignment" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_StructureHistory" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Users" Width="1.5" PointX="15.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_worktime" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Year" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_Year_Holiday" Width="1.5" PointX="3" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="hrModel.HR_YearWorkdays" Width="1.5" PointX="15.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="hrModel.FK_HR_absence_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_educations_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_fired_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_languagelevel_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_MessageInstances_HR_MessageTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_Messages_HR_MessageInstances" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_Notes_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_NotesTable_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_Penalty_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_personassignment_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_pictures_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_PlannedHolidays_HR_person" ManuallyRouted="false" />
+        <AssociationConnector Association="hrModel.FK_HR_Year_Holiday_HR_person" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

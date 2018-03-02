@@ -1,0 +1,1672 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Human resources</name>
+    </assembly>
+    <members>
+        <member name="T:LichenSystaw2004.Author">
+            <summary>
+            Summary description for Author.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.Author.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.Author.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.Author.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.Author.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.MilitaryRangForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.MilitaryRangForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LichenSystaw2004.MilitaryRangForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.GetDate.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.GetDate.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LichenSystaw2004.GetDate.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.FormAttached">
+            <summary>
+            Form for attached documents
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormAttached.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Form for attached documents ctor
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormAttached.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormAttached.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LichenSystaw2004.FormAttached.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formUsers">
+            <summary>
+            Summary description for formAcaunts.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formUsers.#ctor(LichenSystaw2004.mainForm)">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formUsers.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formUsers.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.FormChoose">
+            <summary>
+            Summary description for FormChoose.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormChoose.dataGridView1">
+            <summary>
+            Property that return selected row
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormChoose.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormChoose.#ctor(System.Data.DataTable,System.String)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormChoose.#ctor(System.Data.DataView,System.String)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormChoose.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormChoose.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formFinishYear">
+            <summary>
+            Summary description for formFinishYear.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formFinishYear.#ctor(LichenSystaw2004.mainForm)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formFinishYear.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formFinishYear.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formWait">
+            <summary>
+            Summary description for formWait.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formWait.#ctor(System.String)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formWait.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formWait.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formWait.SetReferenceInternal">
+            <summary>
+            Abe tuka si otbelqzwame koga da cyka
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formWait.SetReferencePoint">
+            <summary>
+            Static method called from the initializing application to 
+            give the splash screen reference points.  Not needed if
+            you are using a lot of status strings.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formWait.StoreIncrements">
+            <summary>
+            Method to store the intervals (in percent complete)
+            from the current invocation of
+            the splash screen to the registry.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formLogIn">
+            <summary>
+            Summary description for LogIn.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formLogIn.textBoxUserName">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formLogIn.#ctor(LichenSystaw2004.mainForm,System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formLogIn.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formLogIn.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formCharacteristicAdd">
+            <summary>
+            Summary description for Characteristic.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formCharacteristicAdd.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formCharacteristicAdd.#ctor(LichenSystaw2004.mainForm)">
+            <summary>
+            Characteristic Constructor
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formCharacteristicAdd.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formCharacteristicAdd.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formCharacteristicAdd.SetControlData(System.Data.DataRow)">
+            <summary>
+            Getting the data for each one from controls from the datarow form parent form		
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formCharacteristicAdd.GetControlData(System.Data.DataRow)">
+             <summary>
+            Retrieving the text from controls for the parent form
+             </summary>
+        </member>
+        <member name="T:LichenSystaw2004.ExpCalculator">
+            <summary>
+            Summary description for ExpCalculator.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.ExpCalculator.StartExp">
+            <summary>
+            Public member for setting startup values in from numboxes
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.ExpCalculator.EndExp">
+            <summary>
+            Public member for receiving results of calcualtions
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.ExpCalculator.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExpCalculator.#ctor">
+            <summary>
+            A form for visualizing ecperience calculator transformer
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExpCalculator.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            A form for visualizing ecperience calculator transformer with startup values
+            </summary>
+            <param name="StartYears"></param>
+            <param name="StartMonths"></param>
+            <param name="StartDays"></param>
+        </member>
+        <member name="M:LichenSystaw2004.ExpCalculator.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExpCalculator.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.Experience">
+            <summary>
+            Summary description for ExperienceCalculator.
+            </summary>
+        </member>
+        <member name="P:LichenSystaw2004.Experience.Years">
+            <summary>
+            Years
+            </summary>
+        </member>
+        <member name="P:LichenSystaw2004.Experience.Months">
+            <summary>
+            Months
+            </summary>
+        </member>
+        <member name="P:LichenSystaw2004.Experience.Days">
+            <summary>
+            Days
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.#ctor">
+            <summary>
+            Blank Constructor. Initializes variables with 0.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Directly initializes all variables
+            </summary>
+            <param name="Years"></param>
+            <param name="Months"></param>
+            <param name="Days"></param>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.Sum(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds given experience to the current. Currently does nothing.
+            </summary>
+            <param name="Years"></param>
+            <param name="Months"></param>
+            <param name="Days"></param>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.AddYears(System.Int32)">
+            <summary>
+            Adds Years
+            </summary>
+            <param name="Years">Integer number of years to be added</param>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.AddMonths(System.Int32)">
+            <summary>
+            Adds Months
+            </summary>
+            <param name="Months">Integer number of months to be added</param>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.AddDays(System.Int32)">
+            <summary>
+            Adds Days
+            </summary>
+            <param name="Days">Integer number of days to be added</param>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.CalculateToNow(System.DateTime)">
+            <summary>
+            Calculates the difference between the staff date and now date then adds the difference to the staff
+            </summary>
+            /// <param name="StaffDate">DateTime object giving the starting date to be used and subtracted from Now.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.AddBetween(System.DateTime,System.DateTime,System.Single)">
+            <summary>
+            Calculates the difference between the start date and end date then adds the difference to the staff
+            </summary>
+            <param name="StartDate">DateTime object giving the starting date to be used and subtracted from enddate.</param>
+            <param name="EndDate">DateTime object giving the end date</param>
+            <param name="staff">Coefficient showing the weight of the experience</param>
+            <returns></returns>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.ConvertToCategory(System.Int32,System.Int32)">
+            <summary>
+            Converting from one category to another using int coefficient
+            </summary>
+            <param name="nom">Nominator</param>
+            <param name="denom">Denominator</param>
+        </member>
+        <member name="M:LichenSystaw2004.Experience.CalculateTotal(System.Data.DataTable)">
+            <summary>
+            Calculates total staff based on the data from assignments
+            </summary>
+            <param name="dtAssignment">Some DataTable</param>
+        </member>
+        <member name="T:LichenSystaw2004.formFind">
+            <summary>
+            Summary description for formFind.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formFind.#ctor(System.Windows.Forms.DataGridView,LichenSystaw2004.mainForm)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formFind.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formFind.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.GlobalPositions">
+            <summary>
+            Summary description for GlobalPositions.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.GlobalPositions.#ctor(LichenSystaw2004.mainForm)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.GlobalPositions.Dispose(System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.GlobalPositions.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formPosition">
+            <summary>
+            Summary description for formPosition.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxShtatCount">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.comboBoxPosition">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxKVS">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxNumberMonths">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxSecurity">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxAdditionNumber">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxOtherRequirements">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxNotes">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.comboBoxTypePosition">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxEducation">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxRang">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxPorNum">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxPMS">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxVOS">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxEKDACode">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxEKDALevel">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxLaw">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxNKPCode">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxNKPLevel">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxMinSalary">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxMaxSalary">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxExperience">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxStartPayment">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxBasePayment">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxAddon">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxScienceAddon">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxOtherAddon">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxFree">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.numBoxBusy">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formPosition.textBoxPositionEng">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formPosition.#ctor(LichenSystaw2004.FormStructureNew,LichenSystaw2004.mainForm,System.Windows.Forms.TreeNode)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formPosition.#ctor(LichenSystaw2004.FormStructureNew,LichenSystaw2004.mainForm,System.Windows.Forms.TreeNode,System.String,System.String,System.String)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formPosition.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formPosition.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formRegister">
+            <summary>
+            Summary description for formRegister.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formRegister.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formRegister.#ctor(LichenSystaw2004.mainForm)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formRegister.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formRegister.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formRegister.ValidateAdminRegistration(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.FormStructureNew">
+            <summary>
+            Summary description for FormStructureNew.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormStructureNew.treeView1">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormStructureNew.#ctor(LichenSystaw2004.mainForm,System.String,System.Data.DataTable)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormStructureNew.Dispose(System.Boolean)">
+            <summary>
+            Required designer variable. 
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormStructureNew.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.IconMenuItem">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.IconMenuItem.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.IconMenuItem.#ctor(System.String,System.Drawing.Icon,System.EventHandler,System.Windows.Forms.Shortcut)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.IconMenuItem.Dispose(System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="P:LichenSystaw2004.IconMenuItem.Icon">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.IconMenuItem.OnMeasureItem(System.Windows.Forms.MeasureItemEventArgs)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.IconMenuItem.OnDrawItem(System.Windows.Forms.DrawItemEventArgs)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.KartotekaLichenSystaw">
+            <summary>
+            Summary description for KartotekaLichenSystaw.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.KartotekaLichenSystaw.FilterColumns">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.KartotekaLichenSystaw.statusBarPanelFilter">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.KartotekaLichenSystaw.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="P:LichenSystaw2004.KartotekaLichenSystaw.GridDataSource">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.KartotekaLichenSystaw.#ctor(LichenSystaw2004.mainForm,System.Data.DataTable,System.String,System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+            
+        </member>
+        <member name="M:LichenSystaw2004.KartotekaLichenSystaw.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.KartotekaLichenSystaw.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formOptions">
+            <summary>
+            Summary description for formOptions.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formOptions.#ctor(LichenSystaw2004.mainForm,System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formOptions.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formOptions.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.Key">
+            <summary>
+            Summary description for Key.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.MacAddress">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.MacAddress.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.MacAddress.GetMac">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.mainForm">
+            <summary>
+            Summary description for mainForm.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.mainForm.tablePrefix">
+            <summary>
+            Summary description for mainForm.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.mainForm.CheckConfigFile">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.mainForm.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.mainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.mainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.mainForm.GetConnString(System.String@)">
+            <summary>
+            constructs a connection string for entity for the corresponding database
+            </summary>
+            <param name="connectionString"></param>
+            <returns>false if unsuccessful</returns>
+        </member>
+        <member name="T:LichenSystaw2004.RegistryAccess">
+            <summary>
+            Method for retrieving a Registry Value.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.RegistryAccess.GetStringRegistryValue(System.String,System.String)">
+            <summary>
+            Method for retrieving a Registry Value.
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LichenSystaw2004.RegistryAccess.SetStringRegistryValue(System.String,System.String)">
+            <summary>
+            Method for storing a Registry Value. 
+            </summary>
+            <param name="key"></param>
+            <param name="stringValue"></param>
+        </member>
+        <member name="T:LichenSystaw2004.Expired">
+            <summary>
+            Summary description for Time.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.CommonNomenclature">
+             <summary>
+             Ôîðìà çà óíèâåðñàëíà íîìåíêëàòóðà
+             </summary>
+            <remarks>
+            Èäåÿòà å äà ñå íàïðàâè ôîðìàòà òàêà, ÷å äà å ìàêñèìàëíî ãúâêàâà è äà ïîçâîëÿâà ðàîáòà ñ ïðèçâîëíè ïî âèä íîìåíêëàòóðè.
+            </remarks>
+        </member>
+        <member name="F:LichenSystaw2004.CommonNomenclature.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclature.#ctor(System.String,System.String,System.Data.DataTable,LichenSystaw2004.mainForm,System.Int32)">
+            <summary>
+            Êîíñòðóêòîð íà êëàñà
+            </summary> 
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclature.#ctor(System.String,System.String,System.Data.DataTable,LichenSystaw2004.mainForm)">
+            <summary>
+            Êîíñòðóêòîð íà êëàñà
+            </summary> 
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclature.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclature.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.CommonNomenclatureAdd">
+            <summary>
+            Summary description for CommonNomenclatureAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.CommonNomenclatureAdd.arrTextBoxes">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.CommonNomenclatureAdd.arrLabels">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.CommonNomenclatureAdd.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclatureAdd.#ctor(System.Collections.ArrayList)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclatureAdd.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclatureAdd.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclatureAdd.SetVariables(System.String[])">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclatureAdd.GetVariables">
+            <summary>
+            Required designaer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclatureAdd.buttonSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            Required designaer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.CommonNomenclatureAdd.buttonCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Required designaer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.FormEducationAdd">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.numBoxEducationPrice">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.numBoxEducationHours">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.numBoxEducationDays">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.textBoxEducationCode">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.textBoxEducationArea">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.textBoxEducationTheme">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.textBoxEducationOrganizer">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.textBoxEducationPlace">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationAdd.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEducationAdd.#ctor">
+            <summary>
+            Summary description for FormEducationAdd.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEducationAdd.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEducationAdd.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.FormEducationNomenclature">
+            <summary>
+            Summary description for FormEducationClassifier.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEducationNomenclature.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEducationNomenclature.#ctor(LichenSystaw2004.mainForm)">
+            <summary>
+            Konstruktor
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEducationNomenclature.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEducationNomenclature.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.FormEKDAAdd">
+            <summary>
+            Summary description for FormEKDAView.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEKDAAdd.#ctor(LichenSystaw2004.mainForm)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEKDAAdd.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEKDAAdd.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.FormEKDAView">
+            <summary>
+            Summary description for FormEKDAAdd.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormEKDAView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEKDAView.#ctor(LichenSystaw2004.mainForm)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEKDAView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormEKDAView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.FormLanguage">
+            <summary>
+            Form for adding and editing language data
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormLanguage.#ctor">
+            <summary>
+            Form for adding and editing language data
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormLanguage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.FormLanguage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LichenSystaw2004.FormLanguage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormLanguage.comboBoxLanguage">
+            <summary>
+            Language combo
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.FormLanguage.comboBoxLanguageLevel">
+            <summary>
+            Language knowledge combo
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.JoinNomenklature">
+             <summary>
+             Ôîðìà çà óíèâåðñàëíà íîìåíêëàòóðà
+             </summary>
+            <remarks>
+            Èäåÿòà å äà ñå íàïðàâè ôîðìàòà òàêà, ÷å äà å ìàêñèìàëíî ãúâêàâà è äà ïîçâîëÿâà ðàîáòà ñ ïðèçâîëíè ïî âèä íîìåíêëàòóðè.
+            </remarks>
+        </member>
+        <member name="F:LichenSystaw2004.JoinNomenklature.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.JoinNomenklature.#ctor(System.String,System.String,System.Collections.ArrayList,LichenSystaw2004.mainForm,System.String)">
+            <summary>
+            Êîíñòðóêòîð íà êëàñà
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.JoinNomenklature.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.JoinNomenklature.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.JoinNomenklature2">
+             <summary>
+             Ôîðìà çà óíèâåðñàëíà íîìåíêëàòóðà
+             </summary>
+            <remarks>
+            Èäåÿòà å äà ñå íàïðàâè ôîðìàòà òàêà, ÷å äà å ìàêñèìàëíî ãúâêàâà è äà ïîçâîëÿâà ðàîáòà ñ ïðèçâîëíè ïî âèä íîìåíêëàòóðè.
+            </remarks>
+        </member>
+        <member name="F:LichenSystaw2004.JoinNomenklature2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.JoinNomenklature2.#ctor(System.String,System.String,System.Data.DataTable,LichenSystaw2004.mainForm,System.String)">
+            <summary>
+            Êîíñòðóêòîð íà êëàñà
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.JoinNomenklature2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.JoinNomenklature2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.NomeclatureData">
+            <summary>
+            Òîçè êëàñ ñå çàïèñâàò âñè÷êè íîìåíêëàòóðíî äàííè
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrScienceTitle">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrScienceLevel">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrLanguages">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrReasonFired">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrBaseReason">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrDirection">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrControl">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrTeam">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrFamilyStatus">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrSex">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrContract">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrNKPCode">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrNKPlevel">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrNKIDCode">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrNKIDlevel">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrNKDSCode">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrNKDSlevel">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrLaw">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrRang">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrExperience">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrYearlyAddon">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrPenaltyReason">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrBonusReason">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrTypePenalty">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrTypeBonus">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrNKPClass">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrLanguageKnowledge">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrMilitaryStatus">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrEKDAType">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrPersonOrder">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.arrSpecialSkills">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtReasonAssignment">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtAdminTable">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtTreeTable">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtPositionTable">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtWorkTime">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtOptions">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtEducation">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtMilitaryRang">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtMilitaryDegree">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NomeclatureData.dtYear">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.NomeclatureData.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.MappingFormData">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.MappingFormData.HeaderText">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.MappingFormData.MappingName">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.MappingFormData.ColumnText">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.City">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.City.Name">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.City.Prefix">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.City.code">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.Nodes">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.Nodes.ID">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.Nodes.Parent">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.Nodes.NodeName">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.NodeIDs">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NodeIDs.ID">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.NodeIDs.Parent">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formPersonalData">
+            <summary>
+            Required designer variable.
+            </summary>word
+        </member>
+        <member name="M:LichenSystaw2004.formPersonalData.#ctor(System.String,LichenSystaw2004.mainForm,System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formPersonalData.#ctor(LichenSystaw2004.mainForm,System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+            
+        </member>
+        <member name="M:LichenSystaw2004.formPersonalData.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formPersonalData.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.ExcelExpo">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.#ctor">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExportView(System.Windows.Forms.DataGridView,System.Data.DataView,System.String)">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ReleaseExcelApplication">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExportPSR(LichenSystaw2004.mainForm)">
+            <summary>
+            Exporting attestations data here
+            </summary>
+            <param name="main"></param>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExportOSR(LichenSystaw2004.mainForm)">
+            <summary>
+            Exporting attestations data here
+            </summary>
+            <param name="main"></param>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExportZZBUT(LichenSystaw2004.mainForm)">
+            <summary>
+            Exporting attestations data here
+            </summary>
+            <param name="main"></param>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExtractHoliday(LichenSystaw2004.mainForm)">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExtractFree(LichenSystaw2004.mainForm)">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExportAttestations(LichenSystaw2004.mainForm)">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExtractCustom(LichenSystaw2004.mainForm,System.Data.DataTable,System.Collections.ArrayList)">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExtractRangUpdate(LichenSystaw2004.mainForm,System.DateTime)">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.ExcelExpo.ExtractImportantHoliday(LichenSystaw2004.mainForm)">
+            <summary>
+            Summary description for ExcelExpo.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.Printing_Export.OmegaExport.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.Printing_Export.OmegaExport.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LichenSystaw2004.Printing_Export.OmegaExport.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LichenSystaw2004.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LichenSystaw2004.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formStatisticTotal2">
+            <summary>
+            Summary description for Statistic.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formStatisticTotal2.dt1">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formStatisticTotal2.arrColumn">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formStatisticTotal2.#ctor(LichenSystaw2004.mainForm,System.Boolean,System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formStatisticTotal2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formStatisticTotal2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LichenSystaw2004.formStatisticTotal">
+            <summary>
+            Summary description for Statistic.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formStatisticTotal.dt1">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:LichenSystaw2004.formStatisticTotal.arrColumn">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formStatisticTotal.#ctor(LichenSystaw2004.mainForm,System.Boolean,System.Boolean)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formStatisticTotal.IsIdInDataTable(System.String,System.Data.DataTable)">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formStatisticTotal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LichenSystaw2004.formStatisticTotal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

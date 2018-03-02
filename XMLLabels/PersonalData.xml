@@ -1,0 +1,371 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="ImportantLabels.xsl"?>
+<!DOCTYPE Labels_Description SYSTEM "DTDDoc.dtd">
+<Labels_Description>
+	<product prod_id = "p1">
+		<product_name>HR</product_name>
+		<version>1.13</version>
+		<client_name>СКС</client_name>
+		<forms>
+			<form form_id = "f2">
+				<formname>tabPageAssignment</formname>
+				<description>Тук се съхраняват всички данни от досието за всяко от лицата</description>
+				<header type = "Static" >Данни за назначение</header>
+				<labels>
+					<label label_id = "l1" important="false" visible="true">
+						<program_name>label1</program_name>
+						<original_text></original_text>
+						<client_text></client_text>
+						<label_description></label_description>
+						<client_label_description>ЕГН на служител</client_label_description>
+						<program_type>string</program_type>
+						<tooltip></tooltip>
+						<SQL_variable_type>VARCHAR()</SQL_variable_type>
+						<SQL_column_name></SQL_column_name>
+						<SQL_table>personAssignment</SQL_table>
+						<associated_control></associated_control>
+						<max_size></max_size>
+						<max_value></max_value>
+						<min_value></min_value>
+					</label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description>ЕГН на служител</client_label_description>
+            <program_type>string</program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type>VARCHAR()</SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table>personAssignment</SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+        </labels>
+			</form>
+		</forms>
+	</product>
+</Labels_Description>

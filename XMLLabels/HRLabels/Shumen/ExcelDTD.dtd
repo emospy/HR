@@ -1,0 +1,47 @@
+<!ELEMENT Excel_Template_Description (template)>
+<!ELEMENT template (template_name, client_name, data_views)>
+<!ELEMENT template_name (#PCDATA)>
+<!ELEMENT client_name (#PCDATA)>
+<!ELEMENT data_views (vuePositions*, vuePerson*)>
+<!ELEMENT vuePositions (#PCDATA)>
+<!ELEMENT vuePerson (#PCDATA)>
+
+<!--
+<!ELEMENT vueAssignment (#PCDATA)>
+<!ELEMENT vueHoliday (#PCDATA)>
+<!ELEMENT vueAttestations (#PCDATA)> 
+-->
+<!ATTLIST vuePositions id ID #REQUIRED>
+<!ATTLIST vuePositions column_text CDATA #REQUIRED>
+<!ATTLIST vuePositions column_number CDATA #REQUIRED>
+
+<!ATTLIST vuePerson id ID #REQUIRED>
+<!ATTLIST vuePerson column_text CDATA #REQUIRED>
+<!ATTLIST vuePerson column_number CDATA #REQUIRED>
+
+<!--
+<!ATTLIST vueAssignment id ID #REQUIRED>
+<!ATTLIST vueAssignments column_text CDATA #REQUIRED>
+<!ATTLIST vueAssignments column_number CDATA #REQUIRED>
+
+<!ATTLIST vueHoliday id ID #REQUIRED>
+<!ATTLIST vueHoliday column_text CDATA #REQUIRED>
+<!ATTLIST vueHoliday column_number CDATA #REQUIRED>
+
+<!ATTLIST vueAttestations id ID #REQUIRED>
+<!ATTLIST vueAttestations column_text CDATA #REQUIRED>
+<!ATTLIST vueAttestations column_number CDATA #REQUIRED> -->
+
+
+<!-- <!ELEMENT Excel_Template_Description (template)>
+<!ELEMENT template (template_name, client_name, data_views)>
+<!ELEMENT template_name (#PCDATA)>
+<!ELEMENT client_name (#PCDATA)>
+<!ELEMENT data_views (data_view)>
+<!ELEMENT data_view (view_name, column_count, columns)>
+<!ELEMENT view_name (#PCDATA)>
+<!ELEMENT column_count (#PCDATA)>
+<!ELEMENT columns (column+)>
+<!ELEMENT column (column_number, column_text)>
+<!ELEMENT column_number (#PCDATA)>
+<!ELEMENT column_text (#PCDATA)> -->

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer.csproj", "{5B5B2C49-E322-4595-86D4-009F1DA9B7DE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5B5B2C49-E322-4595-86D4-009F1DA9B7DE}.Debug.ActiveCfg = Debug|.NET
+		{5B5B2C49-E322-4595-86D4-009F1DA9B7DE}.Debug.Build.0 = Debug|.NET
+		{5B5B2C49-E322-4595-86D4-009F1DA9B7DE}.Release.ActiveCfg = Release|.NET
+		{5B5B2C49-E322-4595-86D4-009F1DA9B7DE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

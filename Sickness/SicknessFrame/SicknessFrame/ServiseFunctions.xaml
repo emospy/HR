@@ -1,0 +1,34 @@
+﻿<Window x:Class="SicknessFrame.ServiseFunctions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Сервизни настройки" Height="300" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Name="btnFixGlobalPositions" Grid.Row="0" Grid.Column="0" Content="Структура-длъжности" Click="btnFixGlobalPositions_Click"/>
+        <Button Name="btnFixDVS" Grid.Row="0" Grid.Column="1" Content="Пренасяне на ДВС" Click="btnFixDVS_Click"/>
+        <Button Name="btnFixFirstAssignment" Grid.Row="1" Grid.Column="0" Content="Корекция на първо назначение" Click="btnFixFirstAssignment_Click"/>
+        <Button Name="btnFixAssignmentDate" Grid.Row="1" Grid.Column="1" Content="Импорт назначения Шумен" Click="btnFixAssignmentDate_Click"/>
+        <Button Name="btnFixSicknessMessages" Grid.Row="2" Grid.Column="0" Content="Корекция на съобщения отпуски" Click="btnFixSicknessMessages_Click"/>
+        <Button Name="btnFixShumenHolidays" Grid.Row="2" Grid.Column="1" Content="Корекция на отпуски ШУ" Click="btnFixShumenHolidays_Click"/>
+        <Button Name="btnFixShumenExperience" Grid.Row="3" Grid.Column="0" Content="Корекция на стаж ШУ" Click="btnFixShumenExperience_Click"/>
+        <Button Name="btnFixNSOAddons" Grid.Row="3" Grid.Column="1" Content="Импорт %НСО" Click="btnFixNSOAddons_Click"/>
+        <Button Name="btnImportNSOKDA" Grid.Row="4" Grid.Column="0" Content="Импорт НСО ЕКДА" Click="BtnImportNSOKDA_OnClick"/>
+        <Button Name="btnImportNSOSalaryAddon" Grid.Row="4" Grid.Column="1" Content="Импорт НСО добавки" Click="btnNSOAddons_Click"/>
+        <Button Name="btnImportStructure" Grid.Row="5" Grid.Column="0" Content="Импорт структура" Click="btnImportStructure_Click"/>
+        <Button Name="btnImportPositions" Grid.Row="5" Grid.Column="1" Content="Импорт длъжности" Click="btnImportPositions_Click"/>
+        <Button Name="btnImportPersons" Grid.Row="6" Grid.Column="0" Content="Импорт служители" Click="btnImportPersons_Click"/>
+        <Button Name="btnImportHolidays" Grid.Row="6" Grid.Column="1" Content="Импорт отпуски" Click="btnImportHolidays_Click"/>
+    </Grid>
+</Window>

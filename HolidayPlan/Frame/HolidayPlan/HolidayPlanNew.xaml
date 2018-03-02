@@ -1,0 +1,60 @@
+﻿<Window x:Class="HolidayPlan.HolidayPlanNewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+        Title="HolidayPlan" Height="700" Width="1000" Loaded="Window_Loaded" Closing="Window_Closing" Icon="/HolidayPlan;component/Images/User.ico" WindowState="Maximized" FontSize="10pt">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Изберете година"/>
+            <DatePicker Name="dpYear" SelectedDateChanged="dpYear_SelectedDateChanged"/>
+        </StackPanel>
+
+        <telerik:RadGridView Name="dgPlanView" Grid.Row="1" CanUserDeleteRows="False" CanUserInsertRows="False" AutoGenerateColumns="False" ShowGroupPanel="False" KeyDown="DataGrid_KeyDown">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn Header="Име" IsReadOnly="True" DataMemberBinding="{Binding Name, Mode=OneWay}" />
+                <telerik:GridViewDataColumn Header="ЕГН" IsReadOnly="True" DataMemberBinding="{Binding EGN, Mode=OneWay}"/>
+                <telerik:GridViewDataColumn Header="Полагаем" IsReadOnly="True" DataMemberBinding="{Binding Total, Mode=OneWay}" />
+                <telerik:GridViewDataColumn Header="Остатък м.г." IsReadOnly="True" DataMemberBinding="{Binding PrevYearLeftover, Mode=OneWay}" />
+                <telerik:GridViewDataColumn Header="Остатък общ" IsReadOnly="True" DataMemberBinding="{Binding TotalLeftover, Mode=OneWay}" />
+                <telerik:GridViewDataColumn Header="Януари" DataMemberBinding="{Binding January, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding JanuaryDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Февруари" DataMemberBinding="{Binding February, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding FebruaryDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Март" DataMemberBinding="{Binding March, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding MarchDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Април" DataMemberBinding="{Binding April, Mode=TwoWay}" />
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding AprilDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Май" DataMemberBinding="{Binding May, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding MayDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Юни" DataMemberBinding="{Binding June, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding JuneDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Юли" DataMemberBinding="{Binding July, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding JulyDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Август" DataMemberBinding="{Binding August, Mode=TwoWay}" />
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding AugustDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Септември" DataMemberBinding="{Binding September, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding SeptemberDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Октомври" DataMemberBinding="{Binding October, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding OctoberDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Ноември" DataMemberBinding="{Binding November, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding NovemberDays, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Декември" DataMemberBinding="{Binding December, Mode=TwoWay}"/>
+                <telerik:GridViewDataColumn Header="Дни" DataMemberBinding="{Binding DecemberDays, Mode=TwoWay}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Grid.Row="2" Name="btnUpdateData" Content="Запази" Click="btnUpdateData_Click" Margin="0,5,10,5" Width="150"/>
+            <Button Grid.Row="2" Name="btnCancelChanges" Content="Откажи" Click="btnCancelChanges_Click" Margin="0,5,10,5" Width="150"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

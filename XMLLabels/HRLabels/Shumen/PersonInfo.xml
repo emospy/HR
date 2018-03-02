@@ -1,0 +1,1207 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="ImportantLabels.xsl"?>
+<!DOCTYPE Labels_Description SYSTEM "DTDDoc.dtd">
+<Labels_Description>
+  <product prod_id = "p1">
+    <product_name>HR</product_name>
+    <version>1.13</version>
+    <client_name>СКС</client_name>
+    <forms>
+      <form form_id = "f2">
+        <formname>PersonInfo</formname>
+        <description>Тук се съхраняват всички данни от досието за всяко от лицата</description>
+        <header type = "Static" >Данни за назначение</header>
+        <labels>
+          <label label_id = "l1" important="false" visible="true">
+            <program_name>labelLevel1</program_name>
+            <original_text>Администрация :</original_text>
+            <client_text>Администрация :</client_text>
+            <label_description>Администрация:</label_description>
+            <client_label_description>Администрация:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Администрация:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxLevel1</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l2" important="false" visible="true">
+            <program_name>labelLevel2</program_name>
+            <original_text>Дирекция :</original_text>
+            <client_text>Дирекция :</client_text>
+            <label_description>Дирекция :</label_description>
+            <client_label_description>Дирекция :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Дирекция :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxLevel2</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l3" important="false" visible="true">
+            <program_name>labelLevel3</program_name>
+            <original_text>Отдел :</original_text>
+            <client_text>Отдел :</client_text>
+            <label_description>Отдел :</label_description>
+            <client_label_description>Отдел :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Отдел :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxLevel3</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l4" important="false" visible="true">
+            <program_name>labelLevel4</program_name>
+            <original_text>Сектор :</original_text>
+            <client_text>Сектор :</client_text>
+            <label_description>Сектор :</label_description>
+            <client_label_description>Сектор :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Сектор :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxLevel4</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l5" important="false" visible="true">
+            <program_name>label6</program_name>
+            <original_text>Длъжност :</original_text>
+            <client_text>Длъжност :</client_text>
+            <label_description>Длъжност :</label_description>
+            <client_label_description>Длъжност :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Длъжност :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxPosition</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l6" important="false" visible="true">
+            <program_name>label18</program_name>
+            <original_text>Правоотношение :</original_text>
+            <client_text>Правоотношение :</client_text>
+            <label_description>Правоотношение :</label_description>
+            <client_label_description>Правоотношение :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Правоотношение :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxLaw</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l7" important="false" visible="true">
+            <program_name>label11</program_name>
+            <original_text>Длъжност по НКП :</original_text>
+            <client_text>Длъжност по НКП :</client_text>
+            <label_description>Длъжност по НКП :</label_description>
+            <client_label_description>Длъжност по НКП :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Длъжност по НКП :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>textBoxNKPLevel</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l8" important="false" visible="true">
+            <program_name>label40</program_name>
+            <original_text>Код по НКП :</original_text>
+            <client_text>Код по НКП :</client_text>
+            <label_description>Код по НКП :</label_description>
+            <client_label_description>Код по НКП :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Код по НКП :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>textBoxNKPCode</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l9" important="false" visible="true">
+            <program_name>label7</program_name>
+            <original_text>Тип договор:</original_text>
+            <client_text>Тип договор:</client_text>
+            <label_description>Тип договор:</label_description>
+            <client_label_description>Тип договор:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Тип договор:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxContract</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l10" important="false" visible="true">
+            <program_name>label13</program_name>
+            <original_text>Основание за назначаване:</original_text>
+            <client_text>Основание за назначаване:</client_text>
+            <label_description>Основание за назначаване:</label_description>
+            <client_label_description>Основание за назначаване:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Основание за назначаване:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxAssignReason</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l11" important="false" visible="true">
+            <program_name>label12</program_name>
+            <original_text>Договор N:</original_text>
+            <client_text>Договор N:</client_text>
+            <label_description>Договор N:</label_description>
+            <client_label_description>Договор N:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Договор N:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>textBoxContractNumber</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l12" important="false" visible="true">
+            <program_name>label10</program_name>
+            <original_text>Назначен на:</original_text>
+            <client_text>Назначен на:</client_text>
+            <label_description>Назначен на:</label_description>
+            <client_label_description>Назначен на:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Назначен на:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>dateTimePickerAssignedAt</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l13" important="false" visible="true">
+            <program_name>label49</program_name>
+            <original_text>Изпитателен срок до:</original_text>
+            <client_text>Изпитателен срок до:</client_text>
+            <label_description>Изпитателен срок до:</label_description>
+            <client_label_description>Изпитателен срок до:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Изпитателен срок до:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>dateTimePickerTestPeriod</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l14" important="false" visible="true">
+            <program_name>label9</program_name>
+            <original_text>Договор до :</original_text>
+            <client_text>Договор до :</client_text>
+            <label_description>Договор до :</label_description>
+            <client_label_description>Договор до :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Договор до :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>dateTimePickerContractExpiry</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l15" important="false" visible="true">
+            <program_name>label39</program_name>
+            <original_text>Трудов стаж (ГГ, ММ, ДД] :</original_text>
+            <client_text>Трудов стаж (ГГ, ММ, ДД] :</client_text>
+            <label_description>Трудов стаж (ГГ, ММ, ДД] :</label_description>
+            <client_label_description>Трудов стаж (ГГ, ММ, ДД] :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Трудов стаж (ГГ, ММ, ДД] :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l16" important="false" visible="true">
+            <program_name>label14</program_name>
+            <original_text>Договор от дата:</original_text>
+            <client_text>Договор от дата:</client_text>
+            <label_description>Договор от дата:</label_description>
+            <client_label_description>Договор от дата:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Договор от дата:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>dateTimePickerContractDate</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l17" important="false" visible="true">
+            <program_name>label8</program_name>
+            <original_text>Работно време:</original_text>
+            <client_text>Работно време:</client_text>
+            <label_description>Работно време:</label_description>
+            <client_label_description>Работно време:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Работно време:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxWorkTime</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l18" important="false" visible="true">
+            <program_name>label15</program_name>
+            <original_text>Осн. заплата:</original_text>
+            <client_text>Осн. заплата:</client_text>
+            <label_description>Осн. заплата:</label_description>
+            <client_label_description>Осн. заплата:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Осн. заплата:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>numBoxBaseSalary</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l19" important="false" visible="true">
+            <program_name>label17</program_name>
+            <original_text>% Надбавки :</original_text>
+            <client_text>Увеличение :</client_text>
+            <label_description>% Надбавки :</label_description>
+            <client_label_description>Увеличение на основното възнаграждение :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Увеличение на основното възнаграждение</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>textBoxSalaryAddon</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l20" important="false" visible="true">
+            <program_name>label16</program_name>
+            <original_text>% пр. време:</original_text>
+            <client_text>% пр. време:</client_text>
+            <label_description>% пр. време:</label_description>
+            <client_label_description>% пр. време:</client_label_description>
+            <program_type></program_type>
+            <tooltip>% пр. време:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>textBoxClassPercent</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l21" important="false" visible="true">
+            <program_name>label46</program_name>
+            <original_text>Месечни надбавки :</original_text>
+            <client_text>Научна степен :</client_text>
+            <label_description>Месечни надбавки :</label_description>
+            <client_label_description>Надбавки за научна степен:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Надбавки за научна степен</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>numBoxMonthlyAddon</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l22" important="false" visible="true">
+            <program_name>label45</program_name>
+            <original_text>Годишни надбавки :</original_text>
+            <client_text>Други :</client_text>
+            <label_description>Годишни надбавки :</label_description>
+            <client_label_description>Други месечни надбавки :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Други месечни надбавки :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>comboBoxYearlyAddon</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l23" important="false" visible="true">
+            <program_name>label41</program_name>
+            <original_text>Полагаем отпуск :</original_text>
+            <client_text>Полагаем отпуск :</client_text>
+            <label_description>Полагаем отпуск :</label_description>
+            <client_label_description>Полагаем отпуск :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Полагаем отпуск :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control>numBoxNumHoliday</associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l24" important="false" visible="true">
+            <program_name>groupBoxAssignmentGrid</program_name>
+            <original_text>Регистър на назначенията</original_text>
+            <client_text>Регистър на назначенията</client_text>
+            <label_description>Регистър на назначенията</label_description>
+            <client_label_description>Регистър на назначенията</client_label_description>
+            <program_type></program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l25" important="false" visible="true">
+            <program_name>buttonSelectPosition</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Избор на длъжност</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l26" important="false" visible="true">
+            <program_name>buttonReasonAssignment</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Номенклатура Основания за назначаване</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id="l27" important="false" visible="true">
+            <program_name>groupBoxPenalty</program_name>
+            <original_text>Данни за наказание</original_text>
+            <client_text>Данни за наказание</client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+          </label>
+          <label label_id="l28" important="false" visible="true">
+            <program_name>labelPenaltyReason</program_name>
+            <original_text>Основание :</original_text>
+            <client_text>Основание :</client_text>
+            <label_description>Основание за назначаване</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Основание за назначаване</tooltip>
+            <associated_control>comboBoxPenaltyReason</associated_control>
+          </label>
+          <label label_id="l29" important="false" visible="true">
+            <program_name>buttonPenaltyReason</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description>Бутон за извикване на номеклатура</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Номенклатура научно звание</tooltip>
+          </label>
+          <label label_id="l30" important="false" visible="true">
+            <program_name>labelPenalty</program_name>
+            <original_text>В сила от:</original_text>
+            <client_text></client_text>
+            <label_description>Дата от която е валидно наказанието</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>В сила от</tooltip>
+            <associated_control>dateTimePickerPenaltyDate</associated_control>
+          </label>
+          <label label_id="l31" important="false" visible="true">
+            <program_name>label30</program_name>
+            <original_text>Валидно до</original_text>
+            <client_text></client_text>
+            <label_description>Дата до която е валидно наказанието</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Валидно до</tooltip>
+            <associated_control>dateTimePickerPenaltyTo</associated_control>
+          </label>
+          <label label_id="l32" important="false" visible="true">
+            <program_name>label31</program_name>
+            <original_text>Вид наказание:</original_text>
+            <client_text></client_text>
+            <label_description>Вид наказание:</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Вид наказание:</tooltip>
+            <associated_control>comboBoxTypePenalty</associated_control>
+          </label>
+          <label label_id="l33" important="false" visible="true">
+            <program_name>buttonTypePenalty</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description>Номенклатура вид наказание</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Номенклатура вид наказание</tooltip>
+          </label>
+          <label label_id="l34" important="false" visible="true">
+            <program_name>label20</program_name>
+            <original_text>Номер заповед :</original_text>
+            <client_text>Номер заповед :</client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Номер заповед :</tooltip>
+            <associated_control>numBoxPenaltyOrder</associated_control>
+          </label>
+          <label label_id="l35" important="false" visible="true">
+            <program_name>label21</program_name>
+            <original_text>От дата :</original_text>
+            <client_text></client_text>
+            <label_description>Дата на която влиза в сила заповедта</label_description>
+            <client_label_description></client_label_description>
+            <tooltip>Дата на която влиза в сила заповедта</tooltip>
+            <associated_control>dateTimePenaltyFormDate</associated_control>
+          </label>
+          <label label_id="l36" important="false" visible="true">
+            <program_name>groupBoxPenaltyGrid</program_name>
+            <original_text>Данни за  наложени наказания за служителя</original_text>
+            <client_text></client_text>
+            <label_description>Данни за  наложени наказания за служителя</label_description>
+            <client_label_description></client_label_description>
+          </label>
+          <label label_id = "l37" important="false" visible="true">
+            <program_name>label1</program_name>
+            <original_text>ЕГН :</original_text>
+            <client_text>ЕГН :</client_text>
+            <label_description>ЕГН :</label_description>
+            <client_label_description>ЕГН :</client_label_description>
+            <program_type></program_type>
+            <tooltip>ЕГН :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l38" important="false" visible="true">
+            <program_name>labelNames</program_name>
+            <original_text>Трите имена на лицето :</original_text>
+            <client_text>Трите имена на лицето :</client_text>
+            <label_description>Трите имена на лицето :</label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Трите имена на лицето :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l40" important="false" visible="true">
+            <program_name>labelCountry</program_name>
+            <original_text>Гражданство :</original_text>
+            <client_text>Гражданство :</client_text>
+            <label_description>Гражданство :</label_description>
+            <client_label_description>Гражданство :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Гражданство :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l41" important="false" visible="true">
+            <program_name>label4</program_name>
+            <original_text>Месторождение град :</original_text>
+            <client_text>Месторождение град :</client_text>
+            <label_description>Месторождение град :</label_description>
+            <client_label_description>Месторождение град :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Месторождение град :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l42" important="false" visible="true">
+            <program_name>labelRegion</program_name>
+            <original_text>Област :</original_text>
+            <client_text>Област :</client_text>
+            <label_description>Област :</label_description>
+            <client_label_description>Област :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Област :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l43" important="false" visible="true">
+            <program_name>labelNaselenoMqsto</program_name>
+            <original_text>Населено място :</original_text>
+            <client_text>Населено място :</client_text>
+            <label_description>Населено място :</label_description>
+            <client_label_description>Населено място :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Населено място :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l44" important="false" visible="true">
+            <program_name>labelKwartal</program_name>
+            <original_text>Адрес :</original_text>
+            <client_text>Адрес :</client_text>
+            <label_description>Адрес :</label_description>
+            <client_label_description>Адрес :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Адрес :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l45" important="false" visible="true">
+            <program_name>labelJKkwartal</program_name>
+            <original_text>Л.К. Номер :</original_text>
+            <client_text>Л.К. Номер :</client_text>
+            <label_description>Л.К. Номер :</label_description>
+            <client_label_description>Л.К. Номер :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Л.К. Номер :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l46" important="false" visible="true">
+            <program_name>labelPublishedBy</program_name>
+            <original_text>Издадена от :</original_text>
+            <client_text>Издадена от :</client_text>
+            <label_description>Издадена от :</label_description>
+            <client_label_description>Издадена от :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Издадена от :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l47" important="false" visible="true">
+            <program_name>labelPublishedByy</program_name>
+            <original_text>Дата на издаване :</original_text>
+            <client_text>Дата на издаване :</client_text>
+            <label_description>Дата на издаване :</label_description>
+            <client_label_description>Дата на издаване :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Дата на издаване :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l48" important="false" visible="true">
+            <program_name>label5</program_name>
+            <original_text>Пол :</original_text>
+            <client_text>Пол :</client_text>
+            <label_description>Пол :</label_description>
+            <client_label_description>Пол :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Пол :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l49" important="false" visible="true">
+            <program_name>label37</program_name>
+            <original_text>Семейно положение :</original_text>
+            <client_text>Семейно положение :</client_text>
+            <label_description>Семейно положение :</label_description>
+            <client_label_description>Семейно положение :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Семейно положение :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l50" important="false" visible="true">
+            <program_name>groupBox2</program_name>
+            <original_text>Паспортни данни</original_text>
+            <client_text>Паспортни данни</client_text>
+            <label_description>Паспортни данни</label_description>
+            <client_label_description>Паспортни данни</client_label_description>
+            <program_type></program_type>
+            <tooltip>Паспортни данни</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l51" important="false" visible="true">
+            <program_name>groupBox6</program_name>
+            <original_text>Снимка</original_text>
+            <client_text>Снимка</client_text>
+            <label_description>Снимка</label_description>
+            <client_label_description>Снимка</client_label_description>
+            <program_type></program_type>
+            <tooltip>Снимка</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l52" important="false" visible="true">
+            <program_name>groupBox3</program_name>
+            <original_text>Лични данни</original_text>
+            <client_text>Лични данни</client_text>
+            <label_description>Лични данни</label_description>
+            <client_label_description>Лични данни</client_label_description>
+            <program_type></program_type>
+            <tooltip>Лични данни</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l53" important="false" visible="true">
+            <program_name></program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l54" important="false" visible="true">
+            <program_name>label52</program_name>
+            <original_text>Специалност :</original_text>
+            <client_text>Специалност :</client_text>
+            <label_description>Специалност :</label_description>
+            <client_label_description>Специалност :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Специалност :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l55" important="false" visible="true">
+            <program_name>label38</program_name>
+            <original_text>Диплома данни :</original_text>
+            <client_text>Допълнително възнаграждение :</client_text>
+            <label_description>Диплома данни :</label_description>
+            <client_label_description>Допълнително възнаграждение :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Допълнително възнаграждение :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l56" important="false" visible="true">
+            <program_name>label36</program_name>
+            <original_text>Образование :</original_text>
+            <client_text>Образование :</client_text>
+            <label_description>Образование :</label_description>
+            <client_label_description>Образование :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Образование :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l57" important="false" visible="true">
+            <program_name>buttonNomenkEducation</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Номенклатура образование</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l58" important="false" visible="true">
+            <program_name>labelScience</program_name>
+            <original_text>Научно звание :</original_text>
+            <client_text>Научно звание :</client_text>
+            <label_description>Научно звание :</label_description>
+            <client_label_description>Научно звание :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Научно звание :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l59" important="false" visible="true">
+            <program_name>buttonNomenkScienceTitle</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Номенклатура научно звание</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l60" important="false" visible="true">
+            <program_name>labelScienceLevel</program_name>
+            <original_text>Научна степен :</original_text>
+            <client_text>Научна степен :</client_text>
+            <label_description>Научна степен :</label_description>
+            <client_label_description>Научна степен :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Научна степен :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l61" important="false" visible="true">
+            <program_name>buttonNomenkScienceLevel</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Номенклатура Научна степен</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l62" important="false" visible="true">
+            <program_name>labelMilitaryRang</program_name>
+            <original_text>Военен ранг :</original_text>
+            <client_text>Пенсиониран :</client_text>
+            <label_description>Военен ранг :</label_description>
+            <client_label_description>Пенсиониран :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Пенсиониран :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l63" important="false" visible="true">
+            <program_name>buttonNomenkMilitaryRang</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Номенклатура военен ранг</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l64" important="false" visible="true">
+            <program_name>labelLanguage</program_name>
+            <original_text>Чужди езици :</original_text>
+            <client_text>Чужди езици :</client_text>
+            <label_description>Чужди езици :</label_description>
+            <client_label_description>Чужди езици :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Чужди езици :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l65" important="false" visible="true">
+            <program_name>buttonNomenkLanguages</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Номенклатура чужди езици</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l66" important="false" visible="true">
+            <program_name>labellanguageLevel</program_name>
+            <original_text>Степен на владеене :</original_text>
+            <client_text>Степен на владеене :</client_text>
+            <label_description>Степен на владеене :</label_description>
+            <client_label_description>Степен на владеене :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Степен на владеене :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l67" important="false" visible="true">
+            <program_name>buttonNomenklatureLanguageLevel</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Номенклатура степен на владеене</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l68" important="false" visible="true">
+            <program_name>label53</program_name>
+            <original_text>Ранг :</original_text>
+            <client_text>Ранг :</client_text>
+            <label_description>Ранг :</label_description>
+            <client_label_description>Ранг :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Ранг :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l69" important="false" visible="true">
+            <program_name>buttonNomenklatureRang</program_name>
+            <original_text></original_text>
+            <client_text></client_text>
+            <label_description></label_description>
+            <client_label_description></client_label_description>
+            <program_type></program_type>
+            <tooltip>Номенклатура  ранг</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l70" important="false" visible="true">
+            <program_name>label3</program_name>
+            <original_text>Телефон :</original_text>
+            <client_text>Телефон :</client_text>
+            <label_description>Телефон :</label_description>
+            <client_label_description>Телефон :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Телефон :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l71" important="false" visible="true">
+            <program_name>label57</program_name>
+            <original_text>Други :</original_text>
+            <client_text>Други :</client_text>
+            <label_description>Други :</label_description>
+            <client_label_description>Други :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Други :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l72" important="false" visible="true">
+            <program_name>label19</program_name>
+            <original_text>При постъпване :</original_text>
+            <client_text>При постъпване :</client_text>
+            <label_description>При постъпване :</label_description>
+            <client_label_description>При постъпване :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Трудов стаж при постъпване :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l73" important="false" visible="true">
+            <program_name>label42</program_name>
+            <original_text>В администрацията:</original_text>
+            <client_text>В администрацията:</client_text>
+            <label_description>В администрацията:</label_description>
+            <client_label_description>В администрацията:</client_label_description>
+            <program_type></program_type>
+            <tooltip>В администрацията:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l74" important="false" visible="true">
+            <program_name>label43</program_name>
+            <original_text>Общо :</original_text>
+            <client_text>Общо :</client_text>
+            <label_description>Общо :</label_description>
+            <client_label_description>Общо :</client_label_description>
+            <program_type></program_type>
+            <tooltip>Общо :</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l75" important="false" visible="true">
+            <program_name>labelHiredAt</program_name>
+            <original_text>Постъпил на:</original_text>
+            <client_text>Постъпил на:</client_text>
+            <label_description>Постъпил на:</label_description>
+            <client_label_description>Постъпил на:</client_label_description>
+            <program_type></program_type>
+            <tooltip>Постъпил на:</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l76" important="false" visible="true">
+            <program_name>buttonОК</program_name>
+            <original_text>    Запис и изход</original_text>
+            <client_text>    Запис и изход</client_text>
+            <label_description>    Запис и изход</label_description>
+            <client_label_description>    Запис и изход</client_label_description>
+            <program_type></program_type>
+            <tooltip>Запис на данните и затваряне на досието</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l77" important="false" visible="true">
+            <program_name>buttonSave</program_name>
+            <original_text> Запис</original_text>
+            <client_text> Запис</client_text>
+            <label_description> Запис</label_description>
+            <client_label_description> Запис</client_label_description>
+            <program_type></program_type>
+            <tooltip>Запис на данните</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l78" important="false" visible="true">
+            <program_name>buttonCancel</program_name>
+            <original_text> Изход</original_text>
+            <client_text> Изход</client_text>
+            <label_description> Изход</label_description>
+            <client_label_description> Изход</client_label_description>
+            <program_type></program_type>
+            <tooltip>Затваряне на досието</tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "l79" important="false" visible="true">
+            <program_name>TabPersonalInfo</program_name>
+            <original_text>Лични данни</original_text>
+            <client_text>Лични данни</client_text>
+            <label_description>Лични данни</label_description>
+            <client_label_description>Лични данни</client_label_description>
+            <program_type></program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+          <label label_id = "L80" important="false" visible="true">
+            <program_name>tabPageAssignment</program_name>
+            <original_text>Назначаване</original_text>
+            <client_text>Назначаване</client_text>
+            <label_description>Назначаване</label_description>
+            <client_label_description>Назначаване</client_label_description>
+            <program_type></program_type>
+            <tooltip></tooltip>
+            <SQL_variable_type></SQL_variable_type>
+            <SQL_column_name></SQL_column_name>
+            <SQL_table></SQL_table>
+            <associated_control></associated_control>
+            <max_size></max_size>
+            <max_value></max_value>
+            <min_value></min_value>
+          </label>
+        </labels>
+      </form>
+    </forms>
+  </product>
+</Labels_Description>

@@ -1,0 +1,16 @@
+$ cat .gitignore
+
+*.user
+*.suo
+*.exe
+*.pdb
+*.cache
+*.tlog
+*.g.cs
+*.i.cs
+
+bin/
+obj/
+
+
+

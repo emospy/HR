@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE Excel_Template_Description SYSTEM "ExcelDTD.dtd">
+<Excel_Template_Description>
+  <template>
+    <template_name>OSR</template_name>
+    <client_name>Shumen University</client_name>
+    <data_views>
+      <vuePositions id="v1" column_number="2" column_text="nameOfPosition"></vuePositions>
+      <vuePositions id="v2" column_number="3" column_text="staffCount"></vuePositions>
+      <vuePositions id="v3" column_number="4" column_text="Busy"></vuePositions>
+      <vuePositions id="v4" column_number="5" column_text="Free"></vuePositions>
+    </data_views>
+  </template>
+</Excel_Template_Description>

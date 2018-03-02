@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE Excel_Template_Description SYSTEM "ExcelDTD.dtd">
+<Excel_Template_Description>
+  <template>
+    <template_name>OSR</template_name>
+    <client_name>Shumen University</client_name>
+    <data_views>
+      <vuePositions id="v2" column_number="6" column_text="Education"></vuePositions>
+      <vuePositions id="v4" column_number="7" column_text="Experience"></vuePositions>
+      <vuePositions id="v5" column_number="10" column_text="staffcount"></vuePositions>
+      <vuePositions id="v9" column_number="13" column_text="NKPCode"></vuePositions>
+      <vuePositions id="v10" column_number="14" column_text="MinSalary"></vuePositions>
+      <vuePositions id="v11" column_number="15" column_text="MaxSalary"></vuePositions>
+      <vuePerson id="v12" column_number="4" column_text="name"></vuePerson>
+      <vuePerson id="v13" column_number="5" column_text="egn"></vuePerson>
+      <vuePerson id="v19" column_number="8" column_text="education"></vuePerson>
+      <vuePerson id="v20" column_number="9" column_text="sciencelevel"></vuePerson>
+      <vuePerson id="v21" column_number="16" column_text="basesalary"></vuePerson>
+      <vuePerson id="v22" column_number="17" column_text="salaryaddon"></vuePerson>
+      <vuePerson id="v14" column_number="18" column_text="cyears"></vuePerson>
+      <vuePerson id="v15" column_number="19" column_text="cyears"></vuePerson>
+      <vuePerson id="v16" column_number="20" column_text="shumenclasssalary"></vuePerson>
+      <vuePerson id="v17" column_number="21" column_text="monthlyaddon"></vuePerson>
+      <vuePerson id="v18" column_number="22" column_text="yearlyaddon"></vuePerson>
+      <vuePerson id="v19" column_number="23" column_text="shumentotalsalary"></vuePerson>
+    </data_views>
+  </template>
+</Excel_Template_Description>

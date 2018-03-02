@@ -1,0 +1,2419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="hrModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="hrModelStoreContainer">
+          <EntitySet Name="HR_Absence" EntityType="hrModel.Store.HR_Absence" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_AdminInfo" EntityType="hrModel.Store.HR_AdminInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_AttachedDocs" EntityType="hrModel.Store.HR_AttachedDocs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Attestations" EntityType="hrModel.Store.HR_Attestations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Education" EntityType="hrModel.Store.HR_Education" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_EducationNomenklature" EntityType="hrModel.Store.HR_EducationNomenklature" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Educations" EntityType="hrModel.Store.HR_Educations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_EKDA" EntityType="hrModel.Store.HR_EKDA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Fired" EntityType="hrModel.Store.HR_Fired" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_FirmPersonal3" EntityType="hrModel.Store.HR_FirmPersonal3" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_FirmStructure" EntityType="hrModel.Store.HR_FirmStructure" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_GlobalPositions" EntityType="hrModel.Store.HR_GlobalPositions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_JoinNomenklature" EntityType="hrModel.Store.HR_JoinNomenklature" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_LanguageLevel" EntityType="hrModel.Store.HR_LanguageLevel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_MessageInstances" EntityType="hrModel.Store.HR_MessageInstances" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Messages" EntityType="hrModel.Store.HR_Messages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_MessageTypes" EntityType="hrModel.Store.HR_MessageTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Newtree2" EntityType="hrModel.Store.HR_Newtree2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_NKID" EntityType="hrModel.Store.HR_NKID" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_nkp" EntityType="hrModel.Store.HR_nkp" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Notes" EntityType="hrModel.Store.HR_Notes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_NotesTable" EntityType="hrModel.Store.HR_NotesTable" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Options" EntityType="hrModel.Store.HR_Options" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Penalty" EntityType="hrModel.Store.HR_Penalty" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_person" EntityType="hrModel.Store.HR_person" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_PersonAssignment" EntityType="hrModel.Store.HR_PersonAssignment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Pictures" EntityType="hrModel.Store.HR_Pictures" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_PlannedHolidays" EntityType="hrModel.Store.HR_PlannedHolidays" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_ReasonAssignment" EntityType="hrModel.Store.HR_ReasonAssignment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_StructureHistory" EntityType="hrModel.Store.HR_StructureHistory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Users" EntityType="hrModel.Store.HR_Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_worktime" EntityType="hrModel.Store.HR_worktime" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Year" EntityType="hrModel.Store.HR_Year" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_Year_Holiday" EntityType="hrModel.Store.HR_Year_Holiday" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HR_YearWorkdays" EntityType="hrModel.Store.HR_YearWorkdays" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_HR_absence_HR_person" Association="hrModel.Store.FK_HR_absence_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Absence" EntitySet="HR_Absence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_educations_HR_person" Association="hrModel.Store.FK_HR_educations_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Educations" EntitySet="HR_Educations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_fired_HR_person" Association="hrModel.Store.FK_HR_fired_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Fired" EntitySet="HR_Fired" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_languagelevel_HR_person" Association="hrModel.Store.FK_HR_languagelevel_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_LanguageLevel" EntitySet="HR_LanguageLevel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_MessageInstances_HR_MessageTypes" Association="hrModel.Store.FK_HR_MessageInstances_HR_MessageTypes">
+            <End Role="HR_MessageTypes" EntitySet="HR_MessageTypes" />
+            <End Role="HR_MessageInstances" EntitySet="HR_MessageInstances" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_Messages_HR_MessageInstances" Association="hrModel.Store.FK_HR_Messages_HR_MessageInstances">
+            <End Role="HR_MessageInstances" EntitySet="HR_MessageInstances" />
+            <End Role="HR_Messages" EntitySet="HR_Messages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_Notes_HR_person" Association="hrModel.Store.FK_HR_Notes_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Notes" EntitySet="HR_Notes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_NotesTable_HR_person" Association="hrModel.Store.FK_HR_NotesTable_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_NotesTable" EntitySet="HR_NotesTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_Penalty_HR_person" Association="hrModel.Store.FK_HR_Penalty_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Penalty" EntitySet="HR_Penalty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_personassignment_HR_person" Association="hrModel.Store.FK_HR_personassignment_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_PersonAssignment" EntitySet="HR_PersonAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_pictures_HR_person" Association="hrModel.Store.FK_HR_pictures_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Pictures" EntitySet="HR_Pictures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_PlannedHolidays_HR_person" Association="hrModel.Store.FK_HR_PlannedHolidays_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_PlannedHolidays" EntitySet="HR_PlannedHolidays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_Year_Holiday_HR_person" Association="hrModel.Store.FK_HR_Year_Holiday_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Year_Holiday" EntitySet="HR_Year_Holiday" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="HR_Absence">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="orderFromDate" Type="date" />
+          <Property Name="fromDate" Type="date" Nullable="false" />
+          <Property Name="toDate" Type="date" Nullable="false" />
+          <Property Name="countDays" Type="int" Nullable="false" />
+          <Property Name="typeAbsence" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="numberOrder" Type="nvarchar" MaxLength="255" />
+          <Property Name="reason" Type="nvarchar" MaxLength="255" />
+          <Property Name="parent" Type="int" Nullable="false" />
+          <Property Name="modifiedByUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="Year" Type="nvarchar" MaxLength="255" />
+          <Property Name="issuedatdate" Type="date" />
+          <Property Name="sicknessduration" Type="nvarchar" MaxLength="50" />
+          <Property Name="Attachment7" Type="nvarchar" MaxLength="100" />
+          <Property Name="Declaration39" Type="nvarchar" MaxLength="100" />
+          <Property Name="AdditionalDocs" Type="nvarchar" MaxLength="100" />
+          <Property Name="MKB" Type="nvarchar" MaxLength="100" />
+          <Property Name="reasons" Type="nvarchar" MaxLength="100" />
+          <Property Name="NAPDocs" Type="nvarchar" MaxLength="100" />
+          <Property Name="CalendarDays" Type="int" />
+          <Property Name="issuedate" Type="date" />
+          <Property Name="SicknessNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="HR_AdminInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="firmName" Type="nvarchar" MaxLength="255" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="kind" Type="nvarchar" MaxLength="255" />
+          <Property Name="region" Type="nvarchar" MaxLength="255" />
+          <Property Name="town" Type="nvarchar" MaxLength="255" />
+          <Property Name="postalCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="addressData" Type="nvarchar" MaxLength="255" />
+          <Property Name="email" Type="nvarchar" MaxLength="255" />
+          <Property Name="phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="secureNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="nominalEmployees" Type="int" />
+          <Property Name="bankName" Type="nvarchar" MaxLength="255" />
+          <Property Name="bankAccount" Type="nvarchar" MaxLength="255" />
+          <Property Name="bankcode" Type="nvarchar" MaxLength="255" />
+          <Property Name="directorName" Type="nvarchar" MaxLength="255" />
+          <Property Name="egnDirector" Type="nvarchar" MaxLength="255" />
+          <Property Name="directorLsys" Type="nvarchar" MaxLength="255" />
+          <Property Name="egnDirectorLsys" Type="nvarchar" MaxLength="255" />
+          <Property Name="mainAccountantName" Type="nvarchar" MaxLength="255" />
+          <Property Name="egnMainAccountant" Type="nvarchar" MaxLength="255" />
+          <Property Name="mainConsult" Type="nvarchar" MaxLength="255" />
+          <Property Name="egnMainConsult" Type="nvarchar" MaxLength="255" />
+          <Property Name="trz" Type="nvarchar" MaxLength="255" />
+          <Property Name="egnTrz" Type="nvarchar" MaxLength="255" />
+          <Property Name="additionalInfo" Type="nvarchar" MaxLength="255" />
+          <Property Name="modifiedByUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="bulstat" Type="nvarchar" MaxLength="45" />
+          <Property Name="taxNum" Type="nvarchar" MaxLength="45" />
+          <Property Name="NKIDCode" Type="nvarchar" MaxLength="45" />
+          <Property Name="NKIDLevel" Type="text" />
+        </EntityType>
+        <EntityType Name="HR_AttachedDocs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="parent" Type="int" Nullable="false" />
+          <Property Name="link" Type="nvarchar" MaxLength="255" />
+          <Property Name="dateadded" Type="date" />
+          <Property Name="typedocument" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Attestations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="nvarchar" MaxLength="255" />
+          <Property Name="par" Type="int" />
+          <Property Name="TotalMark" Type="int" />
+          <Property Name="hasWorkplan" Type="nvarchar" MaxLength="255" />
+          <Property Name="hasMiddleMeeting" Type="nvarchar" MaxLength="255" />
+          <Property Name="hasTraining" Type="nvarchar" MaxLength="255" />
+          <Property Name="NextRangUpdate" Type="nvarchar" MaxLength="255" />
+          <Property Name="hasRangUpdate" Type="nvarchar" MaxLength="255" />
+          <Property Name="RangUpdateData" Type="datetime" />
+          <Property Name="WorkPlanDate" Type="datetime" />
+          <Property Name="MiddleMeetingDate" Type="datetime" />
+          <Property Name="ControllingBossName" Type="text" />
+          <Property Name="hasFinalMeeting" Type="nvarchar" MaxLength="255" />
+          <Property Name="FinalMeetingDate" Type="datetime" />
+          <Property Name="NewRang" Type="nvarchar" MaxLength="255" />
+          <Property Name="TrainingData" Type="nvarchar" MaxLength="255" />
+          <Property Name="Others" Type="nvarchar" MaxLength="255" />
+          <Property Name="hasPositionUpdate" Type="nvarchar" MaxLength="255" />
+          <Property Name="PositionUpdateDate" Type="date" />
+          <Property Name="ObjectionDate" Type="date" />
+          <Property Name="hasObjection" Type="nvarchar" MaxLength="255" />
+          <Property Name="BossName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Education">
+          <Key>
+            <PropertyRef Name="level" />
+          </Key>
+          <Property Name="level" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="englevel" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_EducationNomenklature">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EducationName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EducationCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="EducationArea" Type="nvarchar" MaxLength="255" />
+          <Property Name="NumDays" Type="nvarchar" MaxLength="255" />
+          <Property Name="NumHours" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="nvarchar" MaxLength="255" />
+          <Property Name="Place" Type="nvarchar" MaxLength="255" />
+          <Property Name="Organisation" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Educations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="personid" Type="int" />
+          <Property Name="Area" Type="nvarchar" MaxLength="255" />
+          <Property Name="Theme" Type="text" />
+          <Property Name="Code" Type="nvarchar" MaxLength="255" />
+          <Property Name="EducationDays" Type="nvarchar" MaxLength="255" />
+          <Property Name="EducationHours" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="nvarchar" MaxLength="255" />
+          <Property Name="CertificateData" Type="text" />
+          <Property Name="EducationPlace" Type="nvarchar" MaxLength="255" />
+          <Property Name="FromDate" Type="date" />
+          <Property Name="ToDate" Type="date" />
+          <Property Name="EducationOrganisation" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_EKDA">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="code" Type="nvarchar" MaxLength="255" />
+          <Property Name="level" Type="text" />
+          <Property Name="minSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="maxSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="porNum" Type="nvarchar" MaxLength="255" />
+          <Property Name="education" Type="nvarchar" MaxLength="255" />
+          <Property Name="rang" Type="nvarchar" MaxLength="255" />
+          <Property Name="experience" Type="nvarchar" MaxLength="255" />
+          <Property Name="law" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Fired">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="parent" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="reason" Type="nvarchar" MaxLength="255" />
+          <Property Name="FromDate" Type="date" />
+          <Property Name="CompensationWork" Type="nvarchar" MaxLength="255" />
+          <Property Name="CompensationTime" Type="nvarchar" MaxLength="255" />
+          <Property Name="NumberSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="Compensation" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountDays" Type="int" />
+          <Property Name="level1" Type="nvarchar" MaxLength="255" />
+          <Property Name="level2" Type="nvarchar" MaxLength="255" />
+          <Property Name="level3" Type="nvarchar" MaxLength="255" />
+          <Property Name="level4" Type="nvarchar" MaxLength="255" />
+          <Property Name="position" Type="nvarchar" MaxLength="255" />
+          <Property Name="baseSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="modifiedbyuser" Type="nvarchar" MaxLength="255" />
+          <Property Name="fireorder" Type="nvarchar" MaxLength="255" />
+          <Property Name="FireOrderDate" Type="date" />
+        </EntityType>
+        <EntityType Name="HR_FirmPersonal3">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nameOfPosition" Type="nvarchar" MaxLength="255" />
+          <Property Name="StaffCount" Type="nvarchar" MaxLength="255" />
+          <Property Name="KVS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NumMonths" Type="int" />
+          <Property Name="SecurityLevel" Type="nvarchar" MaxLength="255" />
+          <Property Name="EKDACode" Type="nvarchar" MaxLength="255" />
+          <Property Name="EKDALevel" Type="nvarchar" MaxLength="255" />
+          <Property Name="VOS" Type="nvarchar" MaxLength="255" />
+          <Property Name="PMS" Type="nvarchar" MaxLength="255" />
+          <Property Name="AdditionNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="PorNum" Type="nvarchar" MaxLength="255" />
+          <Property Name="Law" Type="nvarchar" MaxLength="255" />
+          <Property Name="NKPCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="nKPlevel" Type="text" />
+          <Property Name="education" Type="nvarchar" MaxLength="255" />
+          <Property Name="rang" Type="nvarchar" MaxLength="255" />
+          <Property Name="Experience" Type="nvarchar" MaxLength="255" />
+          <Property Name="OtherRequirements" Type="nvarchar" MaxLength="255" />
+          <Property Name="MinSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="MaxSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="free" Type="float" />
+          <Property Name="busy" Type="float" />
+          <Property Name="par" Type="int" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="255" />
+          <Property Name="TypePosition" Type="nvarchar" MaxLength="255" />
+          <Property Name="StaffOrder" Type="int" />
+          <Property Name="BasicDuties" Type="text" />
+          <Property Name="BasicResponsibilities" Type="text" />
+          <Property Name="Competence" Type="text" />
+          <Property Name="Connections" Type="text" />
+          <Property Name="Requirements" Type="text" />
+          <Property Name="NKPClass" Type="nvarchar" MaxLength="255" />
+          <Property Name="StartSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="BaseSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="SalaryAddon" Type="nvarchar" MaxLength="255" />
+          <Property Name="ScienceAddon" Type="nvarchar" MaxLength="255" />
+          <Property Name="OtherAddon" Type="nvarchar" MaxLength="255" />
+          <Property Name="positioneng" Type="nvarchar" MaxLength="255" />
+          <Property Name="globalpositionid" Type="int" />
+          <Property Name="ekdaPayLEvel" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_FirmStructure">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="direction" Type="nvarchar" MaxLength="255" />
+          <Property Name="control" Type="nvarchar" MaxLength="255" />
+          <Property Name="team" Type="nvarchar" MaxLength="255" />
+          <Property Name="administration" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="HR_GlobalPositions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PositionName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EKDALevel" Type="nvarchar" MaxLength="255" />
+          <Property Name="EKDACode" Type="nvarchar" MaxLength="255" />
+          <Property Name="PorNum" Type="nvarchar" MaxLength="255" />
+          <Property Name="PMS" Type="nvarchar" MaxLength="255" />
+          <Property Name="VOS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NKPCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="NKPLevel" Type="nvarchar" MaxLength="255" />
+          <Property Name="Rang" Type="nvarchar" MaxLength="255" />
+          <Property Name="Experience" Type="nvarchar" MaxLength="255" />
+          <Property Name="Education" Type="nvarchar" MaxLength="255" />
+          <Property Name="Law" Type="nvarchar" MaxLength="255" />
+          <Property Name="Minsalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="MaxSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="TypePosition" Type="nvarchar" MaxLength="255" />
+          <Property Name="BasicDuties" Type="text" />
+          <Property Name="BasicResponsibilities" Type="text" />
+          <Property Name="Connections" Type="text" />
+          <Property Name="Competence" Type="text" />
+          <Property Name="Requirements" Type="text" />
+          <Property Name="NKPClass" Type="nvarchar" MaxLength="255" />
+          <Property Name="engposition" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_JoinNomenklature">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="level" Type="nvarchar" MaxLength="255" />
+          <Property Name="descriptor" Type="nvarchar" MaxLength="255" />
+          <Property Name="englevel" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_LanguageLevel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="parent" Type="int" />
+          <Property Name="Language" Type="nvarchar" MaxLength="255" />
+          <Property Name="Level" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="HR_MessageInstances">
+          <Key>
+            <PropertyRef Name="id_messageInstance" />
+          </Key>
+          <Property Name="id_messageInstance" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_messageType" Type="int" Nullable="false" />
+          <Property Name="FixedDate" Type="date" />
+          <Property Name="WarningDays" Type="int" />
+          <Property Name="AlarmDays" Type="int" />
+          <Property Name="id_department" Type="int" />
+        </EntityType>
+        <EntityType Name="HR_Messages">
+          <Key>
+            <PropertyRef Name="id_message" />
+          </Key>
+          <Property Name="id_message" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="text" Nullable="false" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="id_user" Type="int" />
+          <Property Name="id_messageInstance" Type="int" Nullable="false" />
+          <Property Name="IsConfirmed" Type="bit" Nullable="false" />
+          <Property Name="IsMailSent" Type="bit" Nullable="false" />
+          <Property Name="DueDate" Type="date" />
+        </EntityType>
+        <EntityType Name="HR_MessageTypes">
+          <Key>
+            <PropertyRef Name="id_messageType" />
+          </Key>
+          <Property Name="id_messageType" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Newtree2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="level" Type="nvarchar" MaxLength="255" />
+          <Property Name="par" Type="int" />
+          <Property Name="code" Type="nvarchar" MaxLength="255" />
+          <Property Name="leveleng" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_NKID">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="varchar" MaxLength="255" />
+          <Property Name="code" Type="varchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="HR_nkp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="nvarchar" MaxLength="255" />
+          <Property Name="code" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="oldlevel" Type="nvarchar" MaxLength="255" />
+          <Property Name="oldcode" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Notes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="text" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="parent" Type="int" />
+          <Property Name="modifiedByUser" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_NotesTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="par" Type="int" Nullable="false" />
+          <Property Name="Text" Type="text" />
+          <Property Name="date" Type="date" />
+          <Property Name="type" Type="nvarchar" MaxLength="255" />
+          <Property Name="typedocument" Type="nvarchar" MaxLength="255" />
+          <Property Name="modifiedbyuser" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Options">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="classcoef" Type="float" />
+          <Property Name="incrementclass" Type="int" />
+          <Property Name="incrementholiday" Type="int" />
+          <Property Name="holidaycoef" Type="int" />
+          <Property Name="vacancystash" Type="int" />
+          <Property Name="firedsignal" Type="int" />
+          <Property Name="personorder" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Penalty">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="fromDate" Type="date" />
+          <Property Name="numberOrder" Type="nvarchar" MaxLength="255" />
+          <Property Name="reason" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrderDate" Type="date" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="parent" Type="int" />
+          <Property Name="modifiedByUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="toDate" Type="date" />
+          <Property Name="typePenalty" Type="nvarchar" MaxLength="255" />
+          <Property Name="isBonus" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_person">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="egn" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="bornCountry" Type="nvarchar" MaxLength="255" />
+          <Property Name="country" Type="nvarchar" MaxLength="255" />
+          <Property Name="region" Type="nvarchar" MaxLength="255" />
+          <Property Name="town" Type="nvarchar" MaxLength="255" />
+          <Property Name="kwartal" Type="nvarchar" MaxLength="255" />
+          <Property Name="street" Type="nvarchar" MaxLength="255" />
+          <Property Name="numBlockHouse" Type="nvarchar" MaxLength="255" />
+          <Property Name="phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="pcard" Type="nvarchar" MaxLength="255" />
+          <Property Name="pcardPublish" Type="date" />
+          <Property Name="publishedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="familyStatus" Type="nvarchar" MaxLength="255" />
+          <Property Name="education" Type="nvarchar" MaxLength="255" />
+          <Property Name="diplomDate" Type="nvarchar" MaxLength="255" />
+          <Property Name="profession" Type="nvarchar" MaxLength="255" />
+          <Property Name="languages" Type="nvarchar" MaxLength="255" />
+          <Property Name="scienceTitle" Type="nvarchar" MaxLength="255" />
+          <Property Name="scienceLevel" Type="nvarchar" MaxLength="255" />
+          <Property Name="militaryRang" Type="nvarchar" MaxLength="255" />
+          <Property Name="militaryStatus" Type="nvarchar" MaxLength="255" />
+          <Property Name="category" Type="nvarchar" MaxLength="255" />
+          <Property Name="hiredAt" Type="date" />
+          <Property Name="workExperience" Type="nvarchar" MaxLength="255" />
+          <Property Name="sex" Type="nvarchar" MaxLength="255" />
+          <Property Name="fired" Type="int" />
+          <Property Name="borntown" Type="nvarchar" MaxLength="255" />
+          <Property Name="modifiedByUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="nodeID" Type="int" />
+          <Property Name="bornDate" Type="date" />
+          <Property Name="Speciality" Type="nvarchar" MaxLength="255" />
+          <Property Name="ReceivedAddon" Type="nvarchar" MaxLength="255" />
+          <Property Name="Rang" Type="nvarchar" MaxLength="255" />
+          <Property Name="Other" Type="text" />
+          <Property Name="egnlnch" Type="int" />
+          <Property Name="engname" Type="nvarchar" MaxLength="255" />
+          <Property Name="engeducation" Type="nvarchar" MaxLength="255" />
+          <Property Name="other1" Type="int" />
+          <Property Name="other2" Type="nvarchar" MaxLength="255" />
+          <Property Name="other3" Type="nvarchar" MaxLength="255" />
+          <Property Name="other4" Type="nvarchar" MaxLength="255" />
+          <Property Name="other5" Type="nvarchar" MaxLength="255" />
+          <Property Name="positionID" Type="int" />
+          <Property Name="workbook" Type="nvarchar" MaxLength="255" />
+          <Property Name="workbookdate" Type="date" />
+          <Property Name="id_sysco" Type="int" />
+          <Property Name="password" Type="nvarchar" MaxLength="255" />
+          <Property Name="id_roletype" Type="int" Nullable="false" />
+          <Property Name="pcardExpiry" Type="date" />
+          <Property Name="IsSecondary" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HR_PersonAssignment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="contractType" Type="nvarchar" MaxLength="255" />
+          <Property Name="nkpCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="nkpLevel" Type="nvarchar" MaxLength="255" />
+          <Property Name="EKDACode" Type="nvarchar" MaxLength="255" />
+          <Property Name="EKDALevel" Type="text" />
+          <Property Name="classPercent" Type="nvarchar" MaxLength="255" />
+          <Property Name="salaryAddon" Type="nvarchar" MaxLength="255" />
+          <Property Name="baseSalary" Type="nvarchar" MaxLength="255" />
+          <Property Name="numberKids" Type="nvarchar" MaxLength="255" />
+          <Property Name="contractExpiry" Type="date" />
+          <Property Name="contractNumber" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="assignReason" Type="nvarchar" MaxLength="255" />
+          <Property Name="assignedAt" Type="date" />
+          <Property Name="worktime" Type="nvarchar" MaxLength="255" />
+          <Property Name="contract" Type="nvarchar" MaxLength="255" />
+          <Property Name="position" Type="nvarchar" MaxLength="255" />
+          <Property Name="level3" Type="nvarchar" MaxLength="255" />
+          <Property Name="level2" Type="nvarchar" MaxLength="255" />
+          <Property Name="level1" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsAdditionalAssignment" Type="int" />
+          <Property Name="parent" Type="int" />
+          <Property Name="isActive" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="modifiedByUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="years" Type="int" />
+          <Property Name="months" Type="int" />
+          <Property Name="days" Type="int" />
+          <Property Name="positionID" Type="int" />
+          <Property Name="parentContractId" Type="nvarchar" MaxLength="255" />
+          <Property Name="law" Type="nvarchar" MaxLength="255" />
+          <Property Name="level4" Type="nvarchar" MaxLength="255" />
+          <Property Name="YearlyAddon" Type="nvarchar" MaxLength="255" />
+          <Property Name="PrevAssignmentID" Type="int" />
+          <Property Name="MonthlyAddon" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentContractDate" Type="date" />
+          <Property Name="Rang" Type="nvarchar" MaxLength="255" />
+          <Property Name="NumHoliday" Type="nvarchar" MaxLength="255" />
+          <Property Name="TestContractDate" Type="date" />
+          <Property Name="AdditionalHoliday" Type="int" />
+          <Property Name="ExperienceCorrection" Type="int" />
+          <Property Name="exported" Type="int" />
+          <Property Name="pcontractreasoncode" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="substitute" Type="int" />
+          <Property Name="staff" Type="float" />
+          <Property Name="level1eng" Type="nvarchar" MaxLength="255" />
+          <Property Name="level2eng" Type="nvarchar" MaxLength="255" />
+          <Property Name="level3eng" Type="nvarchar" MaxLength="255" />
+          <Property Name="level4eng" Type="nvarchar" MaxLength="255" />
+          <Property Name="positioneng" Type="nvarchar" MaxLength="255" />
+          <Property Name="tutorname" Type="nvarchar" MaxLength="255" />
+          <Property Name="tutorabsencereason" Type="nvarchar" MaxLength="255" />
+          <Property Name="ekdaPayDegree" Type="int" />
+        </EntityType>
+        <EntityType Name="HR_Pictures">
+          <Key>
+            <PropertyRef Name="parent" />
+          </Key>
+          <Property Name="parent" Type="int" Nullable="false" />
+          <Property Name="picture" Type="image" />
+        </EntityType>
+        <EntityType Name="HR_PlannedHolidays">
+          <Key>
+            <PropertyRef Name="id_plannedHoliday" />
+          </Key>
+          <Property Name="id_plannedHoliday" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="int" />
+          <Property Name="par" Type="int" />
+          <Property Name="Jan" Type="nvarchar" MaxLength="50" />
+          <Property Name="JanDays" Type="int" />
+          <Property Name="Feb" Type="nvarchar" MaxLength="50" />
+          <Property Name="FebDays" Type="int" />
+          <Property Name="Mar" Type="nvarchar" MaxLength="50" />
+          <Property Name="MarDays" Type="int" />
+          <Property Name="Apr" Type="nvarchar" MaxLength="50" />
+          <Property Name="AprDays" Type="int" />
+          <Property Name="May" Type="nvarchar" MaxLength="50" />
+          <Property Name="MayDays" Type="int" />
+          <Property Name="Jun" Type="nvarchar" MaxLength="50" />
+          <Property Name="JunDays" Type="int" />
+          <Property Name="Jul" Type="nvarchar" MaxLength="50" />
+          <Property Name="JulDays" Type="int" />
+          <Property Name="Aug" Type="nvarchar" MaxLength="50" />
+          <Property Name="AugDays" Type="int" />
+          <Property Name="Sep" Type="nvarchar" MaxLength="50" />
+          <Property Name="SepDays" Type="int" />
+          <Property Name="Oct" Type="nvarchar" MaxLength="50" />
+          <Property Name="OctDays" Type="int" />
+          <Property Name="Nov" Type="nvarchar" MaxLength="50" />
+          <Property Name="NovDays" Type="int" />
+          <Property Name="Dec" Type="nvarchar" MaxLength="50" />
+          <Property Name="DecDays" Type="int" />
+        </EntityType>
+        <EntityType Name="HR_ReasonAssignment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pcontractreasoncode" Type="nvarchar" MaxLength="255" />
+          <Property Name="substitute" Type="int" />
+        </EntityType>
+        <EntityType Name="HR_StructureHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ChangeFrom" Type="nvarchar" MaxLength="255" />
+          <Property Name="ChangeTo" Type="nvarchar" MaxLength="255" />
+          <Property Name="ChangeOperation" Type="nvarchar" MaxLength="255" />
+          <Property Name="ChangeDate" Type="date" />
+        </EntityType>
+        <EntityType Name="HR_Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="userName" Type="nvarchar" MaxLength="255" />
+          <Property Name="password" Type="nvarchar" MaxLength="255" />
+          <Property Name="typeUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="HR_worktime">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="staff" Type="float" />
+        </EntityType>
+        <EntityType Name="HR_Year">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DBVer" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="HR_Year_Holiday">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="parent" Type="int" />
+          <Property Name="year" Type="int" />
+          <Property Name="leftover" Type="int" />
+          <Property Name="total" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="telk" Type="int" />
+          <Property Name="Unpayed" Type="int" />
+          <Property Name="Education" Type="int" />
+          <Property Name="Additional" Type="int" />
+        </EntityType>
+        <EntityType Name="HR_YearWorkdays">
+          <Key>
+            <PropertyRef Name="id_yearWorkdays" />
+          </Key>
+          <Property Name="id_yearWorkdays" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IsHoliday" Type="bit" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_HR_absence_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="1" />
+          <End Role="HR_Absence" Type="hrModel.Store.HR_Absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Absence">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_educations_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Educations" Type="hrModel.Store.HR_Educations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Educations">
+              <PropertyRef Name="personid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_fired_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Fired" Type="hrModel.Store.HR_Fired" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Fired">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_languagelevel_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="0..1" />
+          <End Role="HR_LanguageLevel" Type="hrModel.Store.HR_LanguageLevel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_LanguageLevel">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_MessageInstances_HR_MessageTypes">
+          <End Role="HR_MessageTypes" Type="hrModel.Store.HR_MessageTypes" Multiplicity="1" />
+          <End Role="HR_MessageInstances" Type="hrModel.Store.HR_MessageInstances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_MessageTypes">
+              <PropertyRef Name="id_messageType" />
+            </Principal>
+            <Dependent Role="HR_MessageInstances">
+              <PropertyRef Name="id_messageType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_Messages_HR_MessageInstances">
+          <End Role="HR_MessageInstances" Type="hrModel.Store.HR_MessageInstances" Multiplicity="1" />
+          <End Role="HR_Messages" Type="hrModel.Store.HR_Messages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_MessageInstances">
+              <PropertyRef Name="id_messageInstance" />
+            </Principal>
+            <Dependent Role="HR_Messages">
+              <PropertyRef Name="id_messageInstance" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_Notes_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Notes" Type="hrModel.Store.HR_Notes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Notes">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_NotesTable_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="1" />
+          <End Role="HR_NotesTable" Type="hrModel.Store.HR_NotesTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_NotesTable">
+              <PropertyRef Name="par" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_Penalty_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Penalty" Type="hrModel.Store.HR_Penalty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Penalty">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_personassignment_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="0..1" />
+          <End Role="HR_PersonAssignment" Type="hrModel.Store.HR_PersonAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_PersonAssignment">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_pictures_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="1" />
+          <End Role="HR_Pictures" Type="hrModel.Store.HR_Pictures" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Pictures">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_PlannedHolidays_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="0..1" />
+          <End Role="HR_PlannedHolidays" Type="hrModel.Store.HR_PlannedHolidays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_PlannedHolidays">
+              <PropertyRef Name="par" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_Year_Holiday_HR_person">
+          <End Role="HR_person" Type="hrModel.Store.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Year_Holiday" Type="hrModel.Store.HR_Year_Holiday" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Year_Holiday">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hrModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HR_Absence" EntityType="hrModel.HR_Absence" />
+          <EntitySet Name="HR_AdminInfo" EntityType="hrModel.HR_AdminInfo" />
+          <EntitySet Name="HR_AttachedDocs" EntityType="hrModel.HR_AttachedDocs" />
+          <EntitySet Name="HR_Attestations" EntityType="hrModel.HR_Attestations" />
+          <EntitySet Name="HR_Education" EntityType="hrModel.HR_Education" />
+          <EntitySet Name="HR_EducationNomenklature" EntityType="hrModel.HR_EducationNomenklature" />
+          <EntitySet Name="HR_Educations" EntityType="hrModel.HR_Educations" />
+          <EntitySet Name="HR_EKDA" EntityType="hrModel.HR_EKDA" />
+          <EntitySet Name="HR_Fired" EntityType="hrModel.HR_Fired" />
+          <EntitySet Name="HR_FirmPersonal3" EntityType="hrModel.HR_FirmPersonal3" />
+          <EntitySet Name="HR_FirmStructure" EntityType="hrModel.HR_FirmStructure" />
+          <EntitySet Name="HR_GlobalPositions" EntityType="hrModel.HR_GlobalPositions" />
+          <EntitySet Name="HR_JoinNomenklature" EntityType="hrModel.HR_JoinNomenklature" />
+          <EntitySet Name="HR_LanguageLevel" EntityType="hrModel.HR_LanguageLevel" />
+          <EntitySet Name="HR_MessageInstances" EntityType="hrModel.HR_MessageInstances" />
+          <EntitySet Name="HR_Messages" EntityType="hrModel.HR_Messages" />
+          <EntitySet Name="HR_MessageTypes" EntityType="hrModel.HR_MessageTypes" />
+          <EntitySet Name="HR_Newtree2" EntityType="hrModel.HR_Newtree2" />
+          <EntitySet Name="HR_NKID" EntityType="hrModel.HR_NKID" />
+          <EntitySet Name="HR_nkp" EntityType="hrModel.HR_nkp" />
+          <EntitySet Name="HR_Notes" EntityType="hrModel.HR_Notes" />
+          <EntitySet Name="HR_NotesTable" EntityType="hrModel.HR_NotesTable" />
+          <EntitySet Name="HR_Options" EntityType="hrModel.HR_Options" />
+          <EntitySet Name="HR_Penalty" EntityType="hrModel.HR_Penalty" />
+          <EntitySet Name="HR_person" EntityType="hrModel.HR_person" />
+          <EntitySet Name="HR_PersonAssignment" EntityType="hrModel.HR_PersonAssignment" />
+          <EntitySet Name="HR_Pictures" EntityType="hrModel.HR_Pictures" />
+          <EntitySet Name="HR_PlannedHolidays" EntityType="hrModel.HR_PlannedHolidays" />
+          <EntitySet Name="HR_ReasonAssignment" EntityType="hrModel.HR_ReasonAssignment" />
+          <EntitySet Name="HR_StructureHistory" EntityType="hrModel.HR_StructureHistory" />
+          <EntitySet Name="HR_Users" EntityType="hrModel.HR_Users" />
+          <EntitySet Name="HR_worktime" EntityType="hrModel.HR_worktime" />
+          <EntitySet Name="HR_Year" EntityType="hrModel.HR_Year" />
+          <EntitySet Name="HR_Year_Holiday" EntityType="hrModel.HR_Year_Holiday" />
+          <EntitySet Name="HR_YearWorkdays" EntityType="hrModel.HR_YearWorkdays" />
+          <AssociationSet Name="FK_HR_absence_HR_person" Association="hrModel.FK_HR_absence_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Absence" EntitySet="HR_Absence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_educations_HR_person" Association="hrModel.FK_HR_educations_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Educations" EntitySet="HR_Educations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_fired_HR_person" Association="hrModel.FK_HR_fired_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Fired" EntitySet="HR_Fired" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_languagelevel_HR_person" Association="hrModel.FK_HR_languagelevel_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_LanguageLevel" EntitySet="HR_LanguageLevel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_MessageInstances_HR_MessageTypes" Association="hrModel.FK_HR_MessageInstances_HR_MessageTypes">
+            <End Role="HR_MessageTypes" EntitySet="HR_MessageTypes" />
+            <End Role="HR_MessageInstances" EntitySet="HR_MessageInstances" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_Messages_HR_MessageInstances" Association="hrModel.FK_HR_Messages_HR_MessageInstances">
+            <End Role="HR_MessageInstances" EntitySet="HR_MessageInstances" />
+            <End Role="HR_Messages" EntitySet="HR_Messages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_Notes_HR_person" Association="hrModel.FK_HR_Notes_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Notes" EntitySet="HR_Notes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_NotesTable_HR_person" Association="hrModel.FK_HR_NotesTable_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_NotesTable" EntitySet="HR_NotesTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_Penalty_HR_person" Association="hrModel.FK_HR_Penalty_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Penalty" EntitySet="HR_Penalty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_personassignment_HR_person" Association="hrModel.FK_HR_personassignment_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_PersonAssignment" EntitySet="HR_PersonAssignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_pictures_HR_person" Association="hrModel.FK_HR_pictures_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Pictures" EntitySet="HR_Pictures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_PlannedHolidays_HR_person" Association="hrModel.FK_HR_PlannedHolidays_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_PlannedHolidays" EntitySet="HR_PlannedHolidays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HR_Year_Holiday_HR_person" Association="hrModel.FK_HR_Year_Holiday_HR_person">
+            <End Role="HR_person" EntitySet="HR_person" />
+            <End Role="HR_Year_Holiday" EntitySet="HR_Year_Holiday" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="HR_Absence">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orderFromDate" Type="DateTime" Precision="0" />
+          <Property Name="fromDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="toDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="countDays" Type="Int32" Nullable="false" />
+          <Property Name="typeAbsence" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="numberOrder" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="reason" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="parent" Type="Int32" Nullable="false" />
+          <Property Name="modifiedByUser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Year" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="issuedatdate" Type="DateTime" Precision="0" />
+          <Property Name="sicknessduration" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Attachment7" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Declaration39" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="AdditionalDocs" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="MKB" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="reasons" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="NAPDocs" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CalendarDays" Type="Int32" />
+          <Property Name="issuedate" Type="DateTime" Precision="0" />
+          <Property Name="SicknessNumber" Type="Int32" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_absence_HR_person" FromRole="HR_Absence" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_AdminInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firmName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="type" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="kind" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="region" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="town" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="postalCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="addressData" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="phone" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="secureNumber" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="nominalEmployees" Type="Int32" />
+          <Property Name="bankName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="bankAccount" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="bankcode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="directorName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="egnDirector" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="directorLsys" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="egnDirectorLsys" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="mainAccountantName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="egnMainAccountant" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="mainConsult" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="egnMainConsult" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="trz" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="egnTrz" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="additionalInfo" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="modifiedByUser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="bulstat" Type="String" MaxLength="45" Unicode="true" FixedLength="false" />
+          <Property Name="taxNum" Type="String" MaxLength="45" Unicode="true" FixedLength="false" />
+          <Property Name="NKIDCode" Type="String" MaxLength="45" Unicode="true" FixedLength="false" />
+          <Property Name="NKIDLevel" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_AttachedDocs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="parent" Type="Int32" Nullable="false" />
+          <Property Name="link" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="dateadded" Type="DateTime" Precision="0" />
+          <Property Name="typedocument" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_Attestations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="par" Type="Int32" />
+          <Property Name="TotalMark" Type="Int32" />
+          <Property Name="hasWorkplan" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="hasMiddleMeeting" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="hasTraining" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NextRangUpdate" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="hasRangUpdate" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="RangUpdateData" Type="DateTime" Precision="3" />
+          <Property Name="WorkPlanDate" Type="DateTime" Precision="3" />
+          <Property Name="MiddleMeetingDate" Type="DateTime" Precision="3" />
+          <Property Name="ControllingBossName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="hasFinalMeeting" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FinalMeetingDate" Type="DateTime" Precision="3" />
+          <Property Name="NewRang" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="TrainingData" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Others" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="hasPositionUpdate" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PositionUpdateDate" Type="DateTime" Precision="0" />
+          <Property Name="ObjectionDate" Type="DateTime" Precision="0" />
+          <Property Name="hasObjection" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="BossName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_Education">
+          <Key>
+            <PropertyRef Name="level" />
+          </Key>
+          <Property Name="level" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="englevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_EducationNomenklature">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EducationName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EducationCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EducationArea" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NumDays" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NumHours" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Place" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Organisation" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_Educations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personid" Type="Int32" />
+          <Property Name="Area" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Theme" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Code" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EducationDays" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EducationHours" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CertificateData" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="EducationPlace" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FromDate" Type="DateTime" Precision="0" />
+          <Property Name="ToDate" Type="DateTime" Precision="0" />
+          <Property Name="EducationOrganisation" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_educations_HR_person" FromRole="HR_Educations" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_EKDA">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="minSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="maxSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="porNum" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="education" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="rang" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="experience" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="law" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_Fired">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="parent" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="reason" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FromDate" Type="DateTime" Precision="0" />
+          <Property Name="CompensationWork" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CompensationTime" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NumberSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Compensation" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CountDays" Type="Int32" />
+          <Property Name="level1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level3" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level4" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="position" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="baseSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="modifiedbyuser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="fireorder" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FireOrderDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_fired_HR_person" FromRole="HR_Fired" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_FirmPersonal3">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nameOfPosition" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="StaffCount" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="KVS" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NumMonths" Type="Int32" />
+          <Property Name="SecurityLevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EKDACode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EKDALevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="VOS" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PMS" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="AdditionNumber" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PorNum" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Law" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NKPCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="nKPlevel" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="education" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="rang" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Experience" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="OtherRequirements" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="MinSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="MaxSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="free" Type="Double" />
+          <Property Name="busy" Type="Double" />
+          <Property Name="par" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="TypePosition" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="StaffOrder" Type="Int32" />
+          <Property Name="BasicDuties" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="BasicResponsibilities" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Competence" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Connections" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Requirements" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="NKPClass" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="StartSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="BaseSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SalaryAddon" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ScienceAddon" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="OtherAddon" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="positioneng" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="globalpositionid" Type="Int32" />
+          <Property Name="ekdaPayLEvel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_FirmStructure">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="direction" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="control" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="team" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="administration" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="HR_GlobalPositions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PositionName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EKDALevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EKDACode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PorNum" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PMS" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="VOS" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NKPCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NKPLevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Rang" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Experience" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Education" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Law" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Minsalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="MaxSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="TypePosition" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="BasicDuties" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="BasicResponsibilities" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Connections" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Competence" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Requirements" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="NKPClass" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="engposition" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_JoinNomenklature">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="level" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="descriptor" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="englevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_LanguageLevel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="parent" Type="Int32" />
+          <Property Name="Language" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Level" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_languagelevel_HR_person" FromRole="HR_LanguageLevel" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_MessageInstances">
+          <Key>
+            <PropertyRef Name="id_messageInstance" />
+          </Key>
+          <Property Name="id_messageInstance" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_messageType" Type="Int32" Nullable="false" />
+          <Property Name="FixedDate" Type="DateTime" Precision="0" />
+          <Property Name="WarningDays" Type="Int32" />
+          <Property Name="AlarmDays" Type="Int32" />
+          <Property Name="id_department" Type="Int32" />
+          <NavigationProperty Name="HR_MessageTypes" Relationship="hrModel.FK_HR_MessageInstances_HR_MessageTypes" FromRole="HR_MessageInstances" ToRole="HR_MessageTypes" />
+          <NavigationProperty Name="HR_Messages" Relationship="hrModel.FK_HR_Messages_HR_MessageInstances" FromRole="HR_MessageInstances" ToRole="HR_Messages" />
+        </EntityType>
+        <EntityType Name="HR_Messages">
+          <Key>
+            <PropertyRef Name="id_message" />
+          </Key>
+          <Property Name="id_message" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="id_user" Type="Int32" />
+          <Property Name="id_messageInstance" Type="Int32" Nullable="false" />
+          <Property Name="IsConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="IsMailSent" Type="Boolean" Nullable="false" />
+          <Property Name="DueDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="HR_MessageInstances" Relationship="hrModel.FK_HR_Messages_HR_MessageInstances" FromRole="HR_Messages" ToRole="HR_MessageInstances" />
+        </EntityType>
+        <EntityType Name="HR_MessageTypes">
+          <Key>
+            <PropertyRef Name="id_messageType" />
+          </Key>
+          <Property Name="id_messageType" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HR_MessageInstances" Relationship="hrModel.FK_HR_MessageInstances_HR_MessageTypes" FromRole="HR_MessageTypes" ToRole="HR_MessageInstances" />
+        </EntityType>
+        <EntityType Name="HR_Newtree2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="level" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="par" Type="Int32" />
+          <Property Name="code" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="leveleng" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_NKID">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="code" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="HR_nkp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="code" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="oldlevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="oldcode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_Notes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="parent" Type="Int32" />
+          <Property Name="modifiedByUser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_Notes_HR_person" FromRole="HR_Notes" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_NotesTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="par" Type="Int32" Nullable="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="type" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="typedocument" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="modifiedbyuser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_NotesTable_HR_person" FromRole="HR_NotesTable" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_Options">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="classcoef" Type="Double" />
+          <Property Name="incrementclass" Type="Int32" />
+          <Property Name="incrementholiday" Type="Int32" />
+          <Property Name="holidaycoef" Type="Int32" />
+          <Property Name="vacancystash" Type="Int32" />
+          <Property Name="firedsignal" Type="Int32" />
+          <Property Name="personorder" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_Penalty">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="fromDate" Type="DateTime" Precision="0" />
+          <Property Name="numberOrder" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="reason" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="OrderDate" Type="DateTime" Precision="0" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="parent" Type="Int32" />
+          <Property Name="modifiedByUser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="toDate" Type="DateTime" Precision="0" />
+          <Property Name="typePenalty" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="isBonus" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_Penalty_HR_person" FromRole="HR_Penalty" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_person">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="egn" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="bornCountry" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="country" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="region" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="town" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="kwartal" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="street" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="numBlockHouse" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="phone" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="pcard" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="pcardPublish" Type="DateTime" Precision="0" />
+          <Property Name="publishedBy" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="familyStatus" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="education" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="diplomDate" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="profession" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="languages" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="scienceTitle" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="scienceLevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="militaryRang" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="militaryStatus" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="category" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="hiredAt" Type="DateTime" Precision="0" />
+          <Property Name="workExperience" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="sex" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="fired" Type="Int32" />
+          <Property Name="borntown" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="modifiedByUser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="nodeID" Type="Int32" />
+          <Property Name="bornDate" Type="DateTime" Precision="0" />
+          <Property Name="Speciality" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ReceivedAddon" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Rang" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Other" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="egnlnch" Type="Int32" />
+          <Property Name="engname" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="engeducation" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="other1" Type="Int32" />
+          <Property Name="other2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="other3" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="other4" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="other5" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="positionID" Type="Int32" />
+          <Property Name="workbook" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="workbookdate" Type="DateTime" Precision="0" />
+          <Property Name="id_sysco" Type="Int32" />
+          <Property Name="password" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="id_roletype" Type="Int32" Nullable="false" />
+          <Property Name="pcardExpiry" Type="DateTime" Precision="0" />
+          <Property Name="IsSecondary" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="HR_Absence" Relationship="hrModel.FK_HR_absence_HR_person" FromRole="HR_person" ToRole="HR_Absence" />
+          <NavigationProperty Name="HR_Educations" Relationship="hrModel.FK_HR_educations_HR_person" FromRole="HR_person" ToRole="HR_Educations" />
+          <NavigationProperty Name="HR_Fired" Relationship="hrModel.FK_HR_fired_HR_person" FromRole="HR_person" ToRole="HR_Fired" />
+          <NavigationProperty Name="HR_LanguageLevel" Relationship="hrModel.FK_HR_languagelevel_HR_person" FromRole="HR_person" ToRole="HR_LanguageLevel" />
+          <NavigationProperty Name="HR_Notes" Relationship="hrModel.FK_HR_Notes_HR_person" FromRole="HR_person" ToRole="HR_Notes" />
+          <NavigationProperty Name="HR_NotesTable" Relationship="hrModel.FK_HR_NotesTable_HR_person" FromRole="HR_person" ToRole="HR_NotesTable" />
+          <NavigationProperty Name="HR_Penalty" Relationship="hrModel.FK_HR_Penalty_HR_person" FromRole="HR_person" ToRole="HR_Penalty" />
+          <NavigationProperty Name="HR_PersonAssignment" Relationship="hrModel.FK_HR_personassignment_HR_person" FromRole="HR_person" ToRole="HR_PersonAssignment" />
+          <NavigationProperty Name="HR_Pictures" Relationship="hrModel.FK_HR_pictures_HR_person" FromRole="HR_person" ToRole="HR_Pictures" />
+          <NavigationProperty Name="HR_PlannedHolidays" Relationship="hrModel.FK_HR_PlannedHolidays_HR_person" FromRole="HR_person" ToRole="HR_PlannedHolidays" />
+          <NavigationProperty Name="HR_Year_Holiday" Relationship="hrModel.FK_HR_Year_Holiday_HR_person" FromRole="HR_person" ToRole="HR_Year_Holiday" />
+        </EntityType>
+        <EntityType Name="HR_PersonAssignment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="contractType" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="nkpCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="nkpLevel" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EKDACode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EKDALevel" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="classPercent" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="salaryAddon" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="baseSalary" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="numberKids" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="contractExpiry" Type="DateTime" Precision="0" />
+          <Property Name="contractNumber" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="assignReason" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="assignedAt" Type="DateTime" Precision="0" />
+          <Property Name="worktime" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="contract" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="position" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level3" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="IsAdditionalAssignment" Type="Int32" />
+          <Property Name="parent" Type="Int32" />
+          <Property Name="isActive" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modifiedByUser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="years" Type="Int32" />
+          <Property Name="months" Type="Int32" />
+          <Property Name="days" Type="Int32" />
+          <Property Name="positionID" Type="Int32" />
+          <Property Name="parentContractId" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="law" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level4" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="YearlyAddon" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PrevAssignmentID" Type="Int32" />
+          <Property Name="MonthlyAddon" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ParentContractDate" Type="DateTime" Precision="0" />
+          <Property Name="Rang" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NumHoliday" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="TestContractDate" Type="DateTime" Precision="0" />
+          <Property Name="AdditionalHoliday" Type="Int32" />
+          <Property Name="ExperienceCorrection" Type="Int32" />
+          <Property Name="exported" Type="Int32" />
+          <Property Name="pcontractreasoncode" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="substitute" Type="Int32" />
+          <Property Name="staff" Type="Double" />
+          <Property Name="level1eng" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level2eng" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level3eng" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="level4eng" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="positioneng" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="tutorname" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="tutorabsencereason" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ekdaPayDegree" Type="Int32" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_personassignment_HR_person" FromRole="HR_PersonAssignment" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_Pictures">
+          <Key>
+            <PropertyRef Name="parent" />
+          </Key>
+          <Property Name="parent" Type="Int32" Nullable="false" />
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_pictures_HR_person" FromRole="HR_Pictures" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_PlannedHolidays">
+          <Key>
+            <PropertyRef Name="id_plannedHoliday" />
+          </Key>
+          <Property Name="id_plannedHoliday" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="par" Type="Int32" />
+          <Property Name="Jan" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="JanDays" Type="Int32" />
+          <Property Name="Feb" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FebDays" Type="Int32" />
+          <Property Name="Mar" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MarDays" Type="Int32" />
+          <Property Name="Apr" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AprDays" Type="Int32" />
+          <Property Name="May" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MayDays" Type="Int32" />
+          <Property Name="Jun" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="JunDays" Type="Int32" />
+          <Property Name="Jul" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="JulDays" Type="Int32" />
+          <Property Name="Aug" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AugDays" Type="Int32" />
+          <Property Name="Sep" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SepDays" Type="Int32" />
+          <Property Name="Oct" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OctDays" Type="Int32" />
+          <Property Name="Nov" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NovDays" Type="Int32" />
+          <Property Name="Dec" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DecDays" Type="Int32" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_PlannedHolidays_HR_person" FromRole="HR_PlannedHolidays" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_ReasonAssignment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pcontractreasoncode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="substitute" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HR_StructureHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChangeFrom" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ChangeTo" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ChangeOperation" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ChangeDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="HR_Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="userName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="password" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="typeUser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="HR_worktime">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="level" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="staff" Type="Double" />
+        </EntityType>
+        <EntityType Name="HR_Year">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DBVer" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HR_Year_Holiday">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="parent" Type="Int32" />
+          <Property Name="year" Type="Int32" />
+          <Property Name="leftover" Type="Int32" />
+          <Property Name="total" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="telk" Type="Int32" />
+          <Property Name="Unpayed" Type="Int32" />
+          <Property Name="Education" Type="Int32" />
+          <Property Name="Additional" Type="Int32" />
+          <NavigationProperty Name="HR_person" Relationship="hrModel.FK_HR_Year_Holiday_HR_person" FromRole="HR_Year_Holiday" ToRole="HR_person" />
+        </EntityType>
+        <EntityType Name="HR_YearWorkdays">
+          <Key>
+            <PropertyRef Name="id_yearWorkdays" />
+          </Key>
+          <Property Name="id_yearWorkdays" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsHoliday" Type="Boolean" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <Association Name="FK_HR_absence_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="1" />
+          <End Role="HR_Absence" Type="hrModel.HR_Absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Absence">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_educations_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Educations" Type="hrModel.HR_Educations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Educations">
+              <PropertyRef Name="personid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_fired_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Fired" Type="hrModel.HR_Fired" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Fired">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_languagelevel_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="0..1" />
+          <End Role="HR_LanguageLevel" Type="hrModel.HR_LanguageLevel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_LanguageLevel">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_MessageInstances_HR_MessageTypes">
+          <End Role="HR_MessageTypes" Type="hrModel.HR_MessageTypes" Multiplicity="1" />
+          <End Role="HR_MessageInstances" Type="hrModel.HR_MessageInstances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_MessageTypes">
+              <PropertyRef Name="id_messageType" />
+            </Principal>
+            <Dependent Role="HR_MessageInstances">
+              <PropertyRef Name="id_messageType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_Messages_HR_MessageInstances">
+          <End Role="HR_MessageInstances" Type="hrModel.HR_MessageInstances" Multiplicity="1" />
+          <End Role="HR_Messages" Type="hrModel.HR_Messages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_MessageInstances">
+              <PropertyRef Name="id_messageInstance" />
+            </Principal>
+            <Dependent Role="HR_Messages">
+              <PropertyRef Name="id_messageInstance" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_Notes_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Notes" Type="hrModel.HR_Notes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Notes">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_NotesTable_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="1" />
+          <End Role="HR_NotesTable" Type="hrModel.HR_NotesTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_NotesTable">
+              <PropertyRef Name="par" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_Penalty_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Penalty" Type="hrModel.HR_Penalty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Penalty">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_personassignment_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="0..1" />
+          <End Role="HR_PersonAssignment" Type="hrModel.HR_PersonAssignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_PersonAssignment">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_pictures_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="1" />
+          <End Role="HR_Pictures" Type="hrModel.HR_Pictures" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Pictures">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_PlannedHolidays_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="0..1" />
+          <End Role="HR_PlannedHolidays" Type="hrModel.HR_PlannedHolidays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_PlannedHolidays">
+              <PropertyRef Name="par" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HR_Year_Holiday_HR_person">
+          <End Role="HR_person" Type="hrModel.HR_person" Multiplicity="0..1" />
+          <End Role="HR_Year_Holiday" Type="hrModel.HR_Year_Holiday" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HR_person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HR_Year_Holiday">
+              <PropertyRef Name="parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hrModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="HR_Absence">
+            <EntityTypeMapping TypeName="hrModel.HR_Absence">
+              <MappingFragment StoreEntitySet="HR_Absence">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="orderFromDate" ColumnName="orderFromDate" />
+                <ScalarProperty Name="fromDate" ColumnName="fromDate" />
+                <ScalarProperty Name="toDate" ColumnName="toDate" />
+                <ScalarProperty Name="countDays" ColumnName="countDays" />
+                <ScalarProperty Name="typeAbsence" ColumnName="typeAbsence" />
+                <ScalarProperty Name="numberOrder" ColumnName="numberOrder" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="modifiedByUser" ColumnName="modifiedByUser" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="issuedatdate" ColumnName="issuedatdate" />
+                <ScalarProperty Name="sicknessduration" ColumnName="sicknessduration" />
+                <ScalarProperty Name="Attachment7" ColumnName="Attachment7" />
+                <ScalarProperty Name="Declaration39" ColumnName="Declaration39" />
+                <ScalarProperty Name="AdditionalDocs" ColumnName="AdditionalDocs" />
+                <ScalarProperty Name="MKB" ColumnName="MKB" />
+                <ScalarProperty Name="reasons" ColumnName="reasons" />
+                <ScalarProperty Name="NAPDocs" ColumnName="NAPDocs" />
+                <ScalarProperty Name="CalendarDays" ColumnName="CalendarDays" />
+                <ScalarProperty Name="issuedate" ColumnName="issuedate" />
+                <ScalarProperty Name="SicknessNumber" ColumnName="SicknessNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_AdminInfo">
+            <EntityTypeMapping TypeName="hrModel.HR_AdminInfo">
+              <MappingFragment StoreEntitySet="HR_AdminInfo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="firmName" ColumnName="firmName" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="kind" ColumnName="kind" />
+                <ScalarProperty Name="region" ColumnName="region" />
+                <ScalarProperty Name="town" ColumnName="town" />
+                <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+                <ScalarProperty Name="addressData" ColumnName="addressData" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="secureNumber" ColumnName="secureNumber" />
+                <ScalarProperty Name="nominalEmployees" ColumnName="nominalEmployees" />
+                <ScalarProperty Name="bankName" ColumnName="bankName" />
+                <ScalarProperty Name="bankAccount" ColumnName="bankAccount" />
+                <ScalarProperty Name="bankcode" ColumnName="bankcode" />
+                <ScalarProperty Name="directorName" ColumnName="directorName" />
+                <ScalarProperty Name="egnDirector" ColumnName="egnDirector" />
+                <ScalarProperty Name="directorLsys" ColumnName="directorLsys" />
+                <ScalarProperty Name="egnDirectorLsys" ColumnName="egnDirectorLsys" />
+                <ScalarProperty Name="mainAccountantName" ColumnName="mainAccountantName" />
+                <ScalarProperty Name="egnMainAccountant" ColumnName="egnMainAccountant" />
+                <ScalarProperty Name="mainConsult" ColumnName="mainConsult" />
+                <ScalarProperty Name="egnMainConsult" ColumnName="egnMainConsult" />
+                <ScalarProperty Name="trz" ColumnName="trz" />
+                <ScalarProperty Name="egnTrz" ColumnName="egnTrz" />
+                <ScalarProperty Name="additionalInfo" ColumnName="additionalInfo" />
+                <ScalarProperty Name="modifiedByUser" ColumnName="modifiedByUser" />
+                <ScalarProperty Name="bulstat" ColumnName="bulstat" />
+                <ScalarProperty Name="taxNum" ColumnName="taxNum" />
+                <ScalarProperty Name="NKIDCode" ColumnName="NKIDCode" />
+                <ScalarProperty Name="NKIDLevel" ColumnName="NKIDLevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_AttachedDocs">
+            <EntityTypeMapping TypeName="hrModel.HR_AttachedDocs">
+              <MappingFragment StoreEntitySet="HR_AttachedDocs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="dateadded" ColumnName="dateadded" />
+                <ScalarProperty Name="typedocument" ColumnName="typedocument" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Attestations">
+            <EntityTypeMapping TypeName="hrModel.HR_Attestations">
+              <MappingFragment StoreEntitySet="HR_Attestations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="par" ColumnName="par" />
+                <ScalarProperty Name="TotalMark" ColumnName="TotalMark" />
+                <ScalarProperty Name="hasWorkplan" ColumnName="hasWorkplan" />
+                <ScalarProperty Name="hasMiddleMeeting" ColumnName="hasMiddleMeeting" />
+                <ScalarProperty Name="hasTraining" ColumnName="hasTraining" />
+                <ScalarProperty Name="NextRangUpdate" ColumnName="NextRangUpdate" />
+                <ScalarProperty Name="hasRangUpdate" ColumnName="hasRangUpdate" />
+                <ScalarProperty Name="RangUpdateData" ColumnName="RangUpdateData" />
+                <ScalarProperty Name="WorkPlanDate" ColumnName="WorkPlanDate" />
+                <ScalarProperty Name="MiddleMeetingDate" ColumnName="MiddleMeetingDate" />
+                <ScalarProperty Name="ControllingBossName" ColumnName="ControllingBossName" />
+                <ScalarProperty Name="hasFinalMeeting" ColumnName="hasFinalMeeting" />
+                <ScalarProperty Name="FinalMeetingDate" ColumnName="FinalMeetingDate" />
+                <ScalarProperty Name="NewRang" ColumnName="NewRang" />
+                <ScalarProperty Name="TrainingData" ColumnName="TrainingData" />
+                <ScalarProperty Name="Others" ColumnName="Others" />
+                <ScalarProperty Name="hasPositionUpdate" ColumnName="hasPositionUpdate" />
+                <ScalarProperty Name="PositionUpdateDate" ColumnName="PositionUpdateDate" />
+                <ScalarProperty Name="ObjectionDate" ColumnName="ObjectionDate" />
+                <ScalarProperty Name="hasObjection" ColumnName="hasObjection" />
+                <ScalarProperty Name="BossName" ColumnName="BossName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Education">
+            <EntityTypeMapping TypeName="hrModel.HR_Education">
+              <MappingFragment StoreEntitySet="HR_Education">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="englevel" ColumnName="englevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_EducationNomenklature">
+            <EntityTypeMapping TypeName="hrModel.HR_EducationNomenklature">
+              <MappingFragment StoreEntitySet="HR_EducationNomenklature">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+                <ScalarProperty Name="EducationCode" ColumnName="EducationCode" />
+                <ScalarProperty Name="EducationArea" ColumnName="EducationArea" />
+                <ScalarProperty Name="NumDays" ColumnName="NumDays" />
+                <ScalarProperty Name="NumHours" ColumnName="NumHours" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="Organisation" ColumnName="Organisation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Educations">
+            <EntityTypeMapping TypeName="hrModel.HR_Educations">
+              <MappingFragment StoreEntitySet="HR_Educations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="personid" ColumnName="personid" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Theme" ColumnName="Theme" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="EducationDays" ColumnName="EducationDays" />
+                <ScalarProperty Name="EducationHours" ColumnName="EducationHours" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="CertificateData" ColumnName="CertificateData" />
+                <ScalarProperty Name="EducationPlace" ColumnName="EducationPlace" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="EducationOrganisation" ColumnName="EducationOrganisation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_EKDA">
+            <EntityTypeMapping TypeName="hrModel.HR_EKDA">
+              <MappingFragment StoreEntitySet="HR_EKDA">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="minSalary" ColumnName="minSalary" />
+                <ScalarProperty Name="maxSalary" ColumnName="maxSalary" />
+                <ScalarProperty Name="porNum" ColumnName="porNum" />
+                <ScalarProperty Name="education" ColumnName="education" />
+                <ScalarProperty Name="rang" ColumnName="rang" />
+                <ScalarProperty Name="experience" ColumnName="experience" />
+                <ScalarProperty Name="law" ColumnName="law" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Fired">
+            <EntityTypeMapping TypeName="hrModel.HR_Fired">
+              <MappingFragment StoreEntitySet="HR_Fired">
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="CompensationWork" ColumnName="CompensationWork" />
+                <ScalarProperty Name="CompensationTime" ColumnName="CompensationTime" />
+                <ScalarProperty Name="NumberSalary" ColumnName="NumberSalary" />
+                <ScalarProperty Name="Compensation" ColumnName="Compensation" />
+                <ScalarProperty Name="CountDays" ColumnName="CountDays" />
+                <ScalarProperty Name="level1" ColumnName="level1" />
+                <ScalarProperty Name="level2" ColumnName="level2" />
+                <ScalarProperty Name="level3" ColumnName="level3" />
+                <ScalarProperty Name="level4" ColumnName="level4" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="baseSalary" ColumnName="baseSalary" />
+                <ScalarProperty Name="modifiedbyuser" ColumnName="modifiedbyuser" />
+                <ScalarProperty Name="fireorder" ColumnName="fireorder" />
+                <ScalarProperty Name="FireOrderDate" ColumnName="FireOrderDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_FirmPersonal3">
+            <EntityTypeMapping TypeName="hrModel.HR_FirmPersonal3">
+              <MappingFragment StoreEntitySet="HR_FirmPersonal3">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nameOfPosition" ColumnName="nameOfPosition" />
+                <ScalarProperty Name="StaffCount" ColumnName="StaffCount" />
+                <ScalarProperty Name="KVS" ColumnName="KVS" />
+                <ScalarProperty Name="NumMonths" ColumnName="NumMonths" />
+                <ScalarProperty Name="SecurityLevel" ColumnName="SecurityLevel" />
+                <ScalarProperty Name="EKDACode" ColumnName="EKDACode" />
+                <ScalarProperty Name="EKDALevel" ColumnName="EKDALevel" />
+                <ScalarProperty Name="VOS" ColumnName="VOS" />
+                <ScalarProperty Name="PMS" ColumnName="PMS" />
+                <ScalarProperty Name="AdditionNumber" ColumnName="AdditionNumber" />
+                <ScalarProperty Name="PorNum" ColumnName="PorNum" />
+                <ScalarProperty Name="Law" ColumnName="Law" />
+                <ScalarProperty Name="NKPCode" ColumnName="NKPCode" />
+                <ScalarProperty Name="nKPlevel" ColumnName="nKPlevel" />
+                <ScalarProperty Name="education" ColumnName="education" />
+                <ScalarProperty Name="rang" ColumnName="rang" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="OtherRequirements" ColumnName="OtherRequirements" />
+                <ScalarProperty Name="MinSalary" ColumnName="MinSalary" />
+                <ScalarProperty Name="MaxSalary" ColumnName="MaxSalary" />
+                <ScalarProperty Name="free" ColumnName="free" />
+                <ScalarProperty Name="busy" ColumnName="busy" />
+                <ScalarProperty Name="par" ColumnName="par" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="TypePosition" ColumnName="TypePosition" />
+                <ScalarProperty Name="StaffOrder" ColumnName="StaffOrder" />
+                <ScalarProperty Name="BasicDuties" ColumnName="BasicDuties" />
+                <ScalarProperty Name="BasicResponsibilities" ColumnName="BasicResponsibilities" />
+                <ScalarProperty Name="Competence" ColumnName="Competence" />
+                <ScalarProperty Name="Connections" ColumnName="Connections" />
+                <ScalarProperty Name="Requirements" ColumnName="Requirements" />
+                <ScalarProperty Name="NKPClass" ColumnName="NKPClass" />
+                <ScalarProperty Name="StartSalary" ColumnName="StartSalary" />
+                <ScalarProperty Name="BaseSalary" ColumnName="BaseSalary" />
+                <ScalarProperty Name="SalaryAddon" ColumnName="SalaryAddon" />
+                <ScalarProperty Name="ScienceAddon" ColumnName="ScienceAddon" />
+                <ScalarProperty Name="OtherAddon" ColumnName="OtherAddon" />
+                <ScalarProperty Name="positioneng" ColumnName="positioneng" />
+                <ScalarProperty Name="globalpositionid" ColumnName="globalpositionid" />
+                <ScalarProperty Name="ekdaPayLEvel" ColumnName="ekdaPayLEvel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_FirmStructure">
+            <EntityTypeMapping TypeName="hrModel.HR_FirmStructure">
+              <MappingFragment StoreEntitySet="HR_FirmStructure">
+                <ScalarProperty Name="direction" ColumnName="direction" />
+                <ScalarProperty Name="control" ColumnName="control" />
+                <ScalarProperty Name="team" ColumnName="team" />
+                <ScalarProperty Name="administration" ColumnName="administration" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_GlobalPositions">
+            <EntityTypeMapping TypeName="hrModel.HR_GlobalPositions">
+              <MappingFragment StoreEntitySet="HR_GlobalPositions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+                <ScalarProperty Name="EKDALevel" ColumnName="EKDALevel" />
+                <ScalarProperty Name="EKDACode" ColumnName="EKDACode" />
+                <ScalarProperty Name="PorNum" ColumnName="PorNum" />
+                <ScalarProperty Name="PMS" ColumnName="PMS" />
+                <ScalarProperty Name="VOS" ColumnName="VOS" />
+                <ScalarProperty Name="NKPCode" ColumnName="NKPCode" />
+                <ScalarProperty Name="NKPLevel" ColumnName="NKPLevel" />
+                <ScalarProperty Name="Rang" ColumnName="Rang" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Law" ColumnName="Law" />
+                <ScalarProperty Name="Minsalary" ColumnName="Minsalary" />
+                <ScalarProperty Name="MaxSalary" ColumnName="MaxSalary" />
+                <ScalarProperty Name="TypePosition" ColumnName="TypePosition" />
+                <ScalarProperty Name="BasicDuties" ColumnName="BasicDuties" />
+                <ScalarProperty Name="BasicResponsibilities" ColumnName="BasicResponsibilities" />
+                <ScalarProperty Name="Connections" ColumnName="Connections" />
+                <ScalarProperty Name="Competence" ColumnName="Competence" />
+                <ScalarProperty Name="Requirements" ColumnName="Requirements" />
+                <ScalarProperty Name="NKPClass" ColumnName="NKPClass" />
+                <ScalarProperty Name="engposition" ColumnName="engposition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_JoinNomenklature">
+            <EntityTypeMapping TypeName="hrModel.HR_JoinNomenklature">
+              <MappingFragment StoreEntitySet="HR_JoinNomenklature">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="descriptor" ColumnName="descriptor" />
+                <ScalarProperty Name="englevel" ColumnName="englevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_LanguageLevel">
+            <EntityTypeMapping TypeName="hrModel.HR_LanguageLevel">
+              <MappingFragment StoreEntitySet="HR_LanguageLevel">
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_MessageInstances">
+            <EntityTypeMapping TypeName="hrModel.HR_MessageInstances">
+              <MappingFragment StoreEntitySet="HR_MessageInstances">
+                <ScalarProperty Name="id_messageInstance" ColumnName="id_messageInstance" />
+                <ScalarProperty Name="id_messageType" ColumnName="id_messageType" />
+                <ScalarProperty Name="FixedDate" ColumnName="FixedDate" />
+                <ScalarProperty Name="WarningDays" ColumnName="WarningDays" />
+                <ScalarProperty Name="AlarmDays" ColumnName="AlarmDays" />
+                <ScalarProperty Name="id_department" ColumnName="id_department" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Messages">
+            <EntityTypeMapping TypeName="hrModel.HR_Messages">
+              <MappingFragment StoreEntitySet="HR_Messages">
+                <ScalarProperty Name="id_message" ColumnName="id_message" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="id_user" ColumnName="id_user" />
+                <ScalarProperty Name="id_messageInstance" ColumnName="id_messageInstance" />
+                <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+                <ScalarProperty Name="IsMailSent" ColumnName="IsMailSent" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_MessageTypes">
+            <EntityTypeMapping TypeName="hrModel.HR_MessageTypes">
+              <MappingFragment StoreEntitySet="HR_MessageTypes">
+                <ScalarProperty Name="id_messageType" ColumnName="id_messageType" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Newtree2">
+            <EntityTypeMapping TypeName="hrModel.HR_Newtree2">
+              <MappingFragment StoreEntitySet="HR_Newtree2">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="par" ColumnName="par" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="leveleng" ColumnName="leveleng" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_NKID">
+            <EntityTypeMapping TypeName="hrModel.HR_NKID">
+              <MappingFragment StoreEntitySet="HR_NKID">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_nkp">
+            <EntityTypeMapping TypeName="hrModel.HR_nkp">
+              <MappingFragment StoreEntitySet="HR_nkp">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="oldlevel" ColumnName="oldlevel" />
+                <ScalarProperty Name="oldcode" ColumnName="oldcode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Notes">
+            <EntityTypeMapping TypeName="hrModel.HR_Notes">
+              <MappingFragment StoreEntitySet="HR_Notes">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="modifiedByUser" ColumnName="modifiedByUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_NotesTable">
+            <EntityTypeMapping TypeName="hrModel.HR_NotesTable">
+              <MappingFragment StoreEntitySet="HR_NotesTable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="par" ColumnName="par" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="typedocument" ColumnName="typedocument" />
+                <ScalarProperty Name="modifiedbyuser" ColumnName="modifiedbyuser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Options">
+            <EntityTypeMapping TypeName="hrModel.HR_Options">
+              <MappingFragment StoreEntitySet="HR_Options">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="classcoef" ColumnName="classcoef" />
+                <ScalarProperty Name="incrementclass" ColumnName="incrementclass" />
+                <ScalarProperty Name="incrementholiday" ColumnName="incrementholiday" />
+                <ScalarProperty Name="holidaycoef" ColumnName="holidaycoef" />
+                <ScalarProperty Name="vacancystash" ColumnName="vacancystash" />
+                <ScalarProperty Name="firedsignal" ColumnName="firedsignal" />
+                <ScalarProperty Name="personorder" ColumnName="personorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Penalty">
+            <EntityTypeMapping TypeName="hrModel.HR_Penalty">
+              <MappingFragment StoreEntitySet="HR_Penalty">
+                <ScalarProperty Name="fromDate" ColumnName="fromDate" />
+                <ScalarProperty Name="numberOrder" ColumnName="numberOrder" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="modifiedByUser" ColumnName="modifiedByUser" />
+                <ScalarProperty Name="toDate" ColumnName="toDate" />
+                <ScalarProperty Name="typePenalty" ColumnName="typePenalty" />
+                <ScalarProperty Name="isBonus" ColumnName="isBonus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_person">
+            <EntityTypeMapping TypeName="hrModel.HR_person">
+              <MappingFragment StoreEntitySet="HR_person">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="egn" ColumnName="egn" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="bornCountry" ColumnName="bornCountry" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="region" ColumnName="region" />
+                <ScalarProperty Name="town" ColumnName="town" />
+                <ScalarProperty Name="kwartal" ColumnName="kwartal" />
+                <ScalarProperty Name="street" ColumnName="street" />
+                <ScalarProperty Name="numBlockHouse" ColumnName="numBlockHouse" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="pcard" ColumnName="pcard" />
+                <ScalarProperty Name="pcardPublish" ColumnName="pcardPublish" />
+                <ScalarProperty Name="publishedBy" ColumnName="publishedBy" />
+                <ScalarProperty Name="familyStatus" ColumnName="familyStatus" />
+                <ScalarProperty Name="education" ColumnName="education" />
+                <ScalarProperty Name="diplomDate" ColumnName="diplomDate" />
+                <ScalarProperty Name="profession" ColumnName="profession" />
+                <ScalarProperty Name="languages" ColumnName="languages" />
+                <ScalarProperty Name="scienceTitle" ColumnName="scienceTitle" />
+                <ScalarProperty Name="scienceLevel" ColumnName="scienceLevel" />
+                <ScalarProperty Name="militaryRang" ColumnName="militaryRang" />
+                <ScalarProperty Name="militaryStatus" ColumnName="militaryStatus" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="hiredAt" ColumnName="hiredAt" />
+                <ScalarProperty Name="workExperience" ColumnName="workExperience" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="fired" ColumnName="fired" />
+                <ScalarProperty Name="borntown" ColumnName="borntown" />
+                <ScalarProperty Name="modifiedByUser" ColumnName="modifiedByUser" />
+                <ScalarProperty Name="nodeID" ColumnName="nodeID" />
+                <ScalarProperty Name="bornDate" ColumnName="bornDate" />
+                <ScalarProperty Name="Speciality" ColumnName="Speciality" />
+                <ScalarProperty Name="ReceivedAddon" ColumnName="ReceivedAddon" />
+                <ScalarProperty Name="Rang" ColumnName="Rang" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
+                <ScalarProperty Name="egnlnch" ColumnName="egnlnch" />
+                <ScalarProperty Name="engname" ColumnName="engname" />
+                <ScalarProperty Name="engeducation" ColumnName="engeducation" />
+                <ScalarProperty Name="other1" ColumnName="other1" />
+                <ScalarProperty Name="other2" ColumnName="other2" />
+                <ScalarProperty Name="other3" ColumnName="other3" />
+                <ScalarProperty Name="other4" ColumnName="other4" />
+                <ScalarProperty Name="other5" ColumnName="other5" />
+                <ScalarProperty Name="positionID" ColumnName="positionID" />
+                <ScalarProperty Name="workbook" ColumnName="workbook" />
+                <ScalarProperty Name="workbookdate" ColumnName="workbookdate" />
+                <ScalarProperty Name="id_sysco" ColumnName="id_sysco" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="id_roletype" ColumnName="id_roletype" />
+                <ScalarProperty Name="pcardExpiry" ColumnName="pcardExpiry" />
+                <ScalarProperty Name="IsSecondary" ColumnName="IsSecondary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_PersonAssignment">
+            <EntityTypeMapping TypeName="hrModel.HR_PersonAssignment">
+              <MappingFragment StoreEntitySet="HR_PersonAssignment">
+                <ScalarProperty Name="contractType" ColumnName="contractType" />
+                <ScalarProperty Name="nkpCode" ColumnName="nkpCode" />
+                <ScalarProperty Name="nkpLevel" ColumnName="nkpLevel" />
+                <ScalarProperty Name="EKDACode" ColumnName="EKDACode" />
+                <ScalarProperty Name="EKDALevel" ColumnName="EKDALevel" />
+                <ScalarProperty Name="classPercent" ColumnName="classPercent" />
+                <ScalarProperty Name="salaryAddon" ColumnName="salaryAddon" />
+                <ScalarProperty Name="baseSalary" ColumnName="baseSalary" />
+                <ScalarProperty Name="numberKids" ColumnName="numberKids" />
+                <ScalarProperty Name="contractExpiry" ColumnName="contractExpiry" />
+                <ScalarProperty Name="contractNumber" ColumnName="contractNumber" />
+                <ScalarProperty Name="assignReason" ColumnName="assignReason" />
+                <ScalarProperty Name="assignedAt" ColumnName="assignedAt" />
+                <ScalarProperty Name="worktime" ColumnName="worktime" />
+                <ScalarProperty Name="contract" ColumnName="contract" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="level3" ColumnName="level3" />
+                <ScalarProperty Name="level2" ColumnName="level2" />
+                <ScalarProperty Name="level1" ColumnName="level1" />
+                <ScalarProperty Name="IsAdditionalAssignment" ColumnName="IsAdditionalAssignment" />
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="modifiedByUser" ColumnName="modifiedByUser" />
+                <ScalarProperty Name="years" ColumnName="years" />
+                <ScalarProperty Name="months" ColumnName="months" />
+                <ScalarProperty Name="days" ColumnName="days" />
+                <ScalarProperty Name="positionID" ColumnName="positionID" />
+                <ScalarProperty Name="parentContractId" ColumnName="parentContractId" />
+                <ScalarProperty Name="law" ColumnName="law" />
+                <ScalarProperty Name="level4" ColumnName="level4" />
+                <ScalarProperty Name="YearlyAddon" ColumnName="YearlyAddon" />
+                <ScalarProperty Name="PrevAssignmentID" ColumnName="PrevAssignmentID" />
+                <ScalarProperty Name="MonthlyAddon" ColumnName="MonthlyAddon" />
+                <ScalarProperty Name="ParentContractDate" ColumnName="ParentContractDate" />
+                <ScalarProperty Name="Rang" ColumnName="Rang" />
+                <ScalarProperty Name="NumHoliday" ColumnName="NumHoliday" />
+                <ScalarProperty Name="TestContractDate" ColumnName="TestContractDate" />
+                <ScalarProperty Name="AdditionalHoliday" ColumnName="AdditionalHoliday" />
+                <ScalarProperty Name="ExperienceCorrection" ColumnName="ExperienceCorrection" />
+                <ScalarProperty Name="exported" ColumnName="exported" />
+                <ScalarProperty Name="pcontractreasoncode" ColumnName="pcontractreasoncode" />
+                <ScalarProperty Name="substitute" ColumnName="substitute" />
+                <ScalarProperty Name="staff" ColumnName="staff" />
+                <ScalarProperty Name="level1eng" ColumnName="level1eng" />
+                <ScalarProperty Name="level2eng" ColumnName="level2eng" />
+                <ScalarProperty Name="level3eng" ColumnName="level3eng" />
+                <ScalarProperty Name="level4eng" ColumnName="level4eng" />
+                <ScalarProperty Name="positioneng" ColumnName="positioneng" />
+                <ScalarProperty Name="tutorname" ColumnName="tutorname" />
+                <ScalarProperty Name="tutorabsencereason" ColumnName="tutorabsencereason" />
+                <ScalarProperty Name="ekdaPayDegree" ColumnName="ekdaPayDegree" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Pictures">
+            <EntityTypeMapping TypeName="hrModel.HR_Pictures">
+              <MappingFragment StoreEntitySet="HR_Pictures">
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_PlannedHolidays">
+            <EntityTypeMapping TypeName="hrModel.HR_PlannedHolidays">
+              <MappingFragment StoreEntitySet="HR_PlannedHolidays">
+                <ScalarProperty Name="id_plannedHoliday" ColumnName="id_plannedHoliday" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="par" ColumnName="par" />
+                <ScalarProperty Name="Jan" ColumnName="Jan" />
+                <ScalarProperty Name="JanDays" ColumnName="JanDays" />
+                <ScalarProperty Name="Feb" ColumnName="Feb" />
+                <ScalarProperty Name="FebDays" ColumnName="FebDays" />
+                <ScalarProperty Name="Mar" ColumnName="Mar" />
+                <ScalarProperty Name="MarDays" ColumnName="MarDays" />
+                <ScalarProperty Name="Apr" ColumnName="Apr" />
+                <ScalarProperty Name="AprDays" ColumnName="AprDays" />
+                <ScalarProperty Name="May" ColumnName="May" />
+                <ScalarProperty Name="MayDays" ColumnName="MayDays" />
+                <ScalarProperty Name="Jun" ColumnName="Jun" />
+                <ScalarProperty Name="JunDays" ColumnName="JunDays" />
+                <ScalarProperty Name="Jul" ColumnName="Jul" />
+                <ScalarProperty Name="JulDays" ColumnName="JulDays" />
+                <ScalarProperty Name="Aug" ColumnName="Aug" />
+                <ScalarProperty Name="AugDays" ColumnName="AugDays" />
+                <ScalarProperty Name="Sep" ColumnName="Sep" />
+                <ScalarProperty Name="SepDays" ColumnName="SepDays" />
+                <ScalarProperty Name="Oct" ColumnName="Oct" />
+                <ScalarProperty Name="OctDays" ColumnName="OctDays" />
+                <ScalarProperty Name="Nov" ColumnName="Nov" />
+                <ScalarProperty Name="NovDays" ColumnName="NovDays" />
+                <ScalarProperty Name="Dec" ColumnName="Dec" />
+                <ScalarProperty Name="DecDays" ColumnName="DecDays" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_ReasonAssignment">
+            <EntityTypeMapping TypeName="hrModel.HR_ReasonAssignment">
+              <MappingFragment StoreEntitySet="HR_ReasonAssignment">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pcontractreasoncode" ColumnName="pcontractreasoncode" />
+                <ScalarProperty Name="substitute" ColumnName="substitute" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_StructureHistory">
+            <EntityTypeMapping TypeName="hrModel.HR_StructureHistory">
+              <MappingFragment StoreEntitySet="HR_StructureHistory">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ChangeFrom" ColumnName="ChangeFrom" />
+                <ScalarProperty Name="ChangeTo" ColumnName="ChangeTo" />
+                <ScalarProperty Name="ChangeOperation" ColumnName="ChangeOperation" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Users">
+            <EntityTypeMapping TypeName="hrModel.HR_Users">
+              <MappingFragment StoreEntitySet="HR_Users">
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="typeUser" ColumnName="typeUser" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_worktime">
+            <EntityTypeMapping TypeName="hrModel.HR_worktime">
+              <MappingFragment StoreEntitySet="HR_worktime">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="staff" ColumnName="staff" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Year">
+            <EntityTypeMapping TypeName="hrModel.HR_Year">
+              <MappingFragment StoreEntitySet="HR_Year">
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="DBVer" ColumnName="DBVer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Year_Holiday">
+            <EntityTypeMapping TypeName="hrModel.HR_Year_Holiday">
+              <MappingFragment StoreEntitySet="HR_Year_Holiday">
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="leftover" ColumnName="leftover" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="telk" ColumnName="telk" />
+                <ScalarProperty Name="Unpayed" ColumnName="Unpayed" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Additional" ColumnName="Additional" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_YearWorkdays">
+            <EntityTypeMapping TypeName="hrModel.HR_YearWorkdays">
+              <MappingFragment StoreEntitySet="HR_YearWorkdays">
+                <ScalarProperty Name="id_yearWorkdays" ColumnName="id_yearWorkdays" />
+                <ScalarProperty Name="IsHoliday" ColumnName="IsHoliday" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
