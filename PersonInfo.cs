@@ -2166,7 +2166,7 @@ namespace HR
             // 
             // label81
             // 
-            this.label81.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.label81.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label81.Location = new System.Drawing.Point(176, 56);
             this.label81.Name = "label81";
@@ -2292,7 +2292,7 @@ namespace HR
             // 
             // labelRegion
             // 
-            this.labelRegion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.labelRegion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRegion.Location = new System.Drawing.Point(609, 56);
             this.labelRegion.Name = "labelRegion";
@@ -2331,7 +2331,7 @@ namespace HR
             // 
             // labelNames
             // 
-            this.labelNames.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.labelNames.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNames.Location = new System.Drawing.Point(176, 16);
             this.labelNames.Name = "labelNames";
@@ -2341,7 +2341,7 @@ namespace HR
             // 
             // labelCountry
             // 
-            this.labelCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.labelCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCountry.Location = new System.Drawing.Point(609, 16);
             this.labelCountry.Name = "labelCountry";
@@ -6208,7 +6208,7 @@ namespace HR
             this.buttonCardNew.Size = new System.Drawing.Size(130, 23);
             this.buttonCardNew.TabIndex = 22;
             this.buttonCardNew.Tag = "Въвеждане на ново наказание";
-            this.buttonCardNew.Text = "Звание";
+            this.buttonCardNew.Text = "Карта";
             this.buttonCardNew.Click += new System.EventHandler(this.buttonCardNew_Click);
             // 
             // buttonCardPrint
@@ -6279,7 +6279,7 @@ namespace HR
             this.groupBoxCardHistory.Size = new System.Drawing.Size(968, 444);
             this.groupBoxCardHistory.TabIndex = 10;
             this.groupBoxCardHistory.TabStop = false;
-            this.groupBoxCardHistory.Text = "Военни звания";
+            this.groupBoxCardHistory.Text = "Служебни карти";
             // 
             // dataGridViewCards
             // 
@@ -6321,6 +6321,7 @@ namespace HR
             this.dataGridViewCards.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCards.Size = new System.Drawing.Size(962, 425);
             this.dataGridViewCards.TabIndex = 1;
+            this.dataGridViewCards.Click += new System.EventHandler(this.dataGridCard_Click);
             // 
             // groupBox10
             // 
@@ -11507,9 +11508,8 @@ namespace HR
                 }
                 else
                 {
-                    var card =
-                        data.HR_Cards.FirstOrDefault(
-                            a => a.id == (int)this.dataGridViewRang.CurrentRow.Cells["id"].Value);
+                    int cid = (int) this.dataGridViewCards.CurrentRow.Cells["id"].Value;
+                    var card = data.HR_Cards.FirstOrDefault( a => a.id == cid);
                     if (card == null)
                     {
                         MessageBox.Show("Грешка при актуализация на данните");
@@ -11535,9 +11535,10 @@ namespace HR
                     }
                 }
                 Op = Operations.ViewPersonData;
-                this.ControlEnabled(false, LockButtons.Rang);
-                this.EnableButtons(true, true, false, true, true, false, LockButtons.Rang);
+                this.ControlEnabled(false, LockButtons.Card);
+                this.EnableButtons(true, true, false, true, true, false, LockButtons.Card);
                 this.Refresh();
+                this.RefreshCardDataSource(false);
 
                 return true;
             }
@@ -11558,7 +11559,7 @@ namespace HR
                     if (MessageBox.Show(this, "Сигурни ли сте че искате да изтриете данните за служебна карта ", "Изтриване", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         this.dataAdapter.UniversalDelete(TableNames.Cards, this.dataGridViewCards.CurrentRow.Cells["id"].Value.ToString(), "id");
-                        this.dtCards.Rows.Remove(this.dtRang.Rows.Find(this.dataGridViewCards.CurrentRow.Cells["id"].Value));
+                        this.dtCards.Rows.Remove(this.dtCards.Rows.Find(this.dataGridViewCards.CurrentRow.Cells["id"].Value));
 
                         var data = new Entities(mainform.EntityConectionString);
                         var lstCards = data.HR_Cards.Where(a => a.parent == this.parent).ToList().OrderBy(a => a.CardIssueDate).ToList();
@@ -11623,9 +11624,9 @@ namespace HR
 
                     for (int i = 0; i < this.dtCards.Rows.Count; i++)
                     {
-                        if (this.dtCards.Rows[i]["isactive"].ToString() == "1")
+                        if ((bool)this.dtCards.Rows[i]["isactive"] == true)
                         {
-                            this.dataGridViewCards.CurrentCell = this.dataGridViewRang.Rows[i].Cells["cardnumber"];
+                            this.dataGridViewCards.CurrentCell = this.dataGridViewCards.Rows[i].Cells["cardnumber"];
                             this.dataGridViewCards.Rows[i].Selected = true;
                             this.dataGridCard_Click(this, null);
                             break;
@@ -11658,7 +11659,7 @@ namespace HR
                 this.textBoxCardSeries.Text = this.dataGridViewCards.CurrentRow.Cells["cardseries"].Value.ToString();
                 this.textBoxCardSign.Text = this.dataGridViewCards.CurrentRow.Cells["cardsign"].Value.ToString();
 
-                this.dateTimePickerCardIssue.Value = (DateTime)this.dataGridViewCards.CurrentRow.Cells["rangorderdate"].Value;
+                this.dateTimePickerCardIssue.Value = (DateTime)this.dataGridViewCards.CurrentRow.Cells["cardissuedate"].Value;
             }
             catch (Exception ex)
             {
