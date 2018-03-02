@@ -132,15 +132,17 @@ namespace SicknessFrame
             object[,] valueArray = (object[,])excelRange.get_Value(XlRangeValueDataType.xlRangeValueDefault);
 		    for (int i = 2; i <= excelRange.Rows.Count; i++)
 		    {
-                string egn = valueArray[i, 1].ToString();
+                string egn = valueArray[i, 1]?.ToString();
 		        var per = data.HR_Person.Where(a => a.fired == 0 && a.egn == egn).ToList();
 		        if (per == null || per.Count == 0)
 		        {
 		            Message += "Служител " + egn + " не е намерен\n";
+		            continue;
 		        }
                 else if (per.Count > 1)
                 {
                     Message += "Служител " + egn + " има повече от едно досие\n";
+                    continue;
                 }
 		        var person = per.FirstOrDefault();
 		        string cn, cs, cz;

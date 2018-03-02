@@ -473,6 +473,19 @@ namespace HR
 			{
 				dictPerson.Add(PersonColumns.hiredAt, "hiredAt");
 			}
+
+		    if (this.checkBoxAge.Checked)
+		    {
+		        int yearsstart, yearsend;
+
+		        int.TryParse(this.numBoxYounger.Text, out yearsstart);
+                int.TryParse(this.numBoxOlder.Text, out yearsend);
+
+		        DateTime start = DateTime.Now.AddYears(-yearsend);
+                DateTime end = DateTime.Now.AddYears(-yearsstart);
+		        fullJoin = fullJoin.Where(p => p.Person.bornDate >= start && p.Person.bornDate <= end);
+                dictPerson.Add(PersonColumns.bornDate, "bornDate");
+            }
 			return fullJoin;
 		}
 

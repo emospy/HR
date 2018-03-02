@@ -142,9 +142,7 @@ namespace SicknessFrame
 								   MilitaryRangs = mils
 							   };
 
-				result = result.Where(a => (a.MilitaryRangs.isactive == "1" || a.MilitaryRangs == null)&& a.Person.fired == 0 && a.Assignment.isActive == 1);
-
-				
+				result = result.Where(a => (a.MilitaryRangs.isactive == "1" || a.MilitaryRangs == null)&& a.Person.fired == 0 && a.Assignment.isActive == 1 );
 
 				if (lvl1 || lvl2 || lvl3 || lvl4)
 				{
@@ -183,9 +181,12 @@ namespace SicknessFrame
 					var lpg = pg.OrderByDescending(a => a.Assignment.assignedAt).ToList();
 					var la = lpg.Last();
 
-				    la.lstAssignments = data.HR_PersonAssignment.Where(a => a.parent == la.Person.id).OrderBy(a => a.assignedAt).ToList();
+				    la.lstAssignments = data.HR_PersonAssignment.Where(a => a.parent == la.Person.id).ToList();
 				    la.lstMilitaryRangs = data.HR_MilitaryRangs.Where(a => a.parent == la.Person.id).OrderBy(a => a.rangorderdate).ToList();
-
+				    //if (la.lstAssignments.Count == 0)
+				    //{
+				    //    continue;
+				    //}
 				    var lar = la.lstAssignments.Last();
                     
 					//if (lvl4)
@@ -239,8 +240,12 @@ namespace SicknessFrame
                             la.MilitaryRangs.rangorderdate = la.lstMilitaryRangs[i].rangorderdate;
                         }
                     }
-
-                    finalResult.Add(la);
+				    if ((la.Assignment.assignedAt >= this.dpFromDate.SelectedDate.Value &&
+				         la.Assignment.assignedAt <= this.dpToDate.SelectedDate.Value) ||
+				        this.dpFromDate.SelectedDate.Value == this.dpToDate.SelectedDate.Value) 
+				    {
+				        finalResult.Add(la);
+				    }
 				}
 
 				var fileName = "result.xlsx";
