@@ -17,7 +17,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button Name="btnFixGlobalPositions" Grid.Row="0" Grid.Column="0" Content="Структура-длъжности" Click="btnFixGlobalPositions_Click"/>
-        <Button Name="btnFixDVS" Grid.Row="0" Grid.Column="1" Content="Пренасяне на ДВС" Click="btnFixDVS_Click"/>
+        <Button Name="btnFixDVS" Grid.Row="0" Grid.Column="1" Content="Импорт служебни карти" Click="btnFixDVS_Click"/>
         <Button Name="btnFixFirstAssignment" Grid.Row="1" Grid.Column="0" Content="Корекция на първо назначение" Click="btnFixFirstAssignment_Click"/>
         <Button Name="btnFixAssignmentDate" Grid.Row="1" Grid.Column="1" Content="Импорт назначения Шумен" Click="btnFixAssignmentDate_Click"/>
         <Button Name="btnFixSicknessMessages" Grid.Row="2" Grid.Column="0" Content="Корекция на съобщения отпуски" Click="btnFixSicknessMessages_Click"/>

@@ -111,34 +111,111 @@ namespace SicknessFrame
 
 		private void btnFixDVS_Click(object sender, RoutedEventArgs e)
 		{
-			int fixedAssignments = 0;
-			int checkedAssignments = 0;
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Изберете файл за импорт на данни";
+            ofd.Filter = "Excel Files (*.xlsx)|*.xlsx| Excel Files (*.xls)|*.xls| All Files (*.*)|*.*";
+            ofd.ShowDialog();
 
-			var lstPpersons = this.data.HR_Person.Where(p => p.fired == 0).ToList();
-			foreach (var per in lstPpersons)
-			{
-				var lstAssignments = this.data.HR_PersonAssignment.Where(a => a.parent == per.id).ToList();
-				var lstDVS = lstAssignments.Where(a => a.classPercent != "" && a.classPercent != null).ToList();
-				if (lstDVS.Count > 0)
-				{
-					var lastAssignment = lstAssignments.Last();
-					checkedAssignments++;
-					if (lastAssignment.classPercent == "" || lastAssignment.classPercent == null)
-					{
-						//look for previous assignment DVS
-						for (int i = lstAssignments.Count - 1; i >= 0; i--)
-						{
-							if (lstAssignments[i].classPercent != "" && lstAssignments[i].classPercent != null)
-							{
-								lastAssignment.classPercent = lstAssignments[i].classPercent;
-								data.SaveChanges();
-								fixedAssignments++;
-								break;
-							}
-						}
-					}
-				}
-			}
+            Worksheet xlsheet;
+            Workbook xlwkbook;
+
+            xlwkbook = (Workbook)System.Runtime.InteropServices.Marshal.BindToMoniker(ofd.FileName);
+            xlsheet = (Worksheet)xlwkbook.ActiveSheet;
+
+            //Range oRng;
+            data = new Entities(this.connstr);
+            //string level;
+
+		    string Message = "";
+            Range excelRange = xlsheet.UsedRange;
+            //get an object array of all of the cells in the worksheet (their values)
+            object[,] valueArray = (object[,])excelRange.get_Value(XlRangeValueDataType.xlRangeValueDefault);
+		    for (int i = 2; i <= excelRange.Rows.Count; i++)
+		    {
+                string egn = valueArray[i, 1].ToString();
+		        var per = data.HR_Person.Where(a => a.fired == 0 && a.egn == egn).ToList();
+		        if (per == null || per.Count == 0)
+		        {
+		            Message += "Служител " + egn + " не е намерен\n";
+		        }
+                else if (per.Count > 1)
+                {
+                    Message += "Служител " + egn + " има повече от едно досие\n";
+                }
+		        var person = per.FirstOrDefault();
+		        string cn, cs, cz;
+                cn = valueArray[i, 15].ToString();
+                cs = valueArray[i, 16].ToString();
+                cz = valueArray[i, 17].ToString();
+		        var lstSame =
+		            data.HR_Cards.Where(a => a.CardNumber == cn && a.CardSeries == cs && a.CardSign == cz).ToList();
+
+                if (lstSame.Count > 0)
+		        {
+		            Message += "Карта на " + egn + " с такива атрибути вече е издавана\n";
+		        }
+		        else
+		        {
+		            var card = new HR_Cards();
+		            DateTime cd = new DateTime(1970,1,1);
+		            var dateStr = valueArray[i, 14].ToString();
+                    DateTime.TryParse(dateStr, out cd);
+		            if (person.engname == null || person.engname == string.Empty)
+		            {
+		                person.engname = valueArray[i, 9]?.ToString() + " " + valueArray[i, 10]?.ToString() + " " +
+		                                 valueArray[i, 11]?.ToString()+ valueArray[i, 12]?.ToString();
+
+		            }
+		            card.CardIssueDate = cd;
+		            card.parent = person.id;
+		            card.CardNumber = cn;
+		            card.CardSeries = cs;
+		            card.CardSign = cz;
+		            card.MilitaryDegree = valueArray[i, 2].ToString();
+                    card.MilitaryDegreeEng = valueArray[i, 3].ToString();
+		            card.isactive = true;
+
+		            var lstCards = data.HR_Cards.Where(a => a.parent == person.id).ToList();
+		            foreach (var ca in lstCards)
+		            {
+		                ca.isactive = false;
+		            }
+
+		            var picPath = ofd.FileName.Substring(0, ofd.FileName.Length - ofd.SafeFileName.Length) +
+		                      valueArray[i, 13].ToString();
+		            byte[] picture;
+		            try
+		            {
+                        picture = File.ReadAllBytes(picPath);
+                        var photo = data.HR_Pictures.FirstOrDefault(a => a.parent == person.id);
+                        if (photo != null)
+                        {
+                            //replace the photo
+                            photo.picture = picture;
+                        }
+                        else
+                        {
+                            //create new photo
+                            photo = new HR_Pictures();
+                            photo.parent = person.id;
+                            photo.picture = picture;
+                            data.HR_Pictures.AddObject(photo);
+                        }
+                    }
+		            catch (Exception)
+		            {
+		                Message += "Снимка " + valueArray[i, 13].ToString() + " не е намерена";
+		            }
+		            
+                    data.HR_Cards.AddObject(card);
+		            data.SaveChanges();
+		        }
+
+		    }
+		    if (Message.Length > 0)
+		    {
+		        MessageBox.Show(Message);
+		    }
 		}
 
 		private void btnFixAbsence_Click(object sender, RoutedEventArgs e)
