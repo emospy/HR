@@ -1692,132 +1692,6 @@ namespace HR
 			}
 		}
 
-		/// <summary>
-		/// Summary description for ExcelExpo.
-		/// </summary>
-		public void ExtractFree(mainForm main)
-		{
-			int CurrentRow = 3;
-			DataTable dtEKDA;
-			DataView vuePositions = new DataView();
-
-			this.dtTree = main.nomenclaatureData.dtTreeTable;
-			this.dtPos = new DataTable();
-			DataAction da = new DataAction(main.connString);
-			this.dtPos = da.SelectWhere(TableNames.FirmPersonal3, "*", " ORDER BY id");
-			dtEKDA = da.SelectWhere(TableNames.Ekda, "*", " ORDER BY id");
-
-			if (this.dtPos == null || dtEKDA == null)
-			{
-				MessageBox.Show("Грешка при зареждане на структурата на организацията", ErrorMessages.NoConnection);
-				return;
-			}
-			DataViewRowState dvrs = DataViewRowState.CurrentRows;
-
-			try
-			{
-				m_objExcel = new Excel.Application();
-			}
-			catch
-			{
-				MessageBox.Show("На компютъра няма инсталиран Microsoft Excel.");
-				return;
-			}
-
-			System.Threading.ThreadStart dele = new System.Threading.ThreadStart(threadStart);
-			System.Threading.Thread th = new System.Threading.Thread(dele);
-			this.form = new formWait("Free");
-			th.Start();
-			try
-			{
-				// Open a workbook in Excel
-				m_objBook = m_objExcel.Workbooks.Open(Application.StartupPath +
-					"\\TemplateFree.xls", vk_update_links, vk_read_only, vk_format, vk_password,
-					vk_write_res_password, vk_ignore_read_only_recommend, vk_origin,
-					vk_delimiter, vk_editable, vk_notify, vk_converter, vk_add_to_mru
-					);
-			}
-			catch (Exception e)
-			{
-				MessageBox.Show("Липсва шаблонен файл", e.Message);
-				return;
-			}
-			m_objSheets = (Excel.Sheets)m_objBook.Worksheets;
-			m_objSheet = (Excel._Worksheet)(m_objSheets.Item[1]);
-
-			this.ExtractFreeLevel(0, ref CurrentRow);
-
-			CurrentRow++;
-
-			m_objSheet.Cells[CurrentRow, 1] = "Длъжностно ниво";
-			m_objSheet.Cells[CurrentRow, 2] = "НАИМЕНОВАНИЯ НА ДЛЪЖНОСТИТЕ";
-			m_objSheet.Cells[CurrentRow, 3] = "Брой по щат";
-			m_objSheet.Cells[CurrentRow, 4] = "Брой заети";
-			m_objSheet.Cells[CurrentRow, 5] = "Брой вакантни";
-			CurrentRow++;
-			m_objSheet.Cells[CurrentRow, 1] = 1;
-			m_objSheet.Cells[CurrentRow, 2] = 2;
-			m_objSheet.Cells[CurrentRow, 3] = 3;
-			m_objSheet.Cells[CurrentRow, 4] = 4;
-			m_objSheet.Cells[CurrentRow, 5] = 5;
-			CurrentRow++;
-
-			foreach (DataRow row in dtEKDA.Rows)
-			{
-				if (row["code"].ToString().Length < 4)
-				{
-					float numTotal = 0, numBusy = 0, numFree = 0;
-					string filt = "EKDACode = '" + row["code"].ToString() + "' AND EKDALevel = '" + row["level"].ToString() + "'";
-					vuePositions = new DataView(dtPos, filt, "id", dvrs);
-					for (int i = 0; i < vuePositions.Count; i++)
-					{
-						try
-						{
-							numTotal += int.Parse(vuePositions[i]["StaffCount"].ToString());
-						}
-						catch
-						{
-						}
-						try
-						{
-							numBusy += int.Parse(vuePositions[i]["Busy"].ToString());
-						}
-						catch
-						{
-						}
-						try
-						{
-							numFree += int.Parse(vuePositions[i]["Free"].ToString());
-						}
-						catch
-						{
-						}
-					}
-					if (numTotal > 0)
-					{
-						PrintPositionsRow(row, numTotal, numBusy, numFree, CurrentRow);
-						CurrentRow++;
-					}
-				}
-				else
-				{
-					m_objSheet.Cells[CurrentRow, 2] = row["code"];
-					m_objRange = m_objSheet.Range[m_objSheet.Cells[CurrentRow, 2], m_objSheet.Cells[CurrentRow, 2]];
-					m_objRange.Font.Bold = true;
-					CurrentRow++;
-				}
-			}
-
-			m_objRange = m_objSheet.Range[m_objSheet.Cells[1, 1], m_objSheet.Cells[CurrentRow, 10]];
-			m_objRange.EntireColumn.AutoFit();
-			m_objExcel.Visible = true;
-
-			ReleaseExcelApplication();
-			form.SetReferencePoint();
-			form.StoreIncrements();
-			th.Abort();
-		}
-
 		public void ExtractFreeEntity(mainForm main)
 		{
 			int CurrentRow = 3;
@@ -1887,68 +1761,7 @@ namespace HR
 			form.SetReferencePoint();
 			form.StoreIncrements();
 			th.Abort();
-		}
-
-		private void PrintFreeRow(int CurrentRow, int pk, DataView vuePositions)
-		{
-			//Име на длъжност - 2
-			m_objSheet.Cells[CurrentRow, 2] = vuePositions[pk]["nameOfPosition"];
-			//Численост (щат) - 3
-			m_objSheet.Cells[CurrentRow, 3] = vuePositions[pk]["staffCount"];
-			//Заети
-			m_objSheet.Cells[CurrentRow, 4] = vuePositions[pk]["Busy"];
-			//Свободни
-			m_objSheet.Cells[CurrentRow, 5] = vuePositions[pk]["Free"];
-		}
-
-		private void ExtractFreeLevel(int parrot, ref int CurrentRow)
-		{
-			int par;
-			DataView vuePositions;
-			DataViewRowState dvrs = DataViewRowState.CurrentRows;
-			DataView vueTree = new DataView(this.dtTree, "par = " + parrot.ToString(), "id", dvrs);
-
-			for (int i = 0; i < vueTree.Count; i++)
-			{
-				try
-				{
-					par = int.Parse(vueTree[i]["par"].ToString());
-				}
-				catch (System.Exception e)
-				{
-					MessageBox.Show(e.Message, "Грешни данни ExportFree");
-					par = 0;
-				}
-				if (par == parrot)
-				{
-					int NodeId;
-					try
-					{
-						NodeId = int.Parse(vueTree[i]["id"].ToString());
-					}
-					catch (System.Exception e)
-					{
-						MessageBox.Show(e.Message, "Грешни данни ExportFree");
-						NodeId = 0;
-					}
-					string NodeText = vueTree[i]["level"].ToString();
-
-					string cond = "par = " + NodeId.ToString();
-					vuePositions = new DataView(this.dtPos, cond, "id", dvrs);
-
-					m_objSheet.Cells[CurrentRow, 2] = NodeText;
-					m_objSheet.Cells[CurrentRow, 1] = vueTree[i]["code"].ToString();
-					m_objRange = m_objSheet.Range[m_objSheet.Cells[CurrentRow, 2], m_objSheet.Cells[CurrentRow, 2]];
-					m_objRange.Font.Bold = true;
-					CurrentRow++;
-					for (int pk = 0; pk < vuePositions.Count; pk++, CurrentRow++)
-					{
-						this.PrintFreeRow(CurrentRow, pk, vuePositions);
-					}
-					this.ExtractFreeLevel(NodeId, ref CurrentRow);
-				}
-			}
-		}
+		}		
 
 		private void ExtractFreeLevelEntity(HR_Newtree2 pdep, ref int CurrentRow, Entities data)
 		{
@@ -2003,19 +1816,7 @@ namespace HR
 			}
 		}
 
-		private void PrintPositionsRow(DataRow row, float numTotal, float numBusy, float numFree, int CurrentRow)
-		{
-			// 1 - код по ЕКДА
-			m_objSheet.Cells[CurrentRow, 1] = row["code"];
-			// 2 - Длъжностно ниво по ЕКДА
-			m_objSheet.Cells[CurrentRow, 2] = row["level"];
-			// 3 - Брой щатни бройки
-			m_objSheet.Cells[CurrentRow, 3] = numTotal.ToString();
-			// 4 - Брой заети щатни бройки
-			m_objSheet.Cells[CurrentRow, 4] = numBusy.ToString();
-			// 5 - Брой свободни
-			m_objSheet.Cells[CurrentRow, 5] = numFree.ToString();
-		}
+		
 		/// <summary>
 		/// Summary description for ExcelExpo.
 		/// </summary>
