@@ -111,113 +111,113 @@ namespace SicknessFrame
 
 		private void btnFixDVS_Click(object sender, RoutedEventArgs e)
 		{
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Изберете файл за импорт на данни";
-            ofd.Filter = "Excel Files (*.xlsx)|*.xlsx| Excel Files (*.xls)|*.xls| All Files (*.*)|*.*";
-            ofd.ShowDialog();
+			OpenFileDialog ofd = new OpenFileDialog();
+			ofd.Title = "Изберете файл за импорт на данни";
+			ofd.Filter = "Excel Files (*.xlsx)|*.xlsx| Excel Files (*.xls)|*.xls| All Files (*.*)|*.*";
+			ofd.ShowDialog();
 
-            Worksheet xlsheet;
-            Workbook xlwkbook;
+			Worksheet xlsheet;
+			Workbook xlwkbook;
 
-            xlwkbook = (Workbook)System.Runtime.InteropServices.Marshal.BindToMoniker(ofd.FileName);
-            xlsheet = (Worksheet)xlwkbook.ActiveSheet;
+			xlwkbook = (Workbook)System.Runtime.InteropServices.Marshal.BindToMoniker(ofd.FileName);
+			xlsheet = (Worksheet)xlwkbook.ActiveSheet;
 
-            //Range oRng;
-            data = new Entities(this.connstr);
-            //string level;
+			//Range oRng;
+			data = new Entities(this.connstr);
+			//string level;
 
-		    string Message = "";
-            Range excelRange = xlsheet.UsedRange;
-            //get an object array of all of the cells in the worksheet (their values)
-            object[,] valueArray = (object[,])excelRange.get_Value(XlRangeValueDataType.xlRangeValueDefault);
-		    for (int i = 2; i <= excelRange.Rows.Count; i++)
-		    {
-                string egn = valueArray[i, 1]?.ToString();
-		        var per = data.HR_Person.Where(a => a.fired == 0 && a.egn == egn).ToList();
-		        if (per == null || per.Count == 0)
-		        {
-		            Message += "Служител " + egn + " не е намерен\n";
-		            continue;
-		        }
-                else if (per.Count > 1)
-                {
-                    Message += "Служител " + egn + " има повече от едно досие\n";
-                    continue;
-                }
-		        var person = per.FirstOrDefault();
-		        string cn, cs, cz;
-                cn = valueArray[i, 15].ToString();
-                cs = valueArray[i, 16].ToString();
-                cz = valueArray[i, 17].ToString();
-		        var lstSame =
-		            data.HR_Cards.Where(a => a.CardNumber == cn && a.CardSeries == cs && a.CardSign == cz).ToList();
+			string Message = "";
+			Range excelRange = xlsheet.UsedRange;
+			//get an object array of all of the cells in the worksheet (their values)
+			object[,] valueArray = (object[,])excelRange.get_Value(XlRangeValueDataType.xlRangeValueDefault);
+			for (int i = 2; i <= excelRange.Rows.Count; i++)
+			{
+				string egn = valueArray[i, 1]?.ToString();
+				var per = data.HR_Person.Where(a => a.fired == 0 && a.egn == egn).ToList();
+				if (per == null || per.Count == 0)
+				{
+					Message += "Служител " + egn + " не е намерен\n";
+					continue;
+				}
+				else if (per.Count > 1)
+				{
+					Message += "Служител " + egn + " има повече от едно досие\n";
+					continue;
+				}
+				var person = per.FirstOrDefault();
+				string cn, cs, cz;
+				cn = valueArray[i, 15].ToString();
+				cs = valueArray[i, 16].ToString();
+				cz = valueArray[i, 17].ToString();
+				var lstSame =
+					data.HR_Cards.Where(a => a.CardNumber == cn && a.CardSeries == cs && a.CardSign == cz).ToList();
 
-                if (lstSame.Count > 0)
-		        {
-		            Message += "Карта на " + egn + " с такива атрибути вече е издавана\n";
-		        }
-		        else
-		        {
-		            var card = new HR_Cards();
-		            DateTime cd = new DateTime(1970,1,1);
-		            var dateStr = valueArray[i, 14].ToString();
-                    DateTime.TryParse(dateStr, out cd);
-		            if (person.engname == null || person.engname == string.Empty)
-		            {
-		                person.engname = valueArray[i, 9]?.ToString() + " " + valueArray[i, 10]?.ToString() + " " +
-		                                 valueArray[i, 11]?.ToString()+ valueArray[i, 12]?.ToString();
+				if (lstSame.Count > 0)
+				{
+					Message += "Карта на " + egn + " с такива атрибути вече е издавана\n";
+				}
+				else
+				{
+					var card = new HR_Cards();
+					DateTime cd = new DateTime(1970, 1, 1);
+					var dateStr = valueArray[i, 14].ToString();
+					DateTime.TryParse(dateStr, out cd);
+					if (person.engname == null || person.engname == string.Empty)
+					{
+						person.engname = valueArray[i, 9]?.ToString() + " " + valueArray[i, 10]?.ToString() + " " +
+										 valueArray[i, 11]?.ToString() + valueArray[i, 12]?.ToString();
 
-		            }
-		            card.CardIssueDate = cd;
-		            card.parent = person.id;
-		            card.CardNumber = cn;
-		            card.CardSeries = cs;
-		            card.CardSign = cz;
-		            card.MilitaryDegree = valueArray[i, 2].ToString();
-                    card.MilitaryDegreeEng = valueArray[i, 3].ToString();
-		            card.isactive = true;
+					}
+					card.CardIssueDate = cd;
+					card.parent = person.id;
+					card.CardNumber = cn;
+					card.CardSeries = cs;
+					card.CardSign = cz;
+					card.MilitaryDegree = valueArray[i, 2].ToString();
+					card.MilitaryDegreeEng = valueArray[i, 3].ToString();
+					card.isactive = true;
 
-		            var lstCards = data.HR_Cards.Where(a => a.parent == person.id).ToList();
-		            foreach (var ca in lstCards)
-		            {
-		                ca.isactive = false;
-		            }
+					var lstCards = data.HR_Cards.Where(a => a.parent == person.id).ToList();
+					foreach (var ca in lstCards)
+					{
+						ca.isactive = false;
+					}
 
-		            var picPath = ofd.FileName.Substring(0, ofd.FileName.Length - ofd.SafeFileName.Length) +
-		                      valueArray[i, 13].ToString();
-		            byte[] picture;
-		            try
-		            {
-                        picture = File.ReadAllBytes(picPath);
-                        var photo = data.HR_Pictures.FirstOrDefault(a => a.parent == person.id);
-                        if (photo != null)
-                        {
-                            //replace the photo
-                            photo.picture = picture;
-                        }
-                        else
-                        {
-                            //create new photo
-                            photo = new HR_Pictures();
-                            photo.parent = person.id;
-                            photo.picture = picture;
-                            data.HR_Pictures.AddObject(photo);
-                        }
-                    }
-		            catch (Exception)
-		            {
-		                Message += "Снимка " + valueArray[i, 13].ToString() + " не е намерена";
-		            }
-		            
-                    data.HR_Cards.AddObject(card);
-		            data.SaveChanges();
-		        }
+					var picPath = ofd.FileName.Substring(0, ofd.FileName.Length - ofd.SafeFileName.Length) +
+							  valueArray[i, 13].ToString();
+					byte[] picture;
+					try
+					{
+						picture = File.ReadAllBytes(picPath);
+						var photo = data.HR_Pictures.FirstOrDefault(a => a.parent == person.id);
+						if (photo != null)
+						{
+							//replace the photo
+							photo.picture = picture;
+						}
+						else
+						{
+							//create new photo
+							photo = new HR_Pictures();
+							photo.parent = person.id;
+							photo.picture = picture;
+							data.HR_Pictures.AddObject(photo);
+						}
+					}
+					catch (Exception)
+					{
+						Message += "Снимка " + valueArray[i, 13].ToString() + " не е намерена";
+					}
 
-		    }
-		    if (Message.Length > 0)
-		    {
-		        MessageBox.Show(Message);
-		    }
+					data.HR_Cards.AddObject(card);
+					data.SaveChanges();
+				}
+
+			}
+			if (Message.Length > 0)
+			{
+				MessageBox.Show(Message);
+			}
 		}
 
 		private void btnFixAbsence_Click(object sender, RoutedEventArgs e)
@@ -978,13 +978,13 @@ namespace SicknessFrame
 				var wb = package.Workbook.Worksheets[1];
 				int end = wb.Dimension.End.Row;
 
-				for (int i = 3; i <= end; i++)
+				for (int i = 28; i <= end; i++)
 				{
 					if (wb.Cells[i, 1].Value == null)
 					{
 						continue;
 					}
-					var name = wb.Cells[i, 2].Value.ToString().Trim() + " " + wb.Cells[i, 3].Value.ToString().Trim() + " " + wb.Cells[i, 4].Value.ToString().Trim();
+					var name = wb.Cells[i, 83].Value?.ToString().Trim();
 					var per = data.HR_Person.FirstOrDefault(a => a.name == name);
 					HR_PersonAssignment ass;
 
@@ -994,15 +994,19 @@ namespace SicknessFrame
 						data.HR_Person.AddObject(per);
 						ass = new HR_PersonAssignment();
 						ass.HR_Person = per;
+						ass.pcontractreasoncode = "1";
 						data.HR_PersonAssignment.AddObject(ass);
-						per.fired = 1;
+						//per.fired = 1;
 					}
 					else
 					{
 						ass = data.HR_PersonAssignment.FirstOrDefault(a => a.parent == per.id);
 						if (ass == null)
 						{
-							continue;
+							ass = new HR_PersonAssignment();
+							ass.HR_Person = per;
+							data.HR_PersonAssignment.AddObject(ass);
+							ass.pcontractreasoncode = "1";
 						}
 					}
 
@@ -1011,7 +1015,14 @@ namespace SicknessFrame
 					DateTime hirat = new DateTime(1970, 1, 1);
 					DateTime.TryParse(wb.Cells[i, 6].Value?.ToString(), out hirat);
 					ass.assignedAt = hirat;
-					ass.contractNumber = wb.Cells[i, 10].Value?.ToString();
+					if (wb.Cells[i, 10].Value == null)
+					{
+						ass.contractNumber = "0";
+					}
+					else
+					{
+						ass.contractNumber = wb.Cells[i, 10].Value.ToString();
+					}
 					hirat = new DateTime(1970, 1, 1);
 					ass.ParentContractDate = hirat;
 					if (wb.Cells[i, 14].Value != null)
@@ -1025,6 +1036,8 @@ namespace SicknessFrame
 						fd = new DateTime(1970, 1, 1);
 						DateTime.TryParse(wb.Cells[i, 16].Value?.ToString(), out fd);
 						fir.FireOrderDate = fd;
+						per.fired = 1;
+						data.HR_Fired.AddObject(fir);
 					}
 
 					float bs = 0;
@@ -1032,19 +1045,22 @@ namespace SicknessFrame
 					ass.baseSalary = bs;
 					if (per.fired == 1)
 					{
-						ass.level1 = wb.Cells[i, 19].Value?.ToString();
-						ass.position = wb.Cells[i, 23].Value?.ToString();
-						ass.nkpCode = wb.Cells[i, 38].Value?.ToString();
-						float stt;
-						if (float.TryParse(wb.Cells[i, 39].Value?.ToString(), out stt))
+						if (ass.level1 == null || ass.level1 == string.Empty)
 						{
-							if (stt == 1)
+							ass.level1 = wb.Cells[i, 19].Value?.ToString();
+							ass.position = wb.Cells[i, 23].Value?.ToString();
+							ass.nkpCode = wb.Cells[i, 38].Value?.ToString();
+							float stt;
+							if (float.TryParse(wb.Cells[i, 39].Value?.ToString(), out stt))
 							{
-								ass.worktime = "Пълно 8 часа";
-							}
-							else
-							{
-								ass.worktime = "Непълно 4 часа";
+								if (stt == 1)
+								{
+									ass.worktime = "Пълно 8 часа";
+								}
+								else
+								{
+									ass.worktime = "Непълно 4 часа";
+								}
 							}
 						}
 					}
@@ -1071,8 +1087,52 @@ namespace SicknessFrame
 					ass.months = staffm;
 					ass.days = staffd;
 
-					//per.
+					//year holiday section					
 
+
+
+					for (int ih = 98; ih >= 94; ih--)
+					{
+						if (wb.Cells[i, ih].Value != null && wb.Cells[i, ih].Value.ToString() != string.Empty)
+						{
+							var yh = new HR_Year_Holiday();
+							yh.year = 2009 + (94 - ih);
+							int days = 0;
+							int.TryParse(wb.Cells[i, ih].Value.ToString(), out days);
+							yh.leftover = days;
+							yh.HR_Person = per;
+							data.HR_Year_Holiday.AddObject(yh);
+						}
+					}
+
+					for (int ih = 93; ih >= 91; ih--)
+					{
+						if (wb.Cells[i, ih].Value != null && wb.Cells[i, ih].Value.ToString() != string.Empty)
+						{
+							var yh = new HR_Year_Holiday();
+							yh.year = 2017 + (91 - ih);
+							int days = 0;
+							int.TryParse(wb.Cells[i, ih].Value.ToString(), out days);
+							yh.leftover = days;
+							yh.HR_Person = per;
+							data.HR_Year_Holiday.AddObject(yh);
+						}
+					}
+
+					if (wb.Cells[i, 89].Value != null && wb.Cells[i, 89].Value.ToString() != string.Empty)
+					{
+						var yh = new HR_Year_Holiday();
+						yh.HR_Person = per;
+						yh.year = 2018;
+
+						int days = 0;
+						int.TryParse(wb.Cells[i, 90].Value.ToString(), out days);
+						yh.leftover = days;
+						days = 0;
+						int.TryParse(wb.Cells[i, 89].Value.ToString(), out days);
+						yh.total = days;
+						data.HR_Year_Holiday.AddObject(yh);
+					}
 					data.SaveChanges();
 				}
 			}
@@ -1205,7 +1265,30 @@ namespace SicknessFrame
 
 		private void btnImportHolidays_Click(object sender, RoutedEventArgs e)
 		{
+			//this.data = new Entities();
 
+			var lstasses = data.HR_PersonAssignment.ToList();
+
+			foreach (var per in lstasses)
+			{
+				if(per.assignedAt == null)
+				{
+					per.assignedAt = new DateTime(1970, 1, 1);
+				}
+				if (per.contractExpiry == null)
+				{
+					per.contractExpiry = new DateTime(1970, 1, 1);
+				}
+				if (per.TestContractDate == null)
+				{
+					per.TestContractDate = new DateTime(1970, 1, 1);
+				}
+				if (per.ParentContractDate == null)
+				{
+					per.ParentContractDate = new DateTime(1970, 1, 1);
+				}
+			}
+			data.SaveChanges();
 		}
 	}
 }

@@ -12479,10 +12479,9 @@ namespace HR
 
                                 pDict.Add("nodeID", "0");
                                 pDict.Add("fired", "1");
-                                pDict.Add("exported", "0");
+                                //iDict.Add("exported", "0");
 
-                                posDict.Add("Free", "'free + " + vueRel[0]["free"].ToString());
-                                posDict.Add("Busy", "'busy - " + vueRel[0]["busy"].ToString());
+                                
 
                                 bool Save = false;
 

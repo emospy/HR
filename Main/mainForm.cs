@@ -1653,7 +1653,7 @@ namespace HR
 		}
 		private void menuSprawki_Free_Click(object sender, System.EventArgs e)
 		{
-			Ex.ExtractFree(this);
+			Ex.ExtractFreeEntity(this);
 			GC.Collect();
 		}
 
