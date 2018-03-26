@@ -510,6 +510,9 @@ warning 6002: The table/view 'HR.dbo.HR_EKDAPayLevels' does not have a primary k
           <Property Name="id_roletype" Type="int" Nullable="false" />
           <Property Name="pcardExpiry" Type="date" />
           <Property Name="IsSecondary" Type="bit" Nullable="false" />
+          <Property Name="TotalExpY" Type="int" />
+          <Property Name="TotalExpM" Type="int" />
+          <Property Name="TotalExpD" Type="int" />
         </EntityType>
         <EntityType Name="HR_PersonAssignment">
           <Key>
@@ -1762,6 +1765,9 @@ FROM [dbo].[HR_EKDAPayLevels] AS [HR_EKDAPayLevels]</DefiningQuery>
           <NavigationProperty Name="HR_Pictures" Relationship="hrModel.FK_HR_pictures_HR_person" FromRole="HR_Person" ToRole="HR_Pictures" />
           <NavigationProperty Name="HR_PlannedHolidays" Relationship="hrModel.FK_HR_PlannedHolidays_HR_person" FromRole="HR_Person" ToRole="HR_PlannedHolidays" />
           <NavigationProperty Name="HR_Year_Holiday" Relationship="hrModel.FK_HR_Year_Holiday_HR_person" FromRole="HR_Person" ToRole="HR_Year_Holiday" />
+          <Property Name="TotalExpY" Type="Int32" />
+          <Property Name="TotalExpM" Type="Int32" />
+          <Property Name="TotalExpD" Type="Int32" />
         </EntityType>
         <Association Name="FK_HR_absence_HR_person">
           <End Type="hrModel.HR_Person" Role="HR_Person" Multiplicity="1" />
@@ -2567,6 +2573,9 @@ FROM [dbo].[HR_EKDAPayLevels] AS [HR_EKDAPayLevels]</DefiningQuery>
           <EntitySetMapping Name="HR_Person">
             <EntityTypeMapping TypeName="hrModel.HR_Person">
               <MappingFragment StoreEntitySet="HR_Person">
+                <ScalarProperty Name="TotalExpD" ColumnName="TotalExpD" />
+                <ScalarProperty Name="TotalExpM" ColumnName="TotalExpM" />
+                <ScalarProperty Name="TotalExpY" ColumnName="TotalExpY" />
                 <ScalarProperty Name="IsSecondary" ColumnName="IsSecondary" />
                 <ScalarProperty Name="pcardExpiry" ColumnName="pcardExpiry" />
                 <ScalarProperty Name="id_roletype" ColumnName="id_roletype" />

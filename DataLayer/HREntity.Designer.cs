@@ -11166,6 +11166,78 @@ namespace HRDataLayer
         private global::System.Boolean _IsSecondary;
         partial void OnIsSecondaryChanging(global::System.Boolean value);
         partial void OnIsSecondaryChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> TotalExpY
+        {
+            get
+            {
+                return _TotalExpY;
+            }
+            set
+            {
+                OnTotalExpYChanging(value);
+                ReportPropertyChanging("TotalExpY");
+                _TotalExpY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TotalExpY");
+                OnTotalExpYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _TotalExpY;
+        partial void OnTotalExpYChanging(Nullable<global::System.Int32> value);
+        partial void OnTotalExpYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> TotalExpM
+        {
+            get
+            {
+                return _TotalExpM;
+            }
+            set
+            {
+                OnTotalExpMChanging(value);
+                ReportPropertyChanging("TotalExpM");
+                _TotalExpM = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TotalExpM");
+                OnTotalExpMChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _TotalExpM;
+        partial void OnTotalExpMChanging(Nullable<global::System.Int32> value);
+        partial void OnTotalExpMChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> TotalExpD
+        {
+            get
+            {
+                return _TotalExpD;
+            }
+            set
+            {
+                OnTotalExpDChanging(value);
+                ReportPropertyChanging("TotalExpD");
+                _TotalExpD = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TotalExpD");
+                OnTotalExpDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _TotalExpD;
+        partial void OnTotalExpDChanging(Nullable<global::System.Int32> value);
+        partial void OnTotalExpDChanged();
 
         #endregion
 
