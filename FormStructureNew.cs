@@ -885,7 +885,7 @@ namespace HR
 					float.TryParse(row["StaffCount"].ToString(), out Staff);
 					TotalStaff += Staff;
 
-					DataTable dtBusy = this.da.SelectWhere(TableNames.PersonAssignment, "*", string.Format("WHERE positionid = {0} AND isactive = 1", row["id"].ToString()));
+					DataTable dtBusy = this.da.SelectWhere(TableNames.PersonAssignment, "*", string.Format("WHERE positionid = {0} AND isactive = 1 and (tutorname = '' or tutorname  is null)", row["id"].ToString()));
 					if (dtBusy != null)
 					{
 						Busy = dtBusy.Rows.Count;

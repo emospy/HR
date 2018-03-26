@@ -1791,7 +1791,7 @@ namespace HR
 					// 3 - Брой щатни бройки
 					m_objSheet.Cells[CurrentRow, 3] = pos.StaffCount;
 
-					var lstAssignments = data.HR_PersonAssignment.Where(a => a.positionID == pos.id && a.isActive == 1 && a.HR_Person.fired == 0).ToList();
+					var lstAssignments = data.HR_PersonAssignment.Where(a => a.positionID == pos.id && a.isActive == 1 && a.HR_Person.fired == 0 && (a.tutorname != "" && a.tutorname != null)).ToList();
 
 					double busy = 0;
 					double staff = 0;

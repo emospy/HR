@@ -978,161 +978,22 @@ namespace SicknessFrame
 				var wb = package.Workbook.Worksheets[1];
 				int end = wb.Dimension.End.Row;
 
-				for (int i = 28; i <= end; i++)
+				for (int i = 3; i <= end; i++)
 				{
 					if (wb.Cells[i, 1].Value == null)
 					{
 						continue;
 					}
-					var name = wb.Cells[i, 83].Value?.ToString().Trim();
-					var per = data.HR_Person.FirstOrDefault(a => a.name == name);
-					HR_PersonAssignment ass;
+					var name = (wb.Cells[i, 2].Value?.ToString().Trim()  + " " + wb.Cells[i, 3].Value?.ToString().Trim() + " " +  wb.Cells[i, 4].Value?.ToString().Trim()).Trim() ;
+					var egn = wb.Cells[i, 5].Value?.ToString().Trim();
+					var per = data.HR_Person.FirstOrDefault(a => a.egn == egn);
+					
 
-					if (per == null)
+					if (per.name == null || per.name == string.Empty)
 					{
-						per = new HR_Person();
-						data.HR_Person.AddObject(per);
-						ass = new HR_PersonAssignment();
-						ass.HR_Person = per;
-						ass.pcontractreasoncode = "1";
-						data.HR_PersonAssignment.AddObject(ass);
-						//per.fired = 1;
+						per.name = name;						
 					}
-					else
-					{
-						ass = data.HR_PersonAssignment.FirstOrDefault(a => a.parent == per.id);
-						if (ass == null)
-						{
-							ass = new HR_PersonAssignment();
-							ass.HR_Person = per;
-							data.HR_PersonAssignment.AddObject(ass);
-							ass.pcontractreasoncode = "1";
-						}
-					}
-
-					per.other1 = wb.Cells[i, 1].Value?.ToString();
-					per.egn = wb.Cells[i, 5].Value?.ToString();
-					DateTime hirat = new DateTime(1970, 1, 1);
-					DateTime.TryParse(wb.Cells[i, 6].Value?.ToString(), out hirat);
-					ass.assignedAt = hirat;
-					if (wb.Cells[i, 10].Value == null)
-					{
-						ass.contractNumber = "0";
-					}
-					else
-					{
-						ass.contractNumber = wb.Cells[i, 10].Value.ToString();
-					}
-					hirat = new DateTime(1970, 1, 1);
-					ass.ParentContractDate = hirat;
-					if (wb.Cells[i, 14].Value != null)
-					{
-						var fir = new HR_Fired();
-						fir.fireorder = wb.Cells[i, 15].Value?.ToString();
-						DateTime fd = new DateTime(1970, 1, 1);
-						DateTime.TryParse(wb.Cells[i, 14].Value?.ToString(), out fd);
-
-						fir.FromDate = fd;
-						fd = new DateTime(1970, 1, 1);
-						DateTime.TryParse(wb.Cells[i, 16].Value?.ToString(), out fd);
-						fir.FireOrderDate = fd;
-						per.fired = 1;
-						data.HR_Fired.AddObject(fir);
-					}
-
-					float bs = 0;
-					float.TryParse(wb.Cells[i, 17].Value?.ToString(), out bs);
-					ass.baseSalary = bs;
-					if (per.fired == 1)
-					{
-						if (ass.level1 == null || ass.level1 == string.Empty)
-						{
-							ass.level1 = wb.Cells[i, 19].Value?.ToString();
-							ass.position = wb.Cells[i, 23].Value?.ToString();
-							ass.nkpCode = wb.Cells[i, 38].Value?.ToString();
-							float stt;
-							if (float.TryParse(wb.Cells[i, 39].Value?.ToString(), out stt))
-							{
-								if (stt == 1)
-								{
-									ass.worktime = "Пълно 8 часа";
-								}
-								else
-								{
-									ass.worktime = "Непълно 4 часа";
-								}
-							}
-						}
-					}
-
-					per.borntown = wb.Cells[i, 24].Value?.ToString();
-					per.pcard = wb.Cells[i, 25].Value?.ToString();
-					DateTime pcp = new DateTime(1970, 1, 1);
-					DateTime.TryParse(wb.Cells[i, 26].Value?.ToString(), out pcp);
-					per.pcardPublish = pcp;
-					per.pcardExpiry = pcp.AddYears(10);
-					per.publishedBy = wb.Cells[i, 27].Value?.ToString();
-
-					per.street = per.kwartal = wb.Cells[i, 28].Value?.ToString() + ", " + wb.Cells[i, 30].Value?.ToString();
-					per.town = wb.Cells[i, 28].Value?.ToString();
-
-					per.diplomDate = wb.Cells[i, 36].Value?.ToString() + " " + wb.Cells[i, 28].Value?.ToString();
-					per.phone = wb.Cells[i, 46].Value?.ToString();
-
-					int staffy = 0, staffm = 0, staffd = 0;
-					int.TryParse(wb.Cells[i, 69].Value?.ToString(), out staffy);
-					int.TryParse(wb.Cells[i, 70].Value?.ToString(), out staffm);
-					int.TryParse(wb.Cells[i, 71].Value?.ToString(), out staffd);
-					ass.years = staffy;
-					ass.months = staffm;
-					ass.days = staffd;
-
-					//year holiday section					
-
-
-
-					for (int ih = 98; ih >= 94; ih--)
-					{
-						if (wb.Cells[i, ih].Value != null && wb.Cells[i, ih].Value.ToString() != string.Empty)
-						{
-							var yh = new HR_Year_Holiday();
-							yh.year = 2009 + (94 - ih);
-							int days = 0;
-							int.TryParse(wb.Cells[i, ih].Value.ToString(), out days);
-							yh.leftover = days;
-							yh.HR_Person = per;
-							data.HR_Year_Holiday.AddObject(yh);
-						}
-					}
-
-					for (int ih = 93; ih >= 91; ih--)
-					{
-						if (wb.Cells[i, ih].Value != null && wb.Cells[i, ih].Value.ToString() != string.Empty)
-						{
-							var yh = new HR_Year_Holiday();
-							yh.year = 2017 + (91 - ih);
-							int days = 0;
-							int.TryParse(wb.Cells[i, ih].Value.ToString(), out days);
-							yh.leftover = days;
-							yh.HR_Person = per;
-							data.HR_Year_Holiday.AddObject(yh);
-						}
-					}
-
-					if (wb.Cells[i, 89].Value != null && wb.Cells[i, 89].Value.ToString() != string.Empty)
-					{
-						var yh = new HR_Year_Holiday();
-						yh.HR_Person = per;
-						yh.year = 2018;
-
-						int days = 0;
-						int.TryParse(wb.Cells[i, 90].Value.ToString(), out days);
-						yh.leftover = days;
-						days = 0;
-						int.TryParse(wb.Cells[i, 89].Value.ToString(), out days);
-						yh.total = days;
-						data.HR_Year_Holiday.AddObject(yh);
-					}
+					
 					data.SaveChanges();
 				}
 			}
