@@ -3048,7 +3048,7 @@ namespace WindowsApplication1
 			DataTable dtExisting = new DataTable();
 
 
-			string connSQL = "Database = disnew; Data Source = 81.161.245.39; User Id = root; Password = teSSla56; charset = utf8;";
+			string connSQL = "Database = dis; Data Source = e-university.tu-sofia.bg; User Id = emo; Password = BchochiB; charset = utf8;";
 			conn = new MySqlConnection(connSQL);
 			comm = new MySqlCommand("SELECT * FROM un_persons", conn);
 			da = new MySqlDataAdapter(comm);
@@ -3086,12 +3086,12 @@ namespace WindowsApplication1
 
 				List<DisPerson> lstExcelPersons = new List<DisPerson>();
 
-				for (int i = 4; i <= max; i++)
+				for (int i = 2; i <= max; i++)
 				{
 					DisPerson person = new DisPerson();
 					//name
 					string gstr;
-					oRng = (Excel.Range)xlsheet.Cells[i, 6];
+					oRng = (Excel.Range)xlsheet.Cells[i, 5];
 					try
 					{
 						gstr = oRng.get_Value(Missing.Value).ToString();
@@ -3144,7 +3144,7 @@ namespace WindowsApplication1
 					person.id_gender = value;
 
 					//egn
-					oRng = (Excel.Range)xlsheet.Cells[i, 4];
+					oRng = (Excel.Range)xlsheet.Cells[i, 8];
 					try
 					{
 						gstr = oRng.get_Value(Missing.Value).ToString();
@@ -3156,22 +3156,22 @@ namespace WindowsApplication1
 					person.egn = gstr;
 
 					DateTime date;
-					oRng = (Excel.Range)xlsheet.Cells[i, 5];
-					try
-					{
-						gstr = oRng.get_Value(Missing.Value).ToString();
-					}
-					catch (System.NullReferenceException)
-					{
-						gstr = "0";
-					}
+					//oRng = (Excel.Range)xlsheet.Cells[i, 5];
+					//try
+					//{
+					//	gstr = oRng.get_Value(Missing.Value).ToString();
+					//}
+					//catch (System.NullReferenceException)
+					//{
+					//	gstr = "0";
+					//}
 
-					if (DateTime.TryParse(gstr, out date) == true)
-					{
-						person.BirthDate = date;
-					}
+					//if (DateTime.TryParse(gstr, out date) == true)
+					//{
+					//	person.BirthDate = date;
+					//}
 
-					oRng = (Excel.Range)xlsheet.Cells[i, 8];
+					oRng = (Excel.Range)xlsheet.Cells[i, 14];
 					try
 					{
 						gstr = oRng.get_Value(Missing.Value).ToString();
@@ -3186,7 +3186,7 @@ namespace WindowsApplication1
 						person.StartDate = date;
 					}
 
-					oRng = (Excel.Range)xlsheet.Cells[i, 9];
+					oRng = (Excel.Range)xlsheet.Cells[i, 15];
 					try
 					{
 						gstr = oRng.get_Value(Missing.Value).ToString();
@@ -3201,7 +3201,7 @@ namespace WindowsApplication1
 						person.EndDate = date;
 					}
 
-					oRng = (Excel.Range)xlsheet.Cells[i, 10];
+					oRng = (Excel.Range)xlsheet.Cells[i, 13];
 					try
 					{
 						gstr = oRng.get_Value(Missing.Value).ToString();
@@ -3216,7 +3216,7 @@ namespace WindowsApplication1
 					}
 					person.id_educationForm = value;
 
-					oRng = (Excel.Range)xlsheet.Cells[i, 13];
+					oRng = (Excel.Range)xlsheet.Cells[i, 11];
 					try
 					{
 						gstr = oRng.get_Value(Missing.Value).ToString();
@@ -3231,7 +3231,7 @@ namespace WindowsApplication1
 					}
 					person.id_department = value;
 
-					oRng = (Excel.Range)xlsheet.Cells[i, 3];
+					oRng = (Excel.Range)xlsheet.Cells[i, 2];
 					try
 					{
 						gstr = oRng.get_Value(Missing.Value).ToString();
@@ -3275,7 +3275,7 @@ namespace WindowsApplication1
 					int id = this.GetLastId();
 
 					command = string.Format("insert into ph_assignments (id_studyType, id_status, id_acceptancereason, id_person, id_educationform, id_department, startdate, enddate, Timestamp, id_useredit) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, '{6}-{7}-{8}', '{9}-{10}-{11}', now(), {12})",
-																		1, 1, 1, id, person.id_educationForm, person.id_department, person.StartDate.Year, person.StartDate.Month, person.StartDate.Day , person.EndDate.Year, person.EndDate.Month, person.EndDate.Day, 998);
+																		1, 1, 1, id, person.id_educationForm, person.id_department, person.StartDate.Year, person.StartDate.Month, person.StartDate.Day, person.EndDate.Year, person.EndDate.Month, person.EndDate.Day, 998);
 
 					comm.CommandText = command;
 					try
@@ -3290,7 +3290,7 @@ namespace WindowsApplication1
 					comm.Connection.Close();
 
 					command = string.Format("insert into un_identitycards (id_egntype, id_person, egn, birthdate, Timestamp, id_useredit) VALUES ({0}, {1}, '{2}', '{3}-{4}-{5}', now(), {6})",
-																		1, id, person.egn, person.BirthDate.Year, person.BirthDate.Month, person.BirthDate.Day,  998);
+																		1, id, person.egn, person.BirthDate.Year, person.BirthDate.Month, person.BirthDate.Day, 998);
 
 					comm.CommandText = command;
 					try
