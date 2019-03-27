@@ -878,17 +878,24 @@ namespace HR
 				this.dataGridViewNames.DataSource = dtEmployees;
 				this.JustifyGrid(this.dataGridViewNames);
 				this.JustifyGrid(this.dataGridViewPositions);
-				float Busy = 0, Staff = 0;
-				float TotalStaff = 0, TotalBusy = 0;
+				double Busy = 0, Staff = 0;
+				double TotalStaff = 0, TotalBusy = 0;
 				foreach (DataRow row in dtPos.Rows)
 				{
-					float.TryParse(row["StaffCount"].ToString(), out Staff);
+					double.TryParse(row["StaffCount"].ToString(), out Staff);
 					TotalStaff += Staff;
 
 					DataTable dtBusy = this.da.SelectWhere(TableNames.PersonAssignment, "*", string.Format("WHERE positionid = {0} AND isactive = 1 and (tutorname = '' or tutorname  is null)", row["id"].ToString()));
 					if (dtBusy != null)
 					{
-						Busy = dtBusy.Rows.Count;
+						Busy = 0;
+						foreach(DataRow ri in dtBusy.Rows)
+						{
+							double bb = 0;
+							double.TryParse(ri["staff"].ToString(), out bb);
+							Busy += bb;
+						}
+						
 						TotalBusy += Busy;
 					}
 					row["Free"] = Staff - Busy;

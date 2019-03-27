@@ -989,11 +989,16 @@ namespace SicknessFrame
 					var per = data.HR_Person.FirstOrDefault(a => a.egn == egn);
 					
 
-					if (per.name == null || per.name == string.Empty)
-					{
-						per.name = name;						
-					}
-					
+					int y = 0, m = 0, d = 0;
+					int.TryParse(wb.Cells[i, 7].Value?.ToString().Trim(), out y);
+					int.TryParse(wb.Cells[i, 8].Value?.ToString().Trim(), out m);
+					int.TryParse(wb.Cells[i, 9].Value?.ToString().Trim(), out d);
+
+					per.TotalExpD = d;
+					per.TotalExpM = m;
+					per.TotalExpY = y;
+
+
 					data.SaveChanges();
 				}
 			}
