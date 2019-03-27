@@ -3047,8 +3047,8 @@ namespace WindowsApplication1
 			DataTable dtHoliday = new DataTable();
 			DataTable dtExisting = new DataTable();
 
-
-			string connSQL = "Database = disnew; Data Source = 81.161.245.39; User Id = root; Password = teSSla56; charset = utf8;";
+			
+			string connSQL = "Database = dis; Data Source = e-university.tu-sofia.bg; User Id = emo; Password = BchochiB; charset = utf8;";
 			conn = new MySqlConnection(connSQL);
 			comm = new MySqlCommand("SELECT * FROM un_persons", conn);
 			da = new MySqlDataAdapter(comm);
@@ -3086,7 +3086,7 @@ namespace WindowsApplication1
 
 				List<DisPerson> lstExcelPersons = new List<DisPerson>();
 
-				for (int i = 4; i <= max; i++)
+				for (int i = 2; i <= max; i++)
 				{
 					DisPerson person = new DisPerson();
 					//name
