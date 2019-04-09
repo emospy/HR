@@ -142,7 +142,10 @@ namespace SicknessFrame
 								   MilitaryRangs = mils
 							   };
 
-				result = result.Where(a => (a.MilitaryRangs.isactive == "1" || a.MilitaryRangs == null)&& a.Person.fired == 0 && a.Assignment.isActive == 1 );
+				if (this.chkAllemployees.IsChecked == true)
+				{
+					result = result.Where(a => (a.MilitaryRangs.isactive == "1" || a.MilitaryRangs == null) && a.Person.fired == 0 && a.Assignment.isActive == 1);
+				}
 
 				if (lvl1 || lvl2 || lvl3 || lvl4)
 				{
@@ -178,7 +181,7 @@ namespace SicknessFrame
 
 				foreach (var pg in resGroups)
 				{
-					var lpg = pg.OrderByDescending(a => a.Assignment.assignedAt).ToList();
+					var lpg = pg.OrderByDescending(a => a.Assignment?.assignedAt).ToList();
 					var la = lpg.Last();
 
 				    la.lstAssignments = data.HR_PersonAssignment.Where(a => a.parent == la.Person.id).ToList();
@@ -187,7 +190,11 @@ namespace SicknessFrame
 				    //{
 				    //    continue;
 				    //}
-				    var lar = la.lstAssignments.Last();
+				    var lar = la.lstAssignments.LastOrDefault();
+					if(lar == null)
+					{
+						continue;
+					}
                     
 					//if (lvl4)
 					//{
@@ -240,12 +247,25 @@ namespace SicknessFrame
                             la.MilitaryRangs.rangorderdate = la.lstMilitaryRangs[i].rangorderdate;
                         }
                     }
-				    if ((la.Assignment.assignedAt >= this.dpFromDate.SelectedDate.Value &&
-				         la.Assignment.assignedAt <= this.dpToDate.SelectedDate.Value) ||
-				        this.dpFromDate.SelectedDate.Value == this.dpToDate.SelectedDate.Value) 
-				    {
-				        finalResult.Add(la);
-				    }
+
+					if (this.chkAllemployees.IsChecked == true)
+					{
+						if ((la.Assignment.assignedAt >= this.dpFromDate.SelectedDate.Value &&
+							 la.Assignment.assignedAt <= this.dpToDate.SelectedDate.Value) ||
+							this.dpFromDate.SelectedDate.Value == this.dpToDate.SelectedDate.Value)
+						{
+							finalResult.Add(la);
+						}
+					}
+					else
+					{
+						if ((la.Person.hiredAt <= this.dpToDate.SelectedDate.Value 
+								&& ((la.Person.fired == 0) || (la.Fired != null && la.Fired.FromDate.Value > this.dpFromDate.SelectedDate.Value)))
+							 ||	this.dpFromDate.SelectedDate.Value == this.dpToDate.SelectedDate.Value)
+						{
+							finalResult.Add(la);
+						}
+					}
 				}
 
 				var fileName = "result.xlsx";

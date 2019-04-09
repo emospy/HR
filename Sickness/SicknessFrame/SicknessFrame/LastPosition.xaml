@@ -14,6 +14,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -37,8 +38,9 @@
 
         <Label Content="Сектор:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
         <ComboBox Name="cmbSector" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" DisplayMemberPath="level"></ComboBox>
+
+        <CheckBox Name="chkAllemployees" Content="Всички служители (назначени и прекратени)" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></CheckBox>
         
-        <Button Content="Генерирай справка" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Name="btnGenerate" Click="BtnGenerate_OnClick"></Button>
-        
+        <Button Content="Генерирай справка" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Name="btnGenerate" Click="BtnGenerate_OnClick"></Button>
     </Grid>
 </Window>
