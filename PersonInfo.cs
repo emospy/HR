@@ -11557,7 +11557,14 @@ namespace HR
 					}
 					try
 					{
-						this.dateTimePickerBirthDate.Value = new DateTime(int.Parse(this.numBoxEgn.Text.Substring(0, 2)) + 1900, int.Parse(this.numBoxEgn.Text.Substring(2, 2)), int.Parse(this.numBoxEgn.Text.Substring(4, 2)));
+                        if (this.numBoxEgn.Text.StartsWith("0"))
+                        {
+                            this.dateTimePickerBirthDate.Enabled = true;
+                        }
+                        else
+                        {
+                            this.dateTimePickerBirthDate.Value = new DateTime(int.Parse(this.numBoxEgn.Text.Substring(0, 2)) + 1900, int.Parse(this.numBoxEgn.Text.Substring(2, 2)), int.Parse(this.numBoxEgn.Text.Substring(4, 2)));
+                        }
 					}
 					catch (Exception)
 					{
@@ -11628,7 +11635,7 @@ namespace HR
 					try
 					{
 						Dict.Add("Egn", this.numBoxEgn.Text);
-						if (this.comboBoxEGN.SelectedIndex == 0)
+						if (this.comboBoxEGN.SelectedIndex == 0 && this.numBoxEgn.Text.StartsWith("0") == false)
 						{
 							Dict.Add("bornDate", new DateTime(int.Parse(Dict["Egn"].ToString().Substring(0, 2)) + 1900, int.Parse(Dict["Egn"].ToString().Substring(2, 2)), int.Parse(Dict["Egn"].ToString().Substring(4, 2))));
 						}
