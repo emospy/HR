@@ -279,120 +279,120 @@ namespace HR
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-			this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
-			this.menuKartoteka = new System.Windows.Forms.MenuItem();
-			this.menuKartoteka_KartotekaLS = new System.Windows.Forms.MenuItem();
-			this.menuKartoteka_KartotekaCanceled = new System.Windows.Forms.MenuItem();
-			this.menuItemPaidHolidays = new System.Windows.Forms.MenuItem();
-			this.menuItemSickness = new System.Windows.Forms.MenuItem();
-			this.menuItemKartotekaHolidayPlan = new System.Windows.Forms.MenuItem();
-			this.menuItem5 = new System.Windows.Forms.MenuItem();
-			this.menuItem2 = new System.Windows.Forms.MenuItem();
-			this.menuKartoteka_Exit = new System.Windows.Forms.MenuItem();
-			this.menuAdministartion2Item = new System.Windows.Forms.MenuItem();
-			this.Administartion2Item1 = new System.Windows.Forms.MenuItem();
-			this.menuItem3 = new System.Windows.Forms.MenuItem();
-			this.menuAdministartion2Item2 = new System.Windows.Forms.MenuItem();
-			this.menuAdministartion2Item3 = new System.Windows.Forms.MenuItem();
-			this.menuItemStructureEdit = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item1 = new System.Windows.Forms.MenuItem();
-			this.menu_Spravki_PSR = new System.Windows.Forms.MenuItem();
-			this.menuSprawki_Free = new System.Windows.Forms.MenuItem();
-			this.menuSprawki_Holiday = new System.Windows.Forms.MenuItem();
-			this.menuItemStatisticsLeadersHolidays = new System.Windows.Forms.MenuItem();
-			this.menuItemSprawkiZZBUT = new System.Windows.Forms.MenuItem();
-			this.menuItemSprawkiAttestations = new System.Windows.Forms.MenuItem();
-			this.menuItemMilitaryRangs = new System.Windows.Forms.MenuItem();
-			this.menuItemSyscosetWeekAbsences = new System.Windows.Forms.MenuItem();
-			this.menuItemOmegaExport = new System.Windows.Forms.MenuItem();
-			this.menuItemOmegaExportAdditional = new System.Windows.Forms.MenuItem();
-			this.menuItemOSRNSO = new System.Windows.Forms.MenuItem();
-			this.menuItemNSOLastPosition = new System.Windows.Forms.MenuItem();
-			this.menuItemNSOOfficerPromotions = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_Item = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_ProfessionClassifier1 = new System.Windows.Forms.MenuItem();
-			this.menuItemNKPDClass = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_ClassifierID2 = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_NKDS = new System.Windows.Forms.MenuItem();
-			this.menuItem9 = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_Osnovaniq3 = new System.Windows.Forms.MenuItem();
-			this.menuReasonAssignment33 = new System.Windows.Forms.MenuItem();
-			this.menuReasonFired34 = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_reasonPenalty = new System.Windows.Forms.MenuItem();
-			this.menuItem10 = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_ZaPredpriqtie = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_WorkTime = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_Law = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturiYearlyAddon = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_TypePenalty = new System.Windows.Forms.MenuItem();
-			this.menuItem_Nomenklaturi_Educations = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_ZaLice = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_Education = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_ForeignLanguages = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_MilitaryRang = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_ScienceTitle = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_ScienceDegree = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_Rang = new System.Windows.Forms.MenuItem();
-			this.menuNomenklaturi_Experience = new System.Windows.Forms.MenuItem();
-			this.menuSystem = new System.Windows.Forms.MenuItem();
-			this.menu5Item1 = new System.Windows.Forms.MenuItem();
-			this.menu5Item2 = new System.Windows.Forms.MenuItem();
-			this.menu5Item3 = new System.Windows.Forms.MenuItem();
-			this.menuItemSystemWorkDays = new System.Windows.Forms.MenuItem();
-			this.menuItem1 = new System.Windows.Forms.MenuItem();
-			this.menuItemBackup = new System.Windows.Forms.MenuItem();
-			this.menuItemRestore = new System.Windows.Forms.MenuItem();
-			this.menuItem4 = new System.Windows.Forms.MenuItem();
-			this.menuItemProgramOptions = new System.Windows.Forms.MenuItem();
-			this.menuItemCheckHolidays = new System.Windows.Forms.MenuItem();
-			this.menuItemNKPDCheck = new System.Windows.Forms.MenuItem();
-			this.menuItem6 = new System.Windows.Forms.MenuItem();
-			this.menuSettingsService = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item21 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item22 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item23 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item24 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item25 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item26 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item27 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item28 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item29 = new System.Windows.Forms.MenuItem();
-			this.menuSpravki_Item210 = new System.Windows.Forms.MenuItem();
-			this.statusBarMain = new System.Windows.Forms.StatusBar();
-			this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
-			this.statusBarPanel2 = new System.Windows.Forms.StatusBarPanel();
-			this.statusBarPanel3 = new System.Windows.Forms.StatusBarPanel();
-			this.statusBarPanel4 = new System.Windows.Forms.StatusBarPanel();
-			this.buttonKartoteka = new System.Windows.Forms.Button();
-			this.buttonStructura = new System.Windows.Forms.Button();
-			this.buttonDlujnosti = new System.Windows.Forms.Button();
-			this.buttonShtatnoRazpisanie = new System.Windows.Forms.Button();
-			this.buttonObshtiSprawki = new System.Windows.Forms.Button();
-			this.buttonUsers = new System.Windows.Forms.Button();
-			this.buttonExit = new System.Windows.Forms.Button();
-			this.menuItem7 = new System.Windows.Forms.MenuItem();
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel4)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// mainMenu1
-			// 
-			this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
+            this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
+            this.menuKartoteka = new System.Windows.Forms.MenuItem();
+            this.menuKartoteka_KartotekaLS = new System.Windows.Forms.MenuItem();
+            this.menuKartoteka_KartotekaCanceled = new System.Windows.Forms.MenuItem();
+            this.menuItemPaidHolidays = new System.Windows.Forms.MenuItem();
+            this.menuItemSickness = new System.Windows.Forms.MenuItem();
+            this.menuItemKartotekaHolidayPlan = new System.Windows.Forms.MenuItem();
+            this.menuItem5 = new System.Windows.Forms.MenuItem();
+            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuKartoteka_Exit = new System.Windows.Forms.MenuItem();
+            this.menuAdministartion2Item = new System.Windows.Forms.MenuItem();
+            this.Administartion2Item1 = new System.Windows.Forms.MenuItem();
+            this.menuItem3 = new System.Windows.Forms.MenuItem();
+            this.menuAdministartion2Item2 = new System.Windows.Forms.MenuItem();
+            this.menuAdministartion2Item3 = new System.Windows.Forms.MenuItem();
+            this.menuItemStructureEdit = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item1 = new System.Windows.Forms.MenuItem();
+            this.menu_Spravki_PSR = new System.Windows.Forms.MenuItem();
+            this.menuSprawki_Free = new System.Windows.Forms.MenuItem();
+            this.menuSprawki_Holiday = new System.Windows.Forms.MenuItem();
+            this.menuItemStatisticsLeadersHolidays = new System.Windows.Forms.MenuItem();
+            this.menuItemSprawkiZZBUT = new System.Windows.Forms.MenuItem();
+            this.menuItemSprawkiAttestations = new System.Windows.Forms.MenuItem();
+            this.menuItemMilitaryRangs = new System.Windows.Forms.MenuItem();
+            this.menuItemSyscosetWeekAbsences = new System.Windows.Forms.MenuItem();
+            this.menuItemOmegaExport = new System.Windows.Forms.MenuItem();
+            this.menuItemOmegaExportAdditional = new System.Windows.Forms.MenuItem();
+            this.menuItemOSRNSO = new System.Windows.Forms.MenuItem();
+            this.menuItemNSOLastPosition = new System.Windows.Forms.MenuItem();
+            this.menuItemNSOOfficerPromotions = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_Item = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_ProfessionClassifier1 = new System.Windows.Forms.MenuItem();
+            this.menuItemNKPDClass = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_ClassifierID2 = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_NKDS = new System.Windows.Forms.MenuItem();
+            this.menuItem9 = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_Osnovaniq3 = new System.Windows.Forms.MenuItem();
+            this.menuReasonAssignment33 = new System.Windows.Forms.MenuItem();
+            this.menuReasonFired34 = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_reasonPenalty = new System.Windows.Forms.MenuItem();
+            this.menuItem10 = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_ZaPredpriqtie = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_WorkTime = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_Law = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturiYearlyAddon = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_TypePenalty = new System.Windows.Forms.MenuItem();
+            this.menuItem_Nomenklaturi_Educations = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_ZaLice = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_Education = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_ForeignLanguages = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_MilitaryRang = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_ScienceTitle = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_ScienceDegree = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_Rang = new System.Windows.Forms.MenuItem();
+            this.menuNomenklaturi_Experience = new System.Windows.Forms.MenuItem();
+            this.menuItem7 = new System.Windows.Forms.MenuItem();
+            this.menuSystem = new System.Windows.Forms.MenuItem();
+            this.menu5Item1 = new System.Windows.Forms.MenuItem();
+            this.menu5Item2 = new System.Windows.Forms.MenuItem();
+            this.menu5Item3 = new System.Windows.Forms.MenuItem();
+            this.menuItemSystemWorkDays = new System.Windows.Forms.MenuItem();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItemBackup = new System.Windows.Forms.MenuItem();
+            this.menuItemRestore = new System.Windows.Forms.MenuItem();
+            this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.menuItemProgramOptions = new System.Windows.Forms.MenuItem();
+            this.menuItemCheckHolidays = new System.Windows.Forms.MenuItem();
+            this.menuItemNKPDCheck = new System.Windows.Forms.MenuItem();
+            this.menuItem6 = new System.Windows.Forms.MenuItem();
+            this.menuSettingsService = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item21 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item22 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item23 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item24 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item25 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item26 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item27 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item28 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item29 = new System.Windows.Forms.MenuItem();
+            this.menuSpravki_Item210 = new System.Windows.Forms.MenuItem();
+            this.statusBarMain = new System.Windows.Forms.StatusBar();
+            this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
+            this.statusBarPanel2 = new System.Windows.Forms.StatusBarPanel();
+            this.statusBarPanel3 = new System.Windows.Forms.StatusBarPanel();
+            this.statusBarPanel4 = new System.Windows.Forms.StatusBarPanel();
+            this.buttonKartoteka = new System.Windows.Forms.Button();
+            this.buttonStructura = new System.Windows.Forms.Button();
+            this.buttonDlujnosti = new System.Windows.Forms.Button();
+            this.buttonShtatnoRazpisanie = new System.Windows.Forms.Button();
+            this.buttonObshtiSprawki = new System.Windows.Forms.Button();
+            this.buttonUsers = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel4)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // mainMenu1
+            // 
+            this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuKartoteka,
             this.menuAdministartion2Item,
             this.menuSpravki_Item,
             this.menuNomenklaturi_Item,
             this.menuSystem});
-			// 
-			// menuKartoteka
-			// 
-			this.menuKartoteka.Index = 0;
-			this.menuKartoteka.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            // 
+            // menuKartoteka
+            // 
+            this.menuKartoteka.Index = 0;
+            this.menuKartoteka.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuKartoteka_KartotekaLS,
             this.menuKartoteka_KartotekaCanceled,
             this.menuItemPaidHolidays,
@@ -401,102 +401,102 @@ namespace HR
             this.menuItem5,
             this.menuItem2,
             this.menuKartoteka_Exit});
-			this.menuKartoteka.Text = "Работа с картотеката";
-			// 
-			// menuKartoteka_KartotekaLS
-			// 
-			this.menuKartoteka_KartotekaLS.Index = 0;
-			this.menuKartoteka_KartotekaLS.Shortcut = System.Windows.Forms.Shortcut.F4;
-			this.menuKartoteka_KartotekaLS.Text = "Картотека личен състав";
-			this.menuKartoteka_KartotekaLS.Click += new System.EventHandler(this.menuKartoteka_KartotekaLS_Click);
-			// 
-			// menuKartoteka_KartotekaCanceled
-			// 
-			this.menuKartoteka_KartotekaCanceled.Index = 1;
-			this.menuKartoteka_KartotekaCanceled.Text = "Картотека прекратени договори";
-			this.menuKartoteka_KartotekaCanceled.Click += new System.EventHandler(this.menuKartoteka_KartotekaCanceled_Click);
-			// 
-			// menuItemPaidHolidays
-			// 
-			this.menuItemPaidHolidays.Index = 2;
-			this.menuItemPaidHolidays.Text = "Картотека полагаем годишен отпуск";
-			this.menuItemPaidHolidays.Click += new System.EventHandler(this.menuItemPaidHolidays_Click);
-			// 
-			// menuItemSickness
-			// 
-			this.menuItemSickness.Index = 3;
-			this.menuItemSickness.Text = "Картотека болнични";
-			this.menuItemSickness.Click += new System.EventHandler(this.menuItemSickness_Click);
-			// 
-			// menuItemKartotekaHolidayPlan
-			// 
-			this.menuItemKartotekaHolidayPlan.Index = 4;
-			this.menuItemKartotekaHolidayPlan.Text = "График отпуски";
-			this.menuItemKartotekaHolidayPlan.Click += new System.EventHandler(this.menuItemKartotekaHolidayPlan_Click);
-			// 
-			// menuItem5
-			// 
-			this.menuItem5.Index = 5;
-			this.menuItem5.Text = "Съобщения";
-			this.menuItem5.Click += new System.EventHandler(this.menuItemMessages_Click);
-			// 
-			// menuItem2
-			// 
-			this.menuItem2.Index = 6;
-			this.menuItem2.Text = "-";
-			// 
-			// menuKartoteka_Exit
-			// 
-			this.menuKartoteka_Exit.Index = 7;
-			this.menuKartoteka_Exit.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
-			this.menuKartoteka_Exit.Text = "Изход";
-			this.menuKartoteka_Exit.Click += new System.EventHandler(this.menuKartoteka_AddNewEmployee_Click_2);
-			// 
-			// menuAdministartion2Item
-			// 
-			this.menuAdministartion2Item.Index = 1;
-			this.menuAdministartion2Item.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuKartoteka.Text = "Работа с картотеката";
+            // 
+            // menuKartoteka_KartotekaLS
+            // 
+            this.menuKartoteka_KartotekaLS.Index = 0;
+            this.menuKartoteka_KartotekaLS.Shortcut = System.Windows.Forms.Shortcut.F4;
+            this.menuKartoteka_KartotekaLS.Text = "Картотека личен състав";
+            this.menuKartoteka_KartotekaLS.Click += new System.EventHandler(this.menuKartoteka_KartotekaLS_Click);
+            // 
+            // menuKartoteka_KartotekaCanceled
+            // 
+            this.menuKartoteka_KartotekaCanceled.Index = 1;
+            this.menuKartoteka_KartotekaCanceled.Text = "Картотека прекратени договори";
+            this.menuKartoteka_KartotekaCanceled.Click += new System.EventHandler(this.menuKartoteka_KartotekaCanceled_Click);
+            // 
+            // menuItemPaidHolidays
+            // 
+            this.menuItemPaidHolidays.Index = 2;
+            this.menuItemPaidHolidays.Text = "Картотека полагаем годишен отпуск";
+            this.menuItemPaidHolidays.Click += new System.EventHandler(this.menuItemPaidHolidays_Click);
+            // 
+            // menuItemSickness
+            // 
+            this.menuItemSickness.Index = 3;
+            this.menuItemSickness.Text = "Картотека болнични";
+            this.menuItemSickness.Click += new System.EventHandler(this.menuItemSickness_Click);
+            // 
+            // menuItemKartotekaHolidayPlan
+            // 
+            this.menuItemKartotekaHolidayPlan.Index = 4;
+            this.menuItemKartotekaHolidayPlan.Text = "График отпуски";
+            this.menuItemKartotekaHolidayPlan.Click += new System.EventHandler(this.menuItemKartotekaHolidayPlan_Click);
+            // 
+            // menuItem5
+            // 
+            this.menuItem5.Index = 5;
+            this.menuItem5.Text = "Съобщения";
+            this.menuItem5.Click += new System.EventHandler(this.menuItemMessages_Click);
+            // 
+            // menuItem2
+            // 
+            this.menuItem2.Index = 6;
+            this.menuItem2.Text = "-";
+            // 
+            // menuKartoteka_Exit
+            // 
+            this.menuKartoteka_Exit.Index = 7;
+            this.menuKartoteka_Exit.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
+            this.menuKartoteka_Exit.Text = "Изход";
+            this.menuKartoteka_Exit.Click += new System.EventHandler(this.menuKartoteka_AddNewEmployee_Click_2);
+            // 
+            // menuAdministartion2Item
+            // 
+            this.menuAdministartion2Item.Index = 1;
+            this.menuAdministartion2Item.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.Administartion2Item1,
             this.menuItem3,
             this.menuAdministartion2Item2,
             this.menuAdministartion2Item3,
             this.menuItemStructureEdit});
-			this.menuAdministartion2Item.Text = "Организацията";
-			// 
-			// Administartion2Item1
-			// 
-			this.Administartion2Item1.Index = 0;
-			this.Administartion2Item1.Text = "Регистрация";
-			this.Administartion2Item1.Click += new System.EventHandler(this.menuAdministration_Register_Click);
-			// 
-			// menuItem3
-			// 
-			this.menuItem3.Index = 1;
-			this.menuItem3.Text = "-";
-			// 
-			// menuAdministartion2Item2
-			// 
-			this.menuAdministartion2Item2.Index = 2;
-			this.menuAdministartion2Item2.Text = "Структура на организацията";
-			this.menuAdministartion2Item2.Click += new System.EventHandler(this.menuAdministartion_Structure_Click);
-			// 
-			// menuAdministartion2Item3
-			// 
-			this.menuAdministartion2Item3.Index = 3;
-			this.menuAdministartion2Item3.Shortcut = System.Windows.Forms.Shortcut.F5;
-			this.menuAdministartion2Item3.Text = "Длъжности в организацията";
-			this.menuAdministartion2Item3.Click += new System.EventHandler(this.menuAdministartion_GlobalPositions_Click);
-			// 
-			// menuItemStructureEdit
-			// 
-			this.menuItemStructureEdit.Index = 4;
-			this.menuItemStructureEdit.Text = "Редакция на структурата";
-			this.menuItemStructureEdit.Click += new System.EventHandler(this.menuItemStructureEdit_Click);
-			// 
-			// menuSpravki_Item
-			// 
-			this.menuSpravki_Item.Index = 2;
-			this.menuSpravki_Item.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuAdministartion2Item.Text = "Организацията";
+            // 
+            // Administartion2Item1
+            // 
+            this.Administartion2Item1.Index = 0;
+            this.Administartion2Item1.Text = "Регистрация";
+            this.Administartion2Item1.Click += new System.EventHandler(this.menuAdministration_Register_Click);
+            // 
+            // menuItem3
+            // 
+            this.menuItem3.Index = 1;
+            this.menuItem3.Text = "-";
+            // 
+            // menuAdministartion2Item2
+            // 
+            this.menuAdministartion2Item2.Index = 2;
+            this.menuAdministartion2Item2.Text = "Структура на организацията";
+            this.menuAdministartion2Item2.Click += new System.EventHandler(this.menuAdministartion_Structure_Click);
+            // 
+            // menuAdministartion2Item3
+            // 
+            this.menuAdministartion2Item3.Index = 3;
+            this.menuAdministartion2Item3.Shortcut = System.Windows.Forms.Shortcut.F5;
+            this.menuAdministartion2Item3.Text = "Длъжности в организацията";
+            this.menuAdministartion2Item3.Click += new System.EventHandler(this.menuAdministartion_GlobalPositions_Click);
+            // 
+            // menuItemStructureEdit
+            // 
+            this.menuItemStructureEdit.Index = 4;
+            this.menuItemStructureEdit.Text = "Редакция на структурата";
+            this.menuItemStructureEdit.Click += new System.EventHandler(this.menuItemStructureEdit_Click);
+            // 
+            // menuSpravki_Item
+            // 
+            this.menuSpravki_Item.Index = 2;
+            this.menuSpravki_Item.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuSpravki_Item1,
             this.menu_Spravki_PSR,
             this.menuSprawki_Free,
@@ -511,96 +511,96 @@ namespace HR
             this.menuItemOSRNSO,
             this.menuItemNSOLastPosition,
             this.menuItemNSOOfficerPromotions});
-			this.menuSpravki_Item.Text = "Справки";
-			// 
-			// menuSpravki_Item1
-			// 
-			this.menuSpravki_Item1.Index = 0;
-			this.menuSpravki_Item1.Text = "Длъжностно щатно разписание";
-			this.menuSpravki_Item1.Click += new System.EventHandler(this.menuSpravki_Staff_Click);
-			// 
-			// menu_Spravki_PSR
-			// 
-			this.menu_Spravki_PSR.Index = 1;
-			this.menu_Spravki_PSR.Text = "Поименно щатно разписание";
-			this.menu_Spravki_PSR.Click += new System.EventHandler(this.menu_Spravki_PSR_Click);
-			// 
-			// menuSprawki_Free
-			// 
-			this.menuSprawki_Free.Index = 2;
-			this.menuSprawki_Free.Text = "Заети и свободни работни места";
-			this.menuSprawki_Free.Click += new System.EventHandler(this.menuSprawki_Free_Click);
-			// 
-			// menuSprawki_Holiday
-			// 
-			this.menuSprawki_Holiday.Index = 3;
-			this.menuSprawki_Holiday.Text = "Полагаем годишен отпуск";
-			this.menuSprawki_Holiday.Click += new System.EventHandler(this.menuSprawki_Holiday_Click);
-			// 
-			// menuItemStatisticsLeadersHolidays
-			// 
-			this.menuItemStatisticsLeadersHolidays.Index = 4;
-			this.menuItemStatisticsLeadersHolidays.Text = "Полагаем годишен отпуск ръководни длъжности";
-			this.menuItemStatisticsLeadersHolidays.Click += new System.EventHandler(this.menuItemStatisticsLeadersHolidays_Click);
-			// 
-			// menuItemSprawkiZZBUT
-			// 
-			this.menuItemSprawkiZZBUT.Index = 5;
-			this.menuItemSprawkiZZBUT.Text = "Справка по ЗЗБУТ";
-			this.menuItemSprawkiZZBUT.Click += new System.EventHandler(this.menuItemSprawkiZZBUT_Click);
-			// 
-			// menuItemSprawkiAttestations
-			// 
-			this.menuItemSprawkiAttestations.Index = 6;
-			this.menuItemSprawkiAttestations.Text = "Обща история на атестации";
-			this.menuItemSprawkiAttestations.Click += new System.EventHandler(this.menuItemSprawkiAttestations_Click);
-			// 
-			// menuItemMilitaryRangs
-			// 
-			this.menuItemMilitaryRangs.Index = 7;
-			this.menuItemMilitaryRangs.Text = "Повишаване във военно звание";
-			this.menuItemMilitaryRangs.Click += new System.EventHandler(this.menuItemMilitaryRangs_Click);
-			// 
-			// menuItemSyscosetWeekAbsences
-			// 
-			this.menuItemSyscosetWeekAbsences.Index = 8;
-			this.menuItemSyscosetWeekAbsences.Text = "Сискосет седмичен отчет";
-			this.menuItemSyscosetWeekAbsences.Click += new System.EventHandler(this.menuItemSyscosetWeekAbsences_Click);
-			// 
-			// menuItemOmegaExport
-			// 
-			this.menuItemOmegaExport.Index = 9;
-			this.menuItemOmegaExport.Text = "Експорт на данни за назначения към Омега";
-			this.menuItemOmegaExport.Click += new System.EventHandler(this.menuItemOmegaExport_Click);
-			// 
-			// menuItemOmegaExportAdditional
-			// 
-			this.menuItemOmegaExportAdditional.Index = 10;
-			this.menuItemOmegaExportAdditional.Text = "Експорт на данни за допълнителни споразумения към Омега";
-			this.menuItemOmegaExportAdditional.Click += new System.EventHandler(this.menuItemOmegaExportAdditional_Click);
-			// 
-			// menuItemOSRNSO
-			// 
-			this.menuItemOSRNSO.Index = 11;
-			this.menuItemOSRNSO.Text = "Длъжностно разписание НСО";
-			this.menuItemOSRNSO.Click += new System.EventHandler(this.menuItemOSRNSO_Click);
-			// 
-			// menuItemNSOLastPosition
-			// 
-			this.menuItemNSOLastPosition.Index = 12;
-			this.menuItemNSOLastPosition.Text = "Служители по последно заемана длъжност";
-			this.menuItemNSOLastPosition.Click += new System.EventHandler(this.menuItemNSOLastPosition_Click);
-			// 
-			// menuItemNSOOfficerPromotions
-			// 
-			this.menuItemNSOOfficerPromotions.Index = 13;
-			this.menuItemNSOOfficerPromotions.Text = "Служители повишени в офицерско звание";
-			this.menuItemNSOOfficerPromotions.Click += new System.EventHandler(this.menuItemNSOOfficerPromotions_Click);
-			// 
-			// menuNomenklaturi_Item
-			// 
-			this.menuNomenklaturi_Item.Index = 3;
-			this.menuNomenklaturi_Item.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuSpravki_Item.Text = "Справки";
+            // 
+            // menuSpravki_Item1
+            // 
+            this.menuSpravki_Item1.Index = 0;
+            this.menuSpravki_Item1.Text = "Длъжностно щатно разписание";
+            this.menuSpravki_Item1.Click += new System.EventHandler(this.menuSpravki_Staff_Click);
+            // 
+            // menu_Spravki_PSR
+            // 
+            this.menu_Spravki_PSR.Index = 1;
+            this.menu_Spravki_PSR.Text = "Поименно щатно разписание";
+            this.menu_Spravki_PSR.Click += new System.EventHandler(this.menu_Spravki_PSR_Click);
+            // 
+            // menuSprawki_Free
+            // 
+            this.menuSprawki_Free.Index = 2;
+            this.menuSprawki_Free.Text = "Заети и свободни работни места";
+            this.menuSprawki_Free.Click += new System.EventHandler(this.menuSprawki_Free_Click);
+            // 
+            // menuSprawki_Holiday
+            // 
+            this.menuSprawki_Holiday.Index = 3;
+            this.menuSprawki_Holiday.Text = "Полагаем годишен отпуск";
+            this.menuSprawki_Holiday.Click += new System.EventHandler(this.menuSprawki_Holiday_Click);
+            // 
+            // menuItemStatisticsLeadersHolidays
+            // 
+            this.menuItemStatisticsLeadersHolidays.Index = 4;
+            this.menuItemStatisticsLeadersHolidays.Text = "Полагаем годишен отпуск ръководни длъжности";
+            this.menuItemStatisticsLeadersHolidays.Click += new System.EventHandler(this.menuItemStatisticsLeadersHolidays_Click);
+            // 
+            // menuItemSprawkiZZBUT
+            // 
+            this.menuItemSprawkiZZBUT.Index = 5;
+            this.menuItemSprawkiZZBUT.Text = "Справка по ЗЗБУТ";
+            this.menuItemSprawkiZZBUT.Click += new System.EventHandler(this.menuItemSprawkiZZBUT_Click);
+            // 
+            // menuItemSprawkiAttestations
+            // 
+            this.menuItemSprawkiAttestations.Index = 6;
+            this.menuItemSprawkiAttestations.Text = "Обща история на атестации";
+            this.menuItemSprawkiAttestations.Click += new System.EventHandler(this.menuItemSprawkiAttestations_Click);
+            // 
+            // menuItemMilitaryRangs
+            // 
+            this.menuItemMilitaryRangs.Index = 7;
+            this.menuItemMilitaryRangs.Text = "Повишаване във военно звание";
+            this.menuItemMilitaryRangs.Click += new System.EventHandler(this.menuItemMilitaryRangs_Click);
+            // 
+            // menuItemSyscosetWeekAbsences
+            // 
+            this.menuItemSyscosetWeekAbsences.Index = 8;
+            this.menuItemSyscosetWeekAbsences.Text = "Сискосет седмичен отчет";
+            this.menuItemSyscosetWeekAbsences.Click += new System.EventHandler(this.menuItemSyscosetWeekAbsences_Click);
+            // 
+            // menuItemOmegaExport
+            // 
+            this.menuItemOmegaExport.Index = 9;
+            this.menuItemOmegaExport.Text = "Експорт на данни за назначения към Омега";
+            this.menuItemOmegaExport.Click += new System.EventHandler(this.menuItemOmegaExport_Click);
+            // 
+            // menuItemOmegaExportAdditional
+            // 
+            this.menuItemOmegaExportAdditional.Index = 10;
+            this.menuItemOmegaExportAdditional.Text = "Експорт на данни за допълнителни споразумения към Омега";
+            this.menuItemOmegaExportAdditional.Click += new System.EventHandler(this.menuItemOmegaExportAdditional_Click);
+            // 
+            // menuItemOSRNSO
+            // 
+            this.menuItemOSRNSO.Index = 11;
+            this.menuItemOSRNSO.Text = "Длъжностно разписание НСО";
+            this.menuItemOSRNSO.Click += new System.EventHandler(this.menuItemOSRNSO_Click);
+            // 
+            // menuItemNSOLastPosition
+            // 
+            this.menuItemNSOLastPosition.Index = 12;
+            this.menuItemNSOLastPosition.Text = "Служители по последно заемана длъжност";
+            this.menuItemNSOLastPosition.Click += new System.EventHandler(this.menuItemNSOLastPosition_Click);
+            // 
+            // menuItemNSOOfficerPromotions
+            // 
+            this.menuItemNSOOfficerPromotions.Index = 13;
+            this.menuItemNSOOfficerPromotions.Text = "Служители повишени в офицерско звание";
+            this.menuItemNSOOfficerPromotions.Click += new System.EventHandler(this.menuItemNSOOfficerPromotions_Click);
+            // 
+            // menuNomenklaturi_Item
+            // 
+            this.menuNomenklaturi_Item.Index = 3;
+            this.menuNomenklaturi_Item.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuNomenklaturi_ProfessionClassifier1,
             this.menuItemNKPDClass,
             this.menuNomenklaturi_ClassifierID2,
@@ -610,114 +610,114 @@ namespace HR
             this.menuItem10,
             this.menuNomenklaturi_ZaPredpriqtie,
             this.menuNomenklaturi_ZaLice});
-			this.menuNomenklaturi_Item.Text = "Номенклатури";
-			// 
-			// menuNomenklaturi_ProfessionClassifier1
-			// 
-			this.menuNomenklaturi_ProfessionClassifier1.Index = 0;
-			this.menuNomenklaturi_ProfessionClassifier1.Text = "Класификатор на професии - НКПД 2011";
-			this.menuNomenklaturi_ProfessionClassifier1.Click += new System.EventHandler(this.menuNomenklaturi_ProfessionClassifier_Click);
-			// 
-			// menuItemNKPDClass
-			// 
-			this.menuItemNKPDClass.Index = 1;
-			this.menuItemNKPDClass.Text = "Класове по НКПД";
-			this.menuItemNKPDClass.Click += new System.EventHandler(this.menuItemNKPDClass_Click);
-			// 
-			// menuNomenklaturi_ClassifierID2
-			// 
-			this.menuNomenklaturi_ClassifierID2.Index = 2;
-			this.menuNomenklaturi_ClassifierID2.Text = "Класификатор на икономически дейности";
-			this.menuNomenklaturi_ClassifierID2.Click += new System.EventHandler(this.menuNomenklaturi_ClassifierID_Click);
-			// 
-			// menuNomenklaturi_NKDS
-			// 
-			this.menuNomenklaturi_NKDS.Index = 3;
-			this.menuNomenklaturi_NKDS.Text = "Единен класификатор на длъжностите в администрацията";
-			this.menuNomenklaturi_NKDS.Click += new System.EventHandler(this.menuNomenklaturi_KlasifikatorDS_Click);
-			// 
-			// menuItem9
-			// 
-			this.menuItem9.Index = 4;
-			this.menuItem9.Text = "-";
-			// 
-			// menuNomenklaturi_Osnovaniq3
-			// 
-			this.menuNomenklaturi_Osnovaniq3.Index = 5;
-			this.menuNomenklaturi_Osnovaniq3.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuNomenklaturi_Item.Text = "Номенклатури";
+            // 
+            // menuNomenklaturi_ProfessionClassifier1
+            // 
+            this.menuNomenklaturi_ProfessionClassifier1.Index = 0;
+            this.menuNomenklaturi_ProfessionClassifier1.Text = "Класификатор на професии - НКПД 2011";
+            this.menuNomenklaturi_ProfessionClassifier1.Click += new System.EventHandler(this.menuNomenklaturi_ProfessionClassifier_Click);
+            // 
+            // menuItemNKPDClass
+            // 
+            this.menuItemNKPDClass.Index = 1;
+            this.menuItemNKPDClass.Text = "Класове по НКПД";
+            this.menuItemNKPDClass.Click += new System.EventHandler(this.menuItemNKPDClass_Click);
+            // 
+            // menuNomenklaturi_ClassifierID2
+            // 
+            this.menuNomenklaturi_ClassifierID2.Index = 2;
+            this.menuNomenklaturi_ClassifierID2.Text = "Класификатор на икономически дейности";
+            this.menuNomenklaturi_ClassifierID2.Click += new System.EventHandler(this.menuNomenklaturi_ClassifierID_Click);
+            // 
+            // menuNomenklaturi_NKDS
+            // 
+            this.menuNomenklaturi_NKDS.Index = 3;
+            this.menuNomenklaturi_NKDS.Text = "Единен класификатор на длъжностите в администрацията";
+            this.menuNomenklaturi_NKDS.Click += new System.EventHandler(this.menuNomenklaturi_KlasifikatorDS_Click);
+            // 
+            // menuItem9
+            // 
+            this.menuItem9.Index = 4;
+            this.menuItem9.Text = "-";
+            // 
+            // menuNomenklaturi_Osnovaniq3
+            // 
+            this.menuNomenklaturi_Osnovaniq3.Index = 5;
+            this.menuNomenklaturi_Osnovaniq3.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuReasonAssignment33,
             this.menuReasonFired34,
             this.menuNomenklaturi_reasonPenalty});
-			this.menuNomenklaturi_Osnovaniq3.Text = "Основания";
-			// 
-			// menuReasonAssignment33
-			// 
-			this.menuReasonAssignment33.Index = 0;
-			this.menuReasonAssignment33.Text = "Основания за назначаване";
-			this.menuReasonAssignment33.Click += new System.EventHandler(this.menuNomenklaturi_ReasonAssignment_Click);
-			// 
-			// menuReasonFired34
-			// 
-			this.menuReasonFired34.Index = 1;
-			this.menuReasonFired34.Text = "Основания за освобождаване";
-			this.menuReasonFired34.Click += new System.EventHandler(this.menuNomenklatures_ReasonFired_Click);
-			// 
-			// menuNomenklaturi_reasonPenalty
-			// 
-			this.menuNomenklaturi_reasonPenalty.Index = 2;
-			this.menuNomenklaturi_reasonPenalty.Text = "Основания за наказание";
-			this.menuNomenklaturi_reasonPenalty.Click += new System.EventHandler(this.menuNomenklaturi_reasonPenalty_Click);
-			// 
-			// menuItem10
-			// 
-			this.menuItem10.Index = 6;
-			this.menuItem10.Text = "-";
-			// 
-			// menuNomenklaturi_ZaPredpriqtie
-			// 
-			this.menuNomenklaturi_ZaPredpriqtie.Index = 7;
-			this.menuNomenklaturi_ZaPredpriqtie.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuNomenklaturi_Osnovaniq3.Text = "Основания";
+            // 
+            // menuReasonAssignment33
+            // 
+            this.menuReasonAssignment33.Index = 0;
+            this.menuReasonAssignment33.Text = "Основания за назначаване";
+            this.menuReasonAssignment33.Click += new System.EventHandler(this.menuNomenklaturi_ReasonAssignment_Click);
+            // 
+            // menuReasonFired34
+            // 
+            this.menuReasonFired34.Index = 1;
+            this.menuReasonFired34.Text = "Основания за освобождаване";
+            this.menuReasonFired34.Click += new System.EventHandler(this.menuNomenklatures_ReasonFired_Click);
+            // 
+            // menuNomenklaturi_reasonPenalty
+            // 
+            this.menuNomenklaturi_reasonPenalty.Index = 2;
+            this.menuNomenklaturi_reasonPenalty.Text = "Основания за наказание";
+            this.menuNomenklaturi_reasonPenalty.Click += new System.EventHandler(this.menuNomenklaturi_reasonPenalty_Click);
+            // 
+            // menuItem10
+            // 
+            this.menuItem10.Index = 6;
+            this.menuItem10.Text = "-";
+            // 
+            // menuNomenklaturi_ZaPredpriqtie
+            // 
+            this.menuNomenklaturi_ZaPredpriqtie.Index = 7;
+            this.menuNomenklaturi_ZaPredpriqtie.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuNomenklaturi_WorkTime,
             this.menuNomenklaturi_Law,
             this.menuNomenklaturiYearlyAddon,
             this.menuNomenklaturi_TypePenalty,
             this.menuItem_Nomenklaturi_Educations});
-			this.menuNomenklaturi_ZaPredpriqtie.Text = "За организацията";
-			// 
-			// menuNomenklaturi_WorkTime
-			// 
-			this.menuNomenklaturi_WorkTime.Index = 0;
-			this.menuNomenklaturi_WorkTime.Text = "Работно време";
-			this.menuNomenklaturi_WorkTime.Click += new System.EventHandler(this.menuNomenklaturi_WorkTime_Click);
-			// 
-			// menuNomenklaturi_Law
-			// 
-			this.menuNomenklaturi_Law.Index = 1;
-			this.menuNomenklaturi_Law.Text = "Правоотношения";
-			this.menuNomenklaturi_Law.Click += new System.EventHandler(this.menuNomenklaturi_Law_Click);
-			// 
-			// menuNomenklaturiYearlyAddon
-			// 
-			this.menuNomenklaturiYearlyAddon.Index = 2;
-			this.menuNomenklaturiYearlyAddon.Text = "Годишни надбавки";
-			this.menuNomenklaturiYearlyAddon.Click += new System.EventHandler(this.menuNomenklaturiYearlyAddon_Click);
-			// 
-			// menuNomenklaturi_TypePenalty
-			// 
-			this.menuNomenklaturi_TypePenalty.Index = 3;
-			this.menuNomenklaturi_TypePenalty.Text = "Видове наказания";
-			this.menuNomenklaturi_TypePenalty.Click += new System.EventHandler(this.menuNomenklaturi_TypePenalty_Click);
-			// 
-			// menuItem_Nomenklaturi_Educations
-			// 
-			this.menuItem_Nomenklaturi_Educations.Index = 4;
-			this.menuItem_Nomenklaturi_Educations.Text = "Обучения";
-			this.menuItem_Nomenklaturi_Educations.Click += new System.EventHandler(this.menuItem_Nomenklaturi_Educations_Click);
-			// 
-			// menuNomenklaturi_ZaLice
-			// 
-			this.menuNomenklaturi_ZaLice.Index = 8;
-			this.menuNomenklaturi_ZaLice.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuNomenklaturi_ZaPredpriqtie.Text = "За организацията";
+            // 
+            // menuNomenklaturi_WorkTime
+            // 
+            this.menuNomenklaturi_WorkTime.Index = 0;
+            this.menuNomenklaturi_WorkTime.Text = "Работно време";
+            this.menuNomenklaturi_WorkTime.Click += new System.EventHandler(this.menuNomenklaturi_WorkTime_Click);
+            // 
+            // menuNomenklaturi_Law
+            // 
+            this.menuNomenklaturi_Law.Index = 1;
+            this.menuNomenklaturi_Law.Text = "Правоотношения";
+            this.menuNomenklaturi_Law.Click += new System.EventHandler(this.menuNomenklaturi_Law_Click);
+            // 
+            // menuNomenklaturiYearlyAddon
+            // 
+            this.menuNomenklaturiYearlyAddon.Index = 2;
+            this.menuNomenklaturiYearlyAddon.Text = "Годишни надбавки";
+            this.menuNomenklaturiYearlyAddon.Click += new System.EventHandler(this.menuNomenklaturiYearlyAddon_Click);
+            // 
+            // menuNomenklaturi_TypePenalty
+            // 
+            this.menuNomenklaturi_TypePenalty.Index = 3;
+            this.menuNomenklaturi_TypePenalty.Text = "Видове наказания";
+            this.menuNomenklaturi_TypePenalty.Click += new System.EventHandler(this.menuNomenklaturi_TypePenalty_Click);
+            // 
+            // menuItem_Nomenklaturi_Educations
+            // 
+            this.menuItem_Nomenklaturi_Educations.Index = 4;
+            this.menuItem_Nomenklaturi_Educations.Text = "Обучения";
+            this.menuItem_Nomenklaturi_Educations.Click += new System.EventHandler(this.menuItem_Nomenklaturi_Educations_Click);
+            // 
+            // menuNomenklaturi_ZaLice
+            // 
+            this.menuNomenklaturi_ZaLice.Index = 8;
+            this.menuNomenklaturi_ZaLice.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuNomenklaturi_Education,
             this.menuNomenklaturi_ForeignLanguages,
             this.menuNomenklaturi_MilitaryRang,
@@ -726,54 +726,60 @@ namespace HR
             this.menuNomenklaturi_Rang,
             this.menuNomenklaturi_Experience,
             this.menuItem7});
-			this.menuNomenklaturi_ZaLice.Text = "За Лицето";
-			// 
-			// menuNomenklaturi_Education
-			// 
-			this.menuNomenklaturi_Education.Index = 0;
-			this.menuNomenklaturi_Education.Text = "Образование";
-			this.menuNomenklaturi_Education.Click += new System.EventHandler(this.menuNomenklaturi_Education_Click);
-			// 
-			// menuNomenklaturi_ForeignLanguages
-			// 
-			this.menuNomenklaturi_ForeignLanguages.Index = 1;
-			this.menuNomenklaturi_ForeignLanguages.Text = "Чужди езици";
-			this.menuNomenklaturi_ForeignLanguages.Click += new System.EventHandler(this.menuNomenklaturi_ForeignLanguages_Click);
-			// 
-			// menuNomenklaturi_MilitaryRang
-			// 
-			this.menuNomenklaturi_MilitaryRang.Index = 2;
-			this.menuNomenklaturi_MilitaryRang.Text = "Военен ранг";
-			this.menuNomenklaturi_MilitaryRang.Click += new System.EventHandler(this.menuNomenklaturi_MilitaryRang_Click);
-			// 
-			// menuNomenklaturi_ScienceTitle
-			// 
-			this.menuNomenklaturi_ScienceTitle.Index = 3;
-			this.menuNomenklaturi_ScienceTitle.Text = "Научно звание";
-			this.menuNomenklaturi_ScienceTitle.Click += new System.EventHandler(this.menuNomenklaturi_ScienceTitle_Click);
-			// 
-			// menuNomenklaturi_ScienceDegree
-			// 
-			this.menuNomenklaturi_ScienceDegree.Index = 4;
-			this.menuNomenklaturi_ScienceDegree.Text = "Научна степен";
-			this.menuNomenklaturi_ScienceDegree.Click += new System.EventHandler(this.menuNomenklaturi_ScienceDegree_Click);
-			// 
-			// menuNomenklaturi_Rang
-			// 
-			this.menuNomenklaturi_Rang.Index = 5;
-			this.menuNomenklaturi_Rang.Text = "Ранг";
-			this.menuNomenklaturi_Rang.Click += new System.EventHandler(this.menuNomenklaturi_Rang_Click);
-			// 
-			// menuNomenklaturi_Experience
-			// 
-			this.menuNomenklaturi_Experience.Index = 6;
-			this.menuNomenklaturi_Experience.Text = "Професионален опит";
-			this.menuNomenklaturi_Experience.Click += new System.EventHandler(this.menuNomenklaturi_Experience_Click);
-			// 
-			// menuSystem
-			// 
-			this.menuSystem.Index = 4;
-			this.menuSystem.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuNomenklaturi_ZaLice.Text = "За Лицето";
+            // 
+            // menuNomenklaturi_Education
+            // 
+            this.menuNomenklaturi_Education.Index = 0;
+            this.menuNomenklaturi_Education.Text = "Образование";
+            this.menuNomenklaturi_Education.Click += new System.EventHandler(this.menuNomenklaturi_Education_Click);
+            // 
+            // menuNomenklaturi_ForeignLanguages
+            // 
+            this.menuNomenklaturi_ForeignLanguages.Index = 1;
+            this.menuNomenklaturi_ForeignLanguages.Text = "Чужди езици";
+            this.menuNomenklaturi_ForeignLanguages.Click += new System.EventHandler(this.menuNomenklaturi_ForeignLanguages_Click);
+            // 
+            // menuNomenklaturi_MilitaryRang
+            // 
+            this.menuNomenklaturi_MilitaryRang.Index = 2;
+            this.menuNomenklaturi_MilitaryRang.Text = "Военен ранг";
+            this.menuNomenklaturi_MilitaryRang.Click += new System.EventHandler(this.menuNomenklaturi_MilitaryRang_Click);
+            // 
+            // menuNomenklaturi_ScienceTitle
+            // 
+            this.menuNomenklaturi_ScienceTitle.Index = 3;
+            this.menuNomenklaturi_ScienceTitle.Text = "Научно звание";
+            this.menuNomenklaturi_ScienceTitle.Click += new System.EventHandler(this.menuNomenklaturi_ScienceTitle_Click);
+            // 
+            // menuNomenklaturi_ScienceDegree
+            // 
+            this.menuNomenklaturi_ScienceDegree.Index = 4;
+            this.menuNomenklaturi_ScienceDegree.Text = "Научна степен";
+            this.menuNomenklaturi_ScienceDegree.Click += new System.EventHandler(this.menuNomenklaturi_ScienceDegree_Click);
+            // 
+            // menuNomenklaturi_Rang
+            // 
+            this.menuNomenklaturi_Rang.Index = 5;
+            this.menuNomenklaturi_Rang.Text = "Ранг";
+            this.menuNomenklaturi_Rang.Click += new System.EventHandler(this.menuNomenklaturi_Rang_Click);
+            // 
+            // menuNomenklaturi_Experience
+            // 
+            this.menuNomenklaturi_Experience.Index = 6;
+            this.menuNomenklaturi_Experience.Text = "Професионален опит";
+            this.menuNomenklaturi_Experience.Click += new System.EventHandler(this.menuNomenklaturi_Experience_Click);
+            // 
+            // menuItem7
+            // 
+            this.menuItem7.Index = 7;
+            this.menuItem7.Text = "Звание НАТО";
+            this.menuItem7.Click += new System.EventHandler(this.menuNomenklaturi_NSONato_Click);
+            // 
+            // menuSystem
+            // 
+            this.menuSystem.Index = 4;
+            this.menuSystem.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menu5Item1,
             this.menu5Item2,
             this.menu5Item3,
@@ -787,291 +793,285 @@ namespace HR
             this.menuItemNKPDCheck,
             this.menuItem6,
             this.menuSettingsService});
-			this.menuSystem.Text = "Системни";
-			// 
-			// menu5Item1
-			// 
-			this.menu5Item1.Index = 0;
-			this.menu5Item1.Text = "Потребители";
-			this.menu5Item1.Click += new System.EventHandler(this.menuSystem_Users_Click);
-			// 
-			// menu5Item2
-			// 
-			this.menu5Item2.Index = 1;
-			this.menu5Item2.Shortcut = System.Windows.Forms.Shortcut.F8;
-			this.menu5Item2.Text = "Смяна на потребители";
-			this.menu5Item2.Click += new System.EventHandler(this.menuSystem_LogIn_Click);
-			// 
-			// menu5Item3
-			// 
-			this.menu5Item3.Index = 2;
-			this.menu5Item3.Text = "Приключване на година";
-			this.menu5Item3.Click += new System.EventHandler(this.menuSystem_FinishYear_Click);
-			// 
-			// menuItemSystemWorkDays
-			// 
-			this.menuItemSystemWorkDays.Index = 3;
-			this.menuItemSystemWorkDays.Text = "Задаване на работни дни";
-			this.menuItemSystemWorkDays.Click += new System.EventHandler(this.menuItemSystemWorkDays_Click);
-			// 
-			// menuItem1
-			// 
-			this.menuItem1.Index = 4;
-			this.menuItem1.Text = "-";
-			// 
-			// menuItemBackup
-			// 
-			this.menuItemBackup.Index = 5;
-			this.menuItemBackup.Text = "Архивиране";
-			this.menuItemBackup.Click += new System.EventHandler(this.menuItemBackup_Click);
-			// 
-			// menuItemRestore
-			// 
-			this.menuItemRestore.Index = 6;
-			this.menuItemRestore.Text = "Възстановяване";
-			this.menuItemRestore.Click += new System.EventHandler(this.menuItemRestore_Click);
-			// 
-			// menuItem4
-			// 
-			this.menuItem4.Index = 7;
-			this.menuItem4.Text = "-";
-			// 
-			// menuItemProgramOptions
-			// 
-			this.menuItemProgramOptions.Index = 8;
-			this.menuItemProgramOptions.Text = "Настройки";
-			this.menuItemProgramOptions.Click += new System.EventHandler(this.menuSystem_ProgramOptions_Click);
-			// 
-			// menuItemCheckHolidays
-			// 
-			this.menuItemCheckHolidays.Index = 9;
-			this.menuItemCheckHolidays.Text = "Проверка коректност на отпуски";
-			this.menuItemCheckHolidays.Click += new System.EventHandler(this.menuItemCheckHolidays_Click);
-			// 
-			// menuItemNKPDCheck
-			// 
-			this.menuItemNKPDCheck.Index = 10;
-			this.menuItemNKPDCheck.Text = "Проверка НКПД";
-			this.menuItemNKPDCheck.Click += new System.EventHandler(this.menuItemNKPDCheck_Click);
-			// 
-			// menuItem6
-			// 
-			this.menuItem6.Index = 11;
-			this.menuItem6.Text = "Проверка структура на организацията";
-			// 
-			// menuSettingsService
-			// 
-			this.menuSettingsService.Index = 12;
-			this.menuSettingsService.Text = "Сервизни функции";
-			this.menuSettingsService.Click += new System.EventHandler(this.menuSettingsService_Click);
-			// 
-			// menuSpravki_Item21
-			// 
-			this.menuSpravki_Item21.Index = -1;
-			this.menuSpravki_Item21.Text = "Служители на длъжност";
-			// 
-			// menuSpravki_Item22
-			// 
-			this.menuSpravki_Item22.Index = -1;
-			this.menuSpravki_Item22.Text = "Служители владеещи чужд език";
-			// 
-			// menuSpravki_Item23
-			// 
-			this.menuSpravki_Item23.Index = -1;
-			this.menuSpravki_Item23.Text = "Отсъствия на служители";
-			// 
-			// menuSpravki_Item24
-			// 
-			this.menuSpravki_Item24.Index = -1;
-			this.menuSpravki_Item24.Text = "Служители по образование";
-			// 
-			// menuSpravki_Item25
-			// 
-			this.menuSpravki_Item25.Index = -1;
-			this.menuSpravki_Item25.Text = "Служители на военен отчет";
-			// 
-			// menuSpravki_Item26
-			// 
-			this.menuSpravki_Item26.Index = -1;
-			this.menuSpravki_Item26.Text = "Служители с (определено) работно време";
-			// 
-			// menuSpravki_Item27
-			// 
-			this.menuSpravki_Item27.Index = -1;
-			this.menuSpravki_Item27.Text = "Служители с договор";
-			// 
-			// menuSpravki_Item28
-			// 
-			this.menuSpravki_Item28.Index = -1;
-			this.menuSpravki_Item28.Text = "Отпуски от минали години";
-			// 
-			// menuSpravki_Item29
-			// 
-			this.menuSpravki_Item29.Index = -1;
-			this.menuSpravki_Item29.Text = "Отпуски за текущата година";
-			// 
-			// menuSpravki_Item210
-			// 
-			this.menuSpravki_Item210.Index = -1;
-			this.menuSpravki_Item210.Text = "Служители с неплатен отпуск";
-			// 
-			// statusBarMain
-			// 
-			this.statusBarMain.Location = new System.Drawing.Point(0, 78);
-			this.statusBarMain.Name = "statusBarMain";
-			this.statusBarMain.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
+            this.menuSystem.Text = "Системни";
+            // 
+            // menu5Item1
+            // 
+            this.menu5Item1.Index = 0;
+            this.menu5Item1.Text = "Потребители";
+            this.menu5Item1.Click += new System.EventHandler(this.menuSystem_Users_Click);
+            // 
+            // menu5Item2
+            // 
+            this.menu5Item2.Index = 1;
+            this.menu5Item2.Shortcut = System.Windows.Forms.Shortcut.F8;
+            this.menu5Item2.Text = "Смяна на потребители";
+            this.menu5Item2.Click += new System.EventHandler(this.menuSystem_LogIn_Click);
+            // 
+            // menu5Item3
+            // 
+            this.menu5Item3.Index = 2;
+            this.menu5Item3.Text = "Приключване на година";
+            this.menu5Item3.Click += new System.EventHandler(this.menuSystem_FinishYear_Click);
+            // 
+            // menuItemSystemWorkDays
+            // 
+            this.menuItemSystemWorkDays.Index = 3;
+            this.menuItemSystemWorkDays.Text = "Задаване на работни дни";
+            this.menuItemSystemWorkDays.Click += new System.EventHandler(this.menuItemSystemWorkDays_Click);
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 4;
+            this.menuItem1.Text = "-";
+            // 
+            // menuItemBackup
+            // 
+            this.menuItemBackup.Index = 5;
+            this.menuItemBackup.Text = "Архивиране";
+            this.menuItemBackup.Click += new System.EventHandler(this.menuItemBackup_Click);
+            // 
+            // menuItemRestore
+            // 
+            this.menuItemRestore.Index = 6;
+            this.menuItemRestore.Text = "Възстановяване";
+            this.menuItemRestore.Click += new System.EventHandler(this.menuItemRestore_Click);
+            // 
+            // menuItem4
+            // 
+            this.menuItem4.Index = 7;
+            this.menuItem4.Text = "-";
+            // 
+            // menuItemProgramOptions
+            // 
+            this.menuItemProgramOptions.Index = 8;
+            this.menuItemProgramOptions.Text = "Настройки";
+            this.menuItemProgramOptions.Click += new System.EventHandler(this.menuSystem_ProgramOptions_Click);
+            // 
+            // menuItemCheckHolidays
+            // 
+            this.menuItemCheckHolidays.Index = 9;
+            this.menuItemCheckHolidays.Text = "Проверка коректност на отпуски";
+            this.menuItemCheckHolidays.Click += new System.EventHandler(this.menuItemCheckHolidays_Click);
+            // 
+            // menuItemNKPDCheck
+            // 
+            this.menuItemNKPDCheck.Index = 10;
+            this.menuItemNKPDCheck.Text = "Проверка НКПД";
+            this.menuItemNKPDCheck.Click += new System.EventHandler(this.menuItemNKPDCheck_Click);
+            // 
+            // menuItem6
+            // 
+            this.menuItem6.Index = 11;
+            this.menuItem6.Text = "Проверка структура на организацията";
+            // 
+            // menuSettingsService
+            // 
+            this.menuSettingsService.Index = 12;
+            this.menuSettingsService.Text = "Сервизни функции";
+            this.menuSettingsService.Click += new System.EventHandler(this.menuSettingsService_Click);
+            // 
+            // menuSpravki_Item21
+            // 
+            this.menuSpravki_Item21.Index = -1;
+            this.menuSpravki_Item21.Text = "Служители на длъжност";
+            // 
+            // menuSpravki_Item22
+            // 
+            this.menuSpravki_Item22.Index = -1;
+            this.menuSpravki_Item22.Text = "Служители владеещи чужд език";
+            // 
+            // menuSpravki_Item23
+            // 
+            this.menuSpravki_Item23.Index = -1;
+            this.menuSpravki_Item23.Text = "Отсъствия на служители";
+            // 
+            // menuSpravki_Item24
+            // 
+            this.menuSpravki_Item24.Index = -1;
+            this.menuSpravki_Item24.Text = "Служители по образование";
+            // 
+            // menuSpravki_Item25
+            // 
+            this.menuSpravki_Item25.Index = -1;
+            this.menuSpravki_Item25.Text = "Служители на военен отчет";
+            // 
+            // menuSpravki_Item26
+            // 
+            this.menuSpravki_Item26.Index = -1;
+            this.menuSpravki_Item26.Text = "Служители с (определено) работно време";
+            // 
+            // menuSpravki_Item27
+            // 
+            this.menuSpravki_Item27.Index = -1;
+            this.menuSpravki_Item27.Text = "Служители с договор";
+            // 
+            // menuSpravki_Item28
+            // 
+            this.menuSpravki_Item28.Index = -1;
+            this.menuSpravki_Item28.Text = "Отпуски от минали години";
+            // 
+            // menuSpravki_Item29
+            // 
+            this.menuSpravki_Item29.Index = -1;
+            this.menuSpravki_Item29.Text = "Отпуски за текущата година";
+            // 
+            // menuSpravki_Item210
+            // 
+            this.menuSpravki_Item210.Index = -1;
+            this.menuSpravki_Item210.Text = "Служители с неплатен отпуск";
+            // 
+            // statusBarMain
+            // 
+            this.statusBarMain.Location = new System.Drawing.Point(0, 78);
+            this.statusBarMain.Name = "statusBarMain";
+            this.statusBarMain.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.statusBarPanel1,
             this.statusBarPanel2,
             this.statusBarPanel3,
             this.statusBarPanel4});
-			this.statusBarMain.ShowPanels = true;
-			this.statusBarMain.Size = new System.Drawing.Size(764, 23);
-			this.statusBarMain.SizingGrip = false;
-			this.statusBarMain.TabIndex = 1;
-			this.statusBarMain.Text = "statusBar1";
-			// 
-			// statusBarPanel1
-			// 
-			this.statusBarPanel1.Name = "statusBarPanel1";
-			this.statusBarPanel1.Text = "User";
-			this.statusBarPanel1.Width = 190;
-			// 
-			// statusBarPanel2
-			// 
-			this.statusBarPanel2.Name = "statusBarPanel2";
-			this.statusBarPanel2.Text = "Computer name";
-			this.statusBarPanel2.Width = 210;
-			// 
-			// statusBarPanel3
-			// 
-			this.statusBarPanel3.Name = "statusBarPanel3";
-			this.statusBarPanel3.Text = "Ip address";
-			this.statusBarPanel3.Width = 240;
-			// 
-			// statusBarPanel4
-			// 
-			this.statusBarPanel4.Name = "statusBarPanel4";
-			this.statusBarPanel4.Text = "Date";
-			this.statusBarPanel4.Width = 130;
-			// 
-			// buttonKartoteka
-			// 
-			this.buttonKartoteka.Image = ((System.Drawing.Image)(resources.GetObject("buttonKartoteka.Image")));
-			this.buttonKartoteka.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.buttonKartoteka.Location = new System.Drawing.Point(8, 3);
-			this.buttonKartoteka.Name = "buttonKartoteka";
-			this.buttonKartoteka.Size = new System.Drawing.Size(100, 56);
-			this.buttonKartoteka.TabIndex = 2;
-			this.buttonKartoteka.Text = "Картотека";
-			this.buttonKartoteka.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonKartoteka.Click += new System.EventHandler(this.buttonKartoteka_Click);
-			// 
-			// buttonStructura
-			// 
-			this.buttonStructura.Image = ((System.Drawing.Image)(resources.GetObject("buttonStructura.Image")));
-			this.buttonStructura.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.buttonStructura.Location = new System.Drawing.Point(116, 3);
-			this.buttonStructura.Name = "buttonStructura";
-			this.buttonStructura.Size = new System.Drawing.Size(100, 56);
-			this.buttonStructura.TabIndex = 3;
-			this.buttonStructura.Text = "Структура";
-			this.buttonStructura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonStructura.Click += new System.EventHandler(this.buttonStructura_Click);
-			// 
-			// buttonDlujnosti
-			// 
-			this.buttonDlujnosti.Image = ((System.Drawing.Image)(resources.GetObject("buttonDlujnosti.Image")));
-			this.buttonDlujnosti.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.buttonDlujnosti.Location = new System.Drawing.Point(224, 3);
-			this.buttonDlujnosti.Name = "buttonDlujnosti";
-			this.buttonDlujnosti.Size = new System.Drawing.Size(100, 56);
-			this.buttonDlujnosti.TabIndex = 4;
-			this.buttonDlujnosti.Text = "Длъжности";
-			this.buttonDlujnosti.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonDlujnosti.Click += new System.EventHandler(this.buttonDlujnosti_Click);
-			// 
-			// buttonShtatnoRazpisanie
-			// 
-			this.buttonShtatnoRazpisanie.Image = ((System.Drawing.Image)(resources.GetObject("buttonShtatnoRazpisanie.Image")));
-			this.buttonShtatnoRazpisanie.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.buttonShtatnoRazpisanie.Location = new System.Drawing.Point(440, 3);
-			this.buttonShtatnoRazpisanie.Name = "buttonShtatnoRazpisanie";
-			this.buttonShtatnoRazpisanie.Size = new System.Drawing.Size(100, 56);
-			this.buttonShtatnoRazpisanie.TabIndex = 5;
-			this.buttonShtatnoRazpisanie.Text = "Щатно разписание";
-			this.buttonShtatnoRazpisanie.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonShtatnoRazpisanie.Click += new System.EventHandler(this.buttonShtatnoRazpisanie_Click);
-			// 
-			// buttonObshtiSprawki
-			// 
-			this.buttonObshtiSprawki.Image = ((System.Drawing.Image)(resources.GetObject("buttonObshtiSprawki.Image")));
-			this.buttonObshtiSprawki.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.buttonObshtiSprawki.Location = new System.Drawing.Point(332, 3);
-			this.buttonObshtiSprawki.Name = "buttonObshtiSprawki";
-			this.buttonObshtiSprawki.Size = new System.Drawing.Size(100, 56);
-			this.buttonObshtiSprawki.TabIndex = 6;
-			this.buttonObshtiSprawki.Text = "Регистрация";
-			this.buttonObshtiSprawki.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonObshtiSprawki.Click += new System.EventHandler(this.buttonObshtiSprawki_Click);
-			// 
-			// buttonUsers
-			// 
-			this.buttonUsers.Image = ((System.Drawing.Image)(resources.GetObject("buttonUsers.Image")));
-			this.buttonUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.buttonUsers.Location = new System.Drawing.Point(548, 3);
-			this.buttonUsers.Name = "buttonUsers";
-			this.buttonUsers.Size = new System.Drawing.Size(100, 56);
-			this.buttonUsers.TabIndex = 7;
-			this.buttonUsers.Text = "Настройки";
-			this.buttonUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonUsers.Click += new System.EventHandler(this.buttonUsers_Click);
-			// 
-			// buttonExit
-			// 
-			this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
-			this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.buttonExit.Location = new System.Drawing.Point(656, 3);
-			this.buttonExit.Name = "buttonExit";
-			this.buttonExit.Size = new System.Drawing.Size(100, 56);
-			this.buttonExit.TabIndex = 8;
-			this.buttonExit.Text = "Изход";
-			this.buttonExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-			// 
-			// menuItem7
-			// 
-			this.menuItem7.Index = 7;
-			this.menuItem7.Text = "Звание НАТО";
-			this.menuItem7.Click += new System.EventHandler(this.menuNomenklaturi_NSONato_Click);
-			// 
-			// mainForm
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(764, 101);
-			this.Controls.Add(this.buttonExit);
-			this.Controls.Add(this.buttonUsers);
-			this.Controls.Add(this.buttonObshtiSprawki);
-			this.Controls.Add(this.buttonShtatnoRazpisanie);
-			this.Controls.Add(this.buttonDlujnosti);
-			this.Controls.Add(this.buttonStructura);
-			this.Controls.Add(this.buttonKartoteka);
-			this.Controls.Add(this.statusBarMain);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MaximizeBox = false;
-			this.MaximumSize = new System.Drawing.Size(780, 140);
-			this.Menu = this.mainMenu1;
-			this.MinimumSize = new System.Drawing.Size(780, 140);
-			this.Name = "mainForm";
-			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Човешки Ресурси 2017 2.58";
-			this.Closing += new System.ComponentModel.CancelEventHandler(this.mainForm_Closing);
-			this.Load += new System.EventHandler(this.mainForm_Load);
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel4)).EndInit();
-			this.ResumeLayout(false);
+            this.statusBarMain.ShowPanels = true;
+            this.statusBarMain.Size = new System.Drawing.Size(764, 23);
+            this.statusBarMain.SizingGrip = false;
+            this.statusBarMain.TabIndex = 1;
+            this.statusBarMain.Text = "statusBar1";
+            // 
+            // statusBarPanel1
+            // 
+            this.statusBarPanel1.Name = "statusBarPanel1";
+            this.statusBarPanel1.Text = "User";
+            this.statusBarPanel1.Width = 190;
+            // 
+            // statusBarPanel2
+            // 
+            this.statusBarPanel2.Name = "statusBarPanel2";
+            this.statusBarPanel2.Text = "Computer name";
+            this.statusBarPanel2.Width = 210;
+            // 
+            // statusBarPanel3
+            // 
+            this.statusBarPanel3.Name = "statusBarPanel3";
+            this.statusBarPanel3.Text = "Ip address";
+            this.statusBarPanel3.Width = 240;
+            // 
+            // statusBarPanel4
+            // 
+            this.statusBarPanel4.Name = "statusBarPanel4";
+            this.statusBarPanel4.Text = "Date";
+            this.statusBarPanel4.Width = 130;
+            // 
+            // buttonKartoteka
+            // 
+            this.buttonKartoteka.Image = ((System.Drawing.Image)(resources.GetObject("buttonKartoteka.Image")));
+            this.buttonKartoteka.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonKartoteka.Location = new System.Drawing.Point(8, 3);
+            this.buttonKartoteka.Name = "buttonKartoteka";
+            this.buttonKartoteka.Size = new System.Drawing.Size(100, 56);
+            this.buttonKartoteka.TabIndex = 2;
+            this.buttonKartoteka.Text = "Картотека";
+            this.buttonKartoteka.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonKartoteka.Click += new System.EventHandler(this.buttonKartoteka_Click);
+            // 
+            // buttonStructura
+            // 
+            this.buttonStructura.Image = ((System.Drawing.Image)(resources.GetObject("buttonStructura.Image")));
+            this.buttonStructura.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonStructura.Location = new System.Drawing.Point(116, 3);
+            this.buttonStructura.Name = "buttonStructura";
+            this.buttonStructura.Size = new System.Drawing.Size(100, 56);
+            this.buttonStructura.TabIndex = 3;
+            this.buttonStructura.Text = "Структура";
+            this.buttonStructura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonStructura.Click += new System.EventHandler(this.buttonStructura_Click);
+            // 
+            // buttonDlujnosti
+            // 
+            this.buttonDlujnosti.Image = ((System.Drawing.Image)(resources.GetObject("buttonDlujnosti.Image")));
+            this.buttonDlujnosti.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonDlujnosti.Location = new System.Drawing.Point(224, 3);
+            this.buttonDlujnosti.Name = "buttonDlujnosti";
+            this.buttonDlujnosti.Size = new System.Drawing.Size(100, 56);
+            this.buttonDlujnosti.TabIndex = 4;
+            this.buttonDlujnosti.Text = "Длъжности";
+            this.buttonDlujnosti.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDlujnosti.Click += new System.EventHandler(this.buttonDlujnosti_Click);
+            // 
+            // buttonShtatnoRazpisanie
+            // 
+            this.buttonShtatnoRazpisanie.Image = ((System.Drawing.Image)(resources.GetObject("buttonShtatnoRazpisanie.Image")));
+            this.buttonShtatnoRazpisanie.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonShtatnoRazpisanie.Location = new System.Drawing.Point(440, 3);
+            this.buttonShtatnoRazpisanie.Name = "buttonShtatnoRazpisanie";
+            this.buttonShtatnoRazpisanie.Size = new System.Drawing.Size(100, 56);
+            this.buttonShtatnoRazpisanie.TabIndex = 5;
+            this.buttonShtatnoRazpisanie.Text = "Щатно разписание";
+            this.buttonShtatnoRazpisanie.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonShtatnoRazpisanie.Click += new System.EventHandler(this.buttonShtatnoRazpisanie_Click);
+            // 
+            // buttonObshtiSprawki
+            // 
+            this.buttonObshtiSprawki.Image = ((System.Drawing.Image)(resources.GetObject("buttonObshtiSprawki.Image")));
+            this.buttonObshtiSprawki.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonObshtiSprawki.Location = new System.Drawing.Point(332, 3);
+            this.buttonObshtiSprawki.Name = "buttonObshtiSprawki";
+            this.buttonObshtiSprawki.Size = new System.Drawing.Size(100, 56);
+            this.buttonObshtiSprawki.TabIndex = 6;
+            this.buttonObshtiSprawki.Text = "Регистрация";
+            this.buttonObshtiSprawki.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonObshtiSprawki.Click += new System.EventHandler(this.buttonObshtiSprawki_Click);
+            // 
+            // buttonUsers
+            // 
+            this.buttonUsers.Image = ((System.Drawing.Image)(resources.GetObject("buttonUsers.Image")));
+            this.buttonUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonUsers.Location = new System.Drawing.Point(548, 3);
+            this.buttonUsers.Name = "buttonUsers";
+            this.buttonUsers.Size = new System.Drawing.Size(100, 56);
+            this.buttonUsers.TabIndex = 7;
+            this.buttonUsers.Text = "Настройки";
+            this.buttonUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonUsers.Click += new System.EventHandler(this.buttonUsers_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
+            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonExit.Location = new System.Drawing.Point(656, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(100, 56);
+            this.buttonExit.TabIndex = 8;
+            this.buttonExit.Text = "Изход";
+            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // mainForm
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(764, 101);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonUsers);
+            this.Controls.Add(this.buttonObshtiSprawki);
+            this.Controls.Add(this.buttonShtatnoRazpisanie);
+            this.Controls.Add(this.buttonDlujnosti);
+            this.Controls.Add(this.buttonStructura);
+            this.Controls.Add(this.buttonKartoteka);
+            this.Controls.Add(this.statusBarMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(780, 140);
+            this.Menu = this.mainMenu1;
+            this.MinimumSize = new System.Drawing.Size(780, 140);
+            this.Name = "mainForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Човешки Ресурси 2020 2.60";
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.mainForm_Closing);
+            this.Load += new System.EventHandler(this.mainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel4)).EndInit();
+            this.ResumeLayout(false);
 
 		}
 		#endregion

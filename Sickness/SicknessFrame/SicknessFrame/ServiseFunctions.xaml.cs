@@ -1156,5 +1156,19 @@ namespace SicknessFrame
 			}
 			data.SaveChanges();
 		}
-	}
+
+        private void BtnRestoreEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            if(this.txtEGN.Text.Length == 10)
+            {
+                var asses = data.HR_PersonAssignment.Where(a => a.HR_Person.egn == this.txtEGN.Text).ToList();
+                if(asses.Count(a => a.isActive == 1) == 0)
+                {
+                    var las = asses.Last();
+                    las.isActive = 1;
+                    data.SaveChanges();
+                }
+            }
+        }
+    }
 }

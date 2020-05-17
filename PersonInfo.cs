@@ -6790,7 +6790,10 @@ namespace HR
 
 		private void buttonAssignmentDelete_Click(object sender, System.EventArgs e)
 		{
-			try
+            string cs;
+            mainForm.GetConnString(out cs);
+            Entities data = new Entities(cs);
+            try
 			{
 				if (this.dataGridViewAssignment.CurrentRow != null)
 				{
@@ -6903,98 +6906,27 @@ namespace HR
 								}
 								else
 								{ //тук трием активно допълнително споразумение
-									DataView vuePrevAssignmet;
-									int previd;
-									IsValid = int.TryParse(this.dataGridViewAssignment.CurrentRow.Cells["prevassignmentid"].Value.ToString(), out previd);
-									if (IsValid == false)
-									{
-										if (MessageBox.Show("Грешка при определяне на предходна длъжност. Служителя няма да се прехвърли към предходната си длъжност. Желатете или да продължите?", "Въпрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-											return;
-									}
-									//										DataView PrevAssignment = new DataView(this.dtAssignment, "parent = " + this.paren + " and id = " + previd, "id", DataViewRowState.CurrentRows);
+                                    int did;
+                                    int.TryParse(this.dataGridViewAssignment.CurrentRow.Cells["ID"].Value.ToString(), out did);
+                                    var assToDel = data.HR_PersonAssignment.FirstOrDefault(a => a.id == did);
+                                    if(assToDel == null)
+                                    {
+                                        MessageBox.Show("Непредвидена грешка при изтриване");
+                                        return;
+                                    }
 
-									structureDict.Add("free", "'free + " + change.ToString());
-									structureDict.Add("busy", "'busy - " + change.ToString());
-
-									vuePrevAssignmet = new DataView(this.dtAssignment, "id = " + previd.ToString(), "id", DataViewRowState.CurrentRows);
-
-									if (vuePrevAssignmet.Count <= 0 || vuePrevAssignmet.Count > 1)
-									{//Тук влизаме само ако предхордото назначение по някаква причина е сбозено!
-										if (MessageBox.Show("Грешка при определяне на предходна длъжност. Служителя няма да се прехвърли към предходната си длъжност. Желатете или да продължите?", "Въпрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-											return;
-										pDict.Add("nodeID", "0");
-
-										IsValid = this.dataAdapter.UniversalUpdateParam(TableNames.Person, "id", pDict, this.parent.ToString(), TransactionComnmand.BEGIN_TRANSACTION);
-										if (IsValid == false)
-										{
-											MessageBox.Show("Грешка при обновяване на лични данни", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-											return;
-										}
-										IsValid = this.dataAdapter.UniversalUpdateObject(TableNames.FirmPersonal3, "id", structureDict, this.dataGridViewAssignment.CurrentRow.Cells["positionid"].Value.ToString(), TransactionComnmand.USE_TRANSACTION);
-										if (IsValid == false)
-										{
-											MessageBox.Show("Грешка при обновяване на данни за длъжност", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-											return;
-										}
-										IsValid = this.dataAdapter.UniversalDelete(TableNames.PersonAssignment, this.dataGridViewAssignment.CurrentRow.Cells["ID"].Value.ToString(), "id", TransactionComnmand.COMMIT_TRANSACTION);
-										if (IsValid == false)
-										{
-											MessageBox.Show("Грешка при изтриване на назначение", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-											return;
-										}
-
-										rowPosition["Free"] = (float.Parse(rowPosition["Free"].ToString()) + change).ToString();
-										rowPosition["Busy"] = (float.Parse(rowPosition["Busy"].ToString()) - change).ToString();
-										this.dtAssignment.Rows.Remove(this.dtAssignment.Rows.Find(this.dataGridViewAssignment.CurrentRow.Cells["ID"].Value));
-									}
-									else
-									{ //открито е предходното споразумение/назначение
-										DataRow rowOldPosition = this.dtPosition.Rows.Find(vuePrevAssignmet[0]["positionid"]);
-
-										pDict.Add("nodeID", rowOldPosition["par"].ToString());
-
-										IsValid = this.dataAdapter.UniversalUpdateParam(TableNames.Person, "id", pDict, this.parent.ToString(), TransactionComnmand.BEGIN_TRANSACTION);
-										if (IsValid == false)
-										{
-											MessageBox.Show("Грешка при обновяване на лични данни", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-											return;
-										}
-										IsValid = this.dataAdapter.UniversalUpdateObject(TableNames.FirmPersonal3, "id", structureDict, this.dataGridViewAssignment.CurrentRow.Cells["positionid"].Value.ToString(), TransactionComnmand.USE_TRANSACTION);
-										if (IsValid == false)
-										{
-											MessageBox.Show("Грешка при обновяване на данни за длъжност", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-											return;
-										}
-										oldStructureDict.Add("free", "'free - " + vuePrevAssignmet[0]["staff"].ToString());
-										oldStructureDict.Add("busy", "'busy + " + vuePrevAssignmet[0]["staff"].ToString());
-										IsValid = this.dataAdapter.UniversalUpdateObject(TableNames.FirmPersonal3, "id", oldStructureDict, vuePrevAssignmet[0]["positionid"].ToString(), TransactionComnmand.USE_TRANSACTION);
-										if (IsValid == false)
-										{
-											MessageBox.Show("Грешка при обновяване на данни за длъжност", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-											return;
-										}
-										isActiveDict.Add("IsActive", "1"); //активираме старото назначение
-										IsValid = this.dataAdapter.UniversalUpdateParam(TableNames.PersonAssignment, "id", isActiveDict, vuePrevAssignmet[0]["id"].ToString(), TransactionComnmand.USE_TRANSACTION);
-										if (IsValid == false)
-										{
-											MessageBox.Show("Грешка при изтриване на назначение", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-											return;
-										}
-										IsValid = this.dataAdapter.UniversalDelete(TableNames.PersonAssignment, this.dataGridViewAssignment.CurrentRow.Cells["ID"].Value.ToString(), "id", TransactionComnmand.COMMIT_TRANSACTION);
-										if (IsValid == false)
-										{
-											MessageBox.Show("Грешка при изтриване на назначение", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-											return;
-										}
-
-										rowPosition["Free"] = (float.Parse(rowPosition["Free"].ToString()) + change).ToString();
-										rowPosition["Busy"] = (float.Parse(rowPosition["Busy"].ToString()) - change).ToString();
-
-										rowOldPosition["Free"] = (float.Parse(rowOldPosition["Free"].ToString()) - float.Parse(vuePrevAssignmet[0]["staff"].ToString())).ToString();
-										rowOldPosition["Busy"] = (float.Parse(rowOldPosition["Busy"].ToString()) + float.Parse(vuePrevAssignmet[0]["staff"].ToString())).ToString();
-
-										this.dtAssignment.Rows.Remove(this.dtAssignment.Rows.Find(this.dataGridViewAssignment.CurrentRow.Cells["ID"].Value));
-									}
+                                    var asses = data.HR_PersonAssignment.Where(a => a.parent == assToDel.parent).ToList();
+                                    if(asses.Count < 2)
+                                    {
+                                        MessageBox.Show("Не може да се намери предходното назначение");
+                                        return;
+                                    }
+                                    asses.Remove(assToDel);
+                                    var pa = asses.OrderBy(a => a.ParentContractDate).ToList().Last();
+                                    pa.isActive = 1;
+                                    data.HR_PersonAssignment.DeleteObject(assToDel);
+                                    data.SaveChanges();
+                                    this.RefreshAssignmentDataSource(false);
 								}
 
 								this.positionID = this.oldPositionID = 0;
@@ -7605,7 +7537,21 @@ namespace HR
 			var person = ass.HR_Person;
 			person.nodeID = this.nodeID;
 
-			this.RefreshAbsenceDataSource(false);
+            try
+            {
+                data.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Грешка при запис на данните.", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Op = Operations.ViewPersonData;
+                this.ControlEnabled(false, LockButtons.Assignment);
+                this.EnableButtons(true, true, false, true, true, false, LockButtons.Assignment);
+                IsAssignmentEdit = false;
+                return;
+            }
+
+            this.RefreshAbsenceDataSource(false);
 			this.RefreshAssignmentDataSource(false);
 			this.RefreshNotesDataSource(false);			
 			
@@ -7626,93 +7572,23 @@ namespace HR
 			mainForm.GetConnString(out cs);
 			var data = new Entities(cs);
 
-			//HR_PersonAssignment ass = new HR_PersonAssignment();
-			var prevAss = data.HR_PersonAssignment.FirstOrDefault(a => a.isActive == 1 && a.parent == this.parent);
+            //HR_PersonAssignment ass = new HR_PersonAssignment();
+
+            int did;
+            int.TryParse(this.dataGridViewAssignment.CurrentRow.Cells["ID"].Value.ToString(), out did);
+            var prevAss = data.HR_PersonAssignment.FirstOrDefault(a => a.id == did);
 	
 			double staff = 0, oldstaff = 0;
 			string substitute, oldsubstitute;
 			bool tesparse;
 			int checkres = 0;
 			bool IsValid = true;
-			if (prevAss == null)
-			{
-				MessageBox.Show("Грешка в данните за предходно назначение или предходното назначение не е активно.", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-			else
-			{
-				this.oldPositionID = (int)prevAss.positionID;				
-
-				staff = this.getWorkTimeStaff();				
-
-				substitute = this.mainform.nomenclaatureData.dtReasonAssignment.Rows[this.comboBoxAssignReason.SelectedIndex]["substitute"].ToString(); //проверява дали новата му назначение е като заместник
-				oldsubstitute = vueAssignment[0]["substitute"].ToString(); //проверява дали новата му назначение е като заместник
-				if (oldsubstitute != "1" && oldsubstitute != "0")
-					oldsubstitute = "0";
-				if (substitute != "1" && substitute != "0")
-					substitute = "0";
-			}
+			
 
 			this.ValidateAssignment(prevAss);
 
 
-			if (staff == -1)
-			{
-				MessageBox.Show("Грешка в данните за щатна бройка предходно назначение.", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-			#region Structure positions
 
-			//There are three topics that need to be solved here regarding potential position change, potential worktime change and potential substitution change
-			//The worktime change takes special effect only if the position remains the same
-			//The substitution change takes special effect only if there is no position change
-			//if thre is position change everything takes effect
-			if (this.positionID == this.oldPositionID && staff == oldstaff)
-			{
-				//do nothing - no change needed
-			}
-			else if (this.positionID == this.oldPositionID)
-			{
-				double staffchange = staff - oldstaff;
-				if (staff > oldstaff)
-				{
-					checkres = this.checkForFree(staff - oldstaff);
-					if (checkres == 0)
-					{
-						if (MessageBox.Show("За съответната длъжност няма свободна щатна бройка. Сигурни ли сте че искате да сключите назначението?", "Няма свободни щатни бройки", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-						{
-							Op = Operations.ViewPersonData;
-							this.ControlEnabled(false, LockButtons.Assignment);
-							this.EnableButtons(true, true, false, true, true, false, LockButtons.Assignment);
-							IsAssignmentEdit = false;
-							return;
-						}
-					}
-				}
-			}
-			else
-			{
-				checkres = this.checkForFree(0);
-				if (checkres == 0)
-				{
-					if (MessageBox.Show("За съответната длъжност няма свободна щатна бройка. Сигурни ли сте че искате да сключите назначението?", "Няма свободни щатни бройки", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-					{
-						Op = Operations.ViewPersonData;
-						this.ControlEnabled(false, LockButtons.Assignment);
-						this.EnableButtons(true, true, false, true, true, false, LockButtons.Assignment);
-						IsAssignmentEdit = false;
-						return;
-					}
-				}
-				else if (checkres < 0)
-				{
-					MessageBox.Show("Грешка при избрана длъжност, работно време или грешка в структурата на организацията.", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					Op = Operations.ViewPersonData;
-					this.ControlEnabled(false, LockButtons.Assignment);
-					this.EnableButtons(true, true, false, true, true, false, LockButtons.Assignment);
-					IsAssignmentEdit = false;
-					return;
-				}
-			}
 
 			#endregion
 			var person = prevAss.HR_Person;
@@ -8119,7 +7995,7 @@ namespace HR
 				ass.level4eng = row["leveleng"].ToString();
 			}
 
-			if (this.comboBoxPosition.SelectedIndex == -1)
+			if (this.comboBoxPosition.SelectedIndex != -1)
 			{
 				DataRow row = ((DataRowView)this.comboBoxPosition.SelectedItem).Row;
 				ass.position = row["positionname"].ToString();
@@ -9165,7 +9041,7 @@ namespace HR
 			}
 		}
 
-		#endregion
+
 
 		#region Absence functions
 
